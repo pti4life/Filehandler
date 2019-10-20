@@ -25,6 +25,16 @@ a rendszerben szereplő felhasználóknak amiről automatikus értesítést kap 
 akinek a dokumentumok el lettek küldve.
 
 ## 3. Vágyálom rendszer
+A cél egy oylan rendszer konstruálása amely segítségével a cég képes a belső <br>
+folyamatait jelentősen gyorsítani, hatákonyabbá tenni. Nem elhanyagolható szempont<br>
+a továbbfejleszthetőség. Tehát a rendszer és annak bármilyen állapotától függetlenül<br>
+könnyen, gyorsan és olcsón továbbfejleszthető legyen. A rendszernek teljesen <br> 
+biztonságosnak kell lennie, hisz a munka hatákonyabbá tételén kívül a biztonság<br>
+garantálása.
+* Cél az, hogy biztonságosabb legyen mint a fizikai, automatizálás nélküli üzleti folyamatok.<br>
+ Ezzel a szolgáltatással leginkább a dokumentáció, papírmunka menedzselése válik <br> 
+ könnyebbé. Mivel egy fájlkezelő szolgáltatásról beszélünk ezért más egyéb dolgokra<br>
+ is használható ahol értelmezhető fájlokkal való munka. 
 
 ## 4. Jelenlegi üzleti folyamatok
 
