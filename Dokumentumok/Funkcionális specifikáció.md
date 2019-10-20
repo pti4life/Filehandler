@@ -1,4 +1,4 @@
-# Fájl kezelő
+# Fájlkezelő
 
 ## 1. Vezetői összefoglaló
 
