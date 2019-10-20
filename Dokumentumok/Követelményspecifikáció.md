@@ -3,7 +3,6 @@
 ## 1. Vezetői összefoglaló
 
 ## 2. Jelenlegi helyzet
-
 A cég egy gyár, ahol szorosan egymásra épülő gyártási folyamatok vannak így <br>
 a dokumentáció kiemelt figyelmet igényel, hisz egy nagy cégnél több részlegből<br>
 állhat a gyártási folyamat. Ezek a részlegek egymással kommunikálnak hosszú<br>
@@ -29,8 +28,9 @@ akinek a dokumentumok el lettek küldve.
 
 ## 4. Jelenlegi üzleti folyamatok
 
+
 ## 5. Igényelt üzleti feladatok
-Olyan fájlkezelő rendszerre van szükség amely  webböngészőből elérhető a 
+Olyan fájlkezelő rendszerre van szükség amely webböngészőből elérhető a 
 <br>felhasználóknak első bejelentkezéskor be kell regisztrálják magukat a 
 <br>rendszerbe a már regisztrált felhasználóknak csak bejelentkezés szükséges
 <br> a fájlkezelő rendszer eléréséhez.Fontos biztonsági szempont hogy
@@ -67,3 +67,7 @@ Olyan fájlkezelő rendszerre van szükség amely  webböngészőből elérhető
 <br>Felhasználók törlésére csak az adatbázis adminisztátornak lehessen lehetősége
 <br>Webes védelemről gondoskodik az is hogy helyi lokális szerveren fog futni az alkalmazás
 <br>így csak az itt dolgozók férhetnek hozzá. 
+
+### 6. Fogalom szótár
+* regisztrált felhasználó: Az a felhasználója a szolgáltatásnak, amely a regisztrációs folyamatot<br> sikeresen végrehajtotta ezáltal bekerült a rendszerbe és az adatait használva sikeres bejelentkezést tud végrehajtani.
+* bejelentkezés: Az a folyamat amely után a regisztrált felhasználó elérheti a webszolgáltatás által nyújtott funkciók lényegi részét. 
