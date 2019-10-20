@@ -1,0 +1,11 @@
+# Fájlkezelő
+
+## 1. Vezetői összefoglaló
+
+## 2. Jelenlegi helyzet
+
+## 3. Vágyálom rendszer
+
+## 4. Jelenlegi üzleti folyamatok
+
+## 5. Igényelt üzleti feladatok
