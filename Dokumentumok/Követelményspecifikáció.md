@@ -14,13 +14,15 @@ elvégezhető munkák nagy részét, ez az egyik fő ok amiért szeretnénk forr
 a gyár működését. Ezen kívül amikor a dokumentációs és egyéb a gyártási folyamathoz<br>
 szükséges anyagok leadása/átvitele történik az illetékes személyhez/személyekhez<br>
 mindkét félnek jelen kell lennie az átadásnál mert más esetben nyomonkövethetetlen<br>
-lenne a dokumentumok áramlása ami további problémákhoz vezethet. Ezek könnyen <br> automatizálható folyamatok amelyek, további időt vesznek el a tényleges munkaidőből<br>
+lenne a dokumentumok áramlása ami további problémákhoz vezethet. Ezek könnyen <br>
+automatizálható folyamatok amelyek, további időt vesznek el a tényleges munkaidőből<br>
 azaz csökken a gyár effektív munkavégzése. Ezek mellett az emberi hiba esélye is<br>
 sokkal nagyobb hisz fenn áll a veszélye, hogy a dokumentációk nem jutnak el időben<br>
 a cég többi részlegéhez, esetleges illetékes emberekhez. Biztonsági kockázatok is<br>
 fennállnak mert fizikailag a dokumentumokat el kell helyezni valahol, és fenn áll<br>
 a veszélye, hogy ezekhez illetéktelen személyek is hozzáférnek. Egy professzionális<br>
-rendszer ezeket a folyamatokat gyökeresen megváltoztatná, a cég működése mérföldekkel<br> effektívebb, biztonságosabb lenne hisz bármilyen dokumentum másolata továbbítható<br>
+rendszer ezeket a folyamatokat gyökeresen megváltoztatná, a cég működése mérföldekkel<br>
+effektívebb, biztonságosabb lenne hisz bármilyen dokumentum másolata továbbítható<br>
 a rendszerben szereplő felhasználóknak amiről automatikus értesítést kap a célszemély<br>
 akinek a dokumentumok el lettek küldve.
 
@@ -30,14 +32,22 @@ folyamatait jelentősen gyorsítani, hatákonyabbá tenni. Nem elhanyagolható s
 a továbbfejleszthetőség. Tehát a rendszer és annak bármilyen állapotától függetlenül<br>
 könnyen, gyorsan és olcsón továbbfejleszthető legyen. A rendszernek teljesen <br> 
 biztonságosnak kell lennie, hisz a munka hatákonyabbá tételén kívül a biztonság<br>
-garantálása.
-* Cél az, hogy biztonságosabb legyen mint a fizikai, automatizálás nélküli üzleti folyamatok.<br>
- Ezzel a szolgáltatással leginkább a dokumentáció, papírmunka menedzselése válik <br> 
- könnyebbé. Mivel egy fájlkezelő szolgáltatásról beszélünk ezért más egyéb dolgokra<br>
- is használható ahol értelmezhető fájlokkal való munka. 
-* Olyan fájlkezelő rendszerre van szükség amely webböngészőből       elérhető.
-* Fontos hogy a felület könnyen át tekinthető legyen és egyben 
-  biztonságos is.<br>Mivel a szoftvert cégünk almazottai fogják használni az alkalmazást
+garantálása.<br>
+További célok:
+* Biztonságosabb legyen mint a fizikai, automatizálás nélküli üzleti folyamatok.<br> 
+* Olyan fájlkezelő rendszerre van szükség amely webböngészőből elérhető.
+* Fontos hogy az adatok könnyen nyomon követhetőek legyenek a bizalmas<br>
+információk kiszivárgásának elkerülése végett. 
+* A felhasználók adatait adatbázisban tárolja a szoftver míg a fájlokat a szerveren<br>
+ felhasználók szerint különböző mappákban. 
+* Regisztrációkor minden felhasználó User jogosultsággal rendelezzen.
+* Felhasználók törlésére csak az adatbázis adminisztátornak lehessen lehetősége.
+* Webes védelemről gondoskodik az is hogy helyi lokális szerveren fog futni az alkalmazás
+így csak az itt dolgozók férhetnek hozzá.
+
+Ezzel a szolgáltatással leginkább a dokumentáció, papírmunka menedzselése válik <br> 
+könnyebbé. Mivel egy fájlkezelő szolgáltatásról beszélünk ezért más egyéb dolgokra<br>
+is használható ahol értelmezhető fájlokkal való munka.
 
 ## 4. Jelenlegi üzleti folyamatok
 
@@ -112,5 +122,6 @@ garantálása.
 
 
 ### 6. Fogalom szótár
-* regisztrált felhasználó: Az a felhasználója a szolgáltatásnak, amely a regisztrációs folyamatot<br> sikeresen végrehajtotta ezáltal bekerült a rendszerbe és az adatait használva sikeres bejelentkezést tud végrehajtani.
+* regisztrált felhasználó: Az a felhasználója a szolgáltatásnak, amely a regisztrációs folyamatot<br> 
+sikeresen végrehajtotta ezáltal bekerült a rendszerbe és az adatait használva sikeres bejelentkezést tud végrehajtani.
 * bejelentkezés: Az a folyamat amely után a regisztrált felhasználó elérheti a webszolgáltatás által nyújtott funkciók lényegi részét. 
