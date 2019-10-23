@@ -35,48 +35,81 @@ garantálása.
  Ezzel a szolgáltatással leginkább a dokumentáció, papírmunka menedzselése válik <br> 
  könnyebbé. Mivel egy fájlkezelő szolgáltatásról beszélünk ezért más egyéb dolgokra<br>
  is használható ahol értelmezhető fájlokkal való munka. 
+* Olyan fájlkezelő rendszerre van szükség amely webböngészőből       elérhető.
+* Fontos hogy a felület könnyen át tekinthető legyen és egyben 
+  biztonságos is.<br>Mivel a szoftvert cégünk almazottai fogják használni az alkalmazást
 
 ## 4. Jelenlegi üzleti folyamatok
 
 
 ## 5. Igényelt üzleti feladatok
-Olyan fájlkezelő rendszerre van szükség amely webböngészőből elérhető a 
-<br>felhasználóknak első bejelentkezéskor be kell regisztrálják magukat a 
-<br>rendszerbe a már regisztrált felhasználóknak csak bejelentkezés szükséges
-<br> a fájlkezelő rendszer eléréséhez.Fontos biztonsági szempont hogy
-<br>valóban csak a bejelentkezett felhasználók érjék el  a fájlkezelőt azok
-<br>akik csak a linket birtokolják ne érjék el a felületet.Bejelentkezés 
-<br>után legyen látható egy lista amin szerepel a tárolt fájlok neve,mérete
-<br>és létrehozási dátuma.A rendszer lehetőséget kell biztosítson fájlok 
-<br>feltöltésére törlésére és letöltésére.Minden felhasználó csak a saját 
-<br>maga által létrehozott vagy feltöltött fájlokhoz fér hozzá.továbbá fájlok
-<br>továbbitására más felhasználóknak akár eggyesével akár több fájl 
-<br>kijelölésével egyszerre,ehhez meg kell adniuk a címzett felhasználónevét.
-<br>Ezekről a fájlokról a másik felhasználó másolatot kap. Az ilyen módon 
-<br>kapott fájlokat is ugyanúgy lehet látni és kezelni, mint a saját maga
-<br>által létrehozott fájlokat. A másolatokról láthatónak kell lennie, 
-<br>hogy ki küldte át. A fogadó felhasználónak a saját email címére email
-<br>értesítést kell kapnia az átküldött fájl(ok)ról, amiben szerepel a fájlok
-<br>neve, és a küldő felhasználó neve.A listáról kiindulva lehessen új fájlokat
-<br> feltölteni, szöveges fájlt létrehozni, meglévőket szerkeszteni, törölni. 
-<br>Fájlok neve nem kell hogy egyedi legyen. Több fájlnak is lehet egyszerre 
-<br>ugyanaz a neve. Amikor új szövegest fájlt akarok létrehozni, akkor vigyen
-<br> el egy üres űrlapra, ahol megadhatom a nevét és a tartalmát. Sikeres
-<br>mentéskor térjen vissza a listára. A listán a szöveges fájlok mellett
-<br>legyen egy szerkeszt gomb vagy link, amire kattintva elvisz az űrlapra,
-<br>ahol a tartalmát és a nevét szerkeszthetem. Mentéskor térjen vissza a
-<br>listára.Bejelentkezés után a felhasználónak legyen lehetősége az felhasználónevének
-<br>és jelszavának megváltoztatására. Legyen egy kilépés gomb ami mindig 
-<br>látszik valahol az oldalon, függetlenül attól, hogy melyik felületen vagyok.
-<br>Fontos hogy a felület könnyen át tekinthető legyen és egyben 
-<br>biztonságos is.Mivel a szoftvert cégünk almazottai fogják használni 
-<br>fontos hogy az adatok könnyen nyomon követhetőek legyenek  a bizalmas
-<br>információk kiszivárgásának elkerülése végett. A felhasználók adatait
-<br>adatbázisban tárolja a szoftver míg a fájlokat a szerveren felhasználók szerint
-<br>külömböző mappákban. Regisztrációkor minden felhasználó User jogosultsággal rendelezzen.
-<br>Felhasználók törlésére csak az adatbázis adminisztátornak lehessen lehetősége
-<br>Webes védelemről gondoskodik az is hogy helyi lokális szerveren fog futni az alkalmazás
-<br>így csak az itt dolgozók férhetnek hozzá. 
+
+* Regisztráció:<br>
+  A Regisztrációhoz egyedi és valós email-cím,egyedi felhasználónév továbbá<br>
+  jelszó és jelszó megőrősítést adjon meg a felhasználó amellyeknek mindegyikét<br>
+  validálni is kell hogy helyesen töltette-e ki az adatokat amenyiben nem<br>
+  megfelelő hiba üzenet jelenik meg amenyiben helyes át irányítjuk a bejelentkezésre.
+
+* Bejelentkezés:<br>
+  A már regisztrált felhasználóknak felhasználónevet és jelszót kell megadjanak<br>
+  a bejelentkezéshez ha a regisztrációkor megadott adatoknak megfelelően <br>
+  töltötték ki az adatokat át irányítjuk a felhasználót a fájl lista oldalra <br>
+  egyébként a megfelelő hiba üzenetet jelenítjük meg számára.
+
+
+* Fájlok megjelenítése:<br>
+  A felület csak a bejelentkezett felhasználók számára elérhető Egy listában <br>
+  jelenik meg a tárolt fájlok neve módosítási dátuma mérete.A lista továbbá<br>
+  rendezhető alapértelmezetten név szerint rendezett és öttösével jelenik meg egy lapon<br>
+
+* Fájl keresése:<br>
+  A felhasználónak fájl név megadásával lehetősége van fájlok keresésére a listából
+
+* Fájl feltöltés:<br>
+  A felhasználó saját gépéről való tallózásal tud új fájlokat feltölteni amely <br>
+  sikeres feltöltés után a listában jelenik meg és eltárolódik a megfelelő helyen.
+
+* Fájl törlése:<br>
+  A felhasználó a listából tud fájlokat törölni.Törlés után a fájl törlődik<br>
+  mind a listából mind a tárolási helyről és az adatbázisból.
+
+* Fájl letöltése:<br>
+  A felhasználó a listából kiválasztott fájlt letölti a saját számítógépére. 
+
+* Fájl küldése:<br>
+  A felhasználó tud  a listából kijelöléssel egy,vagy egyszerre több fájlt<br>
+  tövábbítani más felhasználóknak ehhez meg kell adniuk a címzett felhasználónevét.<br>
+  Sikeres küldéskor a fájlokról a másik felhasználó másolatot kap. Az ilyen<br> 
+  módon kapott fájlokat is ugyanúgy lehet látni és kezelni, mint a saját maga<br>
+  által létrehozott fájlokat. A másolatokról láthatónak kell lennie,<br> 
+  hogy ki küldte át. A fogadó felhasználónak a saját email címére email<br>
+  értesítést kell kapnia az átküldött fájl(ok)ról, amiben szerepel a fájlok<br>
+  neve, és a küldő felhasználó neve sikertelen küldéskor megfelelő hiba üzenet<br>
+  jelenik meg a küldő felhasználó számára.
+
+* Szöveges fájl készítése:<br>
+  A felhasználó tud új szöveges fájlt létrehozni és az oldalon keresztül<br>
+  felvinni a tartalmát.Ezek a fájlok mentés után ugy úgy tárolódnak mint<br>
+  a feltöltött fájlok és megjelennek a listában és végre hajthatóak rajta<br>
+  a műveletek.Megadhatóak azonos névvel is fájlok
+
+
+* Szöveges fájl szerkesztése:<br>
+  A felhasználó mind a feltöltött a fogadott és a felületen készített szöveges<br>
+  fájlokat eléri és tudja szerkeszteni azok tartalmár mentés után visza kerül<br>
+  a listába az új módosítási dátummal
+
+* Felhasználó név módosítás:<br>
+ A felhasználó módosíthatja a felhasználó nevét amennyiben az új felhasználó név<br>
+ helyes frissül az adatbázisban ellenkező esetben a megfelelő hiba üzenetet jelenik meg.
+
+* Jelszó Módosítás:<br>
+ A felhasználó módosíthatja a jelszavát amennyiben az új jelszó helyes frissül <br>
+ az adatbázisban ellenkező esetben a megfelelő hiba üzenetet jelenik meg.
+
+* Kijelentkezés:<br>
+  A felhasználót kijelentkezéskor át irányítjuk a bejelentkezésre.
+
 
 ### 6. Fogalom szótár
 * regisztrált felhasználó: Az a felhasználója a szolgáltatásnak, amely a regisztrációs folyamatot<br> sikeresen végrehajtotta ezáltal bekerült a rendszerbe és az adatait használva sikeres bejelentkezést tud végrehajtani.
