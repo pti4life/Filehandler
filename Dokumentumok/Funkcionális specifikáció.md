@@ -152,3 +152,13 @@ módosítására. Az alábbi validációs folyamatok futnak le ilyenkor:
 
 * Jelszó módosítás: A felhasználó a profil menüpont alatt jelszavát módosíthatja <br>
 Ha az új jelszó megfelel a hozzá tartozó validációs folyamatnak akkor a jelszó megváltozi, egyébként nem. Mindkettőről értesítést kap a felhasználó.
+
+## Képernyőtervek
+
+ ![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/K%C3%A9perny%C5%91terv/Felhasznaloi%20muveletek.jpg)
+
+ ![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/K%C3%A9perny%C5%91terv/F%C3%A1jlkezel%C5%91.jpg)
+
+ ![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/K%C3%A9perny%C5%91terv/Regisztr%C3%A1ci%C3%B3.jpg)
+
+ ![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/K%C3%A9perny%C5%91terv/Rolunk.jpg)
