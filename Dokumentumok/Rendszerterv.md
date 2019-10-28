@@ -59,3 +59,19 @@ keretrendszerrel.
 # 7. Absztrakt domain modell:
 # 8. Architekturális terv:
 # 9. Adatbázis terv:
+Logikai adatmodell:
+
+A szoftver Oracle SQL adatbázist fog használni, a felhasználók azonosítására illetve<br>
+a fájlok és az egyéb a szoftver működéséhez szükséges adatok tárolására.<br>
+Az adatbázis 2 táblából fog felépülni:<br>
+* Users
+* Files
+
+táblákból amelyek *Egy-a-többhöz* kapcsolatban állnak egymással.<br>
+Azaz a *Files* tábla minden rekordjához tartoznia kell egy a *Users*<br>
+táblából vett elsődleges kulcsnak ami egy felhasználót azonosít.
+
+Az webalkalmazás adatbázishoz való kapcsolódásához a Hybernate<br> 
+keretrendszer megoldásait fogjuk használni az adatbázis műveletekhez<br>
+mert egy jól kiforrott, nagy felhasználóbázissal rendelkező keretrendszerről<br>
+van szó.
