@@ -1,4 +1,3 @@
-
 # 1. A rendszer célja:
 # 2. Projekt terv:
 # 3. Üzleti folyamatok modellje:
@@ -74,4 +73,25 @@ táblából vett elsődleges kulcsnak ami egy felhasználót azonosít.
 Az webalkalmazás adatbázishoz való kapcsolódásához a Hybernate<br> 
 keretrendszer megoldásait fogjuk használni az adatbázis műveletekhez<br>
 mert egy jól kiforrott, nagy felhasználóbázissal rendelkező keretrendszerről<br>
-van szó.
+van szó.<br>
+### Adatbázis modell:<br>
+![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/database.jpg)
+
+* ### *Users* tábla:
+    * <b>ID:</b> A felhasználót azonosító *int* típusú mező.
+    * <b>name:</b> A felhasználó nevét tároló *varchar* típusú mező.
+    * <b>username:</b> A felhasználó felhasználónevét tároló *varchar* típusú mező.
+    * <b>password:</b> A felhasználó hashelt jelszavát tároló *varchar* típusú mező.
+    * <b>email:</b> A felhasználó e-mail címét tároló *varchar* típusú mező.
+* ### *Files* tábla:
+    * <b>ID:</b> Egy fájlt azonosító *int* típusú mező.
+    * <b>user_id:</b> Azon felhasználó *int* típusú ID mezője akinek a tulajdonában áll a fájl.<br> 
+    Ez szolgáltatja a kapcsolatot a két tábla között *[Külső kulcs]*.
+    * <b>name:</b> A fájl nevét tároló *varchar* típusú mező.
+    * <b>type:</b> A fájl típusát tároló *varchar* típusú mező.
+    * <b>size:</b> A fájl méretét bájtban, tartalmazó *int* típusú mező.
+    * <b>modif_date:</b>: A fájl módosítási dátumát tartalmazó *timestamp* típusú mező.<br>
+    Alapértelmezetten a feltöltöltés időpontját tartalmazza.
+    * <b>sender_id</b>: Azon felhasználót azonosító *int* típusú ID mező aki a fájlt küldte a<br>
+    *user_id* mezőben lévő ID-val rendelkező felhasználónak. Ha a felhasználó saját magának hozta létre a fájlt vagy töltötte fel akkor null az értéke.
+
