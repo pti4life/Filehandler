@@ -1,6 +1,108 @@
 # 1. A rendszer célja:
 # 2. Projekt terv:
 # 3. Üzleti folyamatok modellje:
+* **Üzleti Szereplők:**
+    * A cég alkalmazottai: A szerepkör a webes felületen történő            regisztrációval<br>
+      jön létre Sikeres regisztrációt követően Felhasználói jogosultságot<br>
+      kap majd képessé válik bejelentkezni a fájlfeltöltő felületre<br>
+*   **Támogatandó üzleti folyamatok:**
+    * Felhasználó azonosítás:<br>
+      A felhasználó beviszi a nevét és jelszavát a webes felületre majd <br>
+      a program megvizsgálja hogy létezik-e ilyen felhasználó az adatbázisban<br>
+      amenyiben igen a jelszóra használja a megfelelő titkosítási algoritmust<br>
+      és megvizsgálja hogy a felhasználóhoz tárolt jelszó megegyezik-e a <br> 
+      bevittel amennyiben igen sikeresen tovább jut a fájl lista felületre<br>
+      ellenkező esetben pedig a megfelelő hiba üzenetet kapja a felhasználó.
+
+      ![ ](kép)
+    * Felhasználó Regisztrálás:<br>
+      A felhasználónak ki kell töltenie a regisztráláshoz egy regisztrációs <br>
+      űrlapot kell kitölteni bizonyos megkötésekkel. Az űrlap kitöltéséhez a<br> következő adatokra van szükség:
+      |Adat|Megszorítás|
+      |----|-----------|
+      |Felhasználónév|Legalább 3 karakter hosszú és egyedi|
+      |Jelszó|Legalább 3 karakter hosszú|
+      |Jelszó megerősítés|Megegyezik a Jelszóval|
+      |email|Valós email formátum és egyedi|  
+      A program feldolgozza az adatokat amennyiben minden megszorításnak<br>
+      eleget tesz feltölti az adatokat az adatbázisba ami után a felhasználó<br>
+      már be tud jelentkezni a felületre ellenkező esetben a megfelelő<br>
+      hiba üzenetet kapja  felhasználó.
+
+      ![ ](kép)
+    * Felhasználó módosítás: <br>
+      A felhasználó módosíthatja felhasználó nevét valamint jelszavát <br>
+      Az új adatnak is meg kell felelnie a megszorításoknak ammenyiben a <br>
+      megfelel az adatok frissülnek az adatbázis és vissza jelzést kap a <br>
+      felhasználó ellenkező esetben a megfelelő hiba üzenetet.
+
+    * Fájlok feltöltése:<br>
+      A felhasználó képes fájlok feltöltésére a kiválasztott fájlt a szereveren<br>
+      tároljuk és fáljra vonatkozó adatokat pedig az adatbázisban beleértbe a <br>
+      felhasználó azonosítóját.
+
+    * Fájlok listájának megjelenítése:<br>
+      Az összes felhasználóhoz rendelt fájlt kiolvasódik az adatbázisból<br>
+      és egy listában jelenik meg a főmenüben oldalanként ötösével.<br>
+      Megjelenik a listában a fájl neve,módosítási dátuma,mérete <br>
+      opcionálisan a küldő felhasználó neve valamint az elérhető műveletek.
+
+    * Fájlok törlése:<br>
+      Ha a fájlok listája nem üres a felhasználó a kiválasztott fájlt a <br>
+      törlés gombra kattintva törli az adatbázisból valamint a szerverről<br>
+      így a felhasználó nem éri el többé.
+
+    * Fájlok letöltése:<br>
+      Ha a fájlok listája nem üres a felhasználó a kiválasztott fájlt <br>
+      le tudja tölteni a szerverről az általa használt eszközre.
+
+    * Fájl keresés:<br>
+      A felhasználó a fájl nevének megadásával keresni tud a hozzá rendelt<br>
+      fájlok között.
+
+    * Fájlok küldése<br>
+      A felhasználó képes fájlok küldésére egyesével vagy akár egyszerre többet<br>
+      is ehez szükség van a címzett felhasználó nevére.A kiválasztott fájlokról<br>
+      másolat készül a címzett részére a fájlokra vonatkozó adatokat tároljuk az<br>
+      adatbázis beleértbe a címzett azonosítóját.A címzett fájl listákába bekerül<br>
+      amely jelzi  küldő felhasználó nevét.
+
+    * Szövegesfájl létrehozása:<br>
+      A felhasználónak lehetősége van Szöveges típusu fájlok létrehozására<br>
+      egy külön felületen ehez meg kell adni a tetszés szerint fájl nevét és<br> tartalmát majd a mentésre kattintva ezeket a fájlokat is ugyan úgy <br>
+      tároljuk a szerveren és az adatbázisban a fájl listába bekerülenek ezek<br>
+      a fájlok is.
+
+    * Szövegesfájl szerkesztés:<br>
+      Szöveges típusu fájloknál a felhasználónak lehetősége van a fájlok <br>
+      tartalmának és nevének módosítására. ilyenkor frissülnek az adatok<br>
+      minda szerveren és az adatbázisban mind a fájl lista felületen.
+
+    * Email küldés:<br>
+      A felhasználó amikor fájlt kap emailt kap a regisztráláskor megadott<br>
+      email címére amely tartalmazza a fogadott fájlt nevét  a küldés<br>
+      dátumát valamint a küldő felhasználó nevét.
+
+* Üzleti entitások 
+  * User: Regisztrálás során vihető fel az adatbázisba segítségével a         felhasználók képesek végrehajtani az üzleti folyamatokat. Bejelentkezni   csak regisztrált userel lehetséges. Az objektum váza:
+    | USER | 
+    |  -   |
+    | long(id)|
+    | String(username)|
+    |String(password)|
+    |String(email)|
+
+  * File: A felhasználókhoz tartozik a felhasználók hozhatnak létre vagy<br>
+    tölthetnek fel és kaphatnak más felhasználóktól. Az objektum váza:
+    | File |
+    |   -  |
+    |long(fileId)|
+    |long(userId)|
+    |long(senderId)|
+    |String(FileName)|
+    |String(fileType)|
+    |int(fileSize)|
+    |Date(modifyDate)|
 # 4. Követelmények:
 # 5. Funkcionális terv:
 # 6. Fizikai környezet:
