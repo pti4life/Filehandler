@@ -93,5 +93,6 @@ van szó.<br>
     * <b>modif_date:</b>: A fájl módosítási dátumát tartalmazó *timestamp* típusú mező.<br>
     Alapértelmezetten a feltöltöltés időpontját tartalmazza.
     * <b>sender_id</b>: Azon felhasználót azonosító *int* típusú ID mező aki a fájlt küldte a<br>
-    *user_id* mezőben lévő ID-val rendelkező felhasználónak. Ha a felhasználó saját magának hozta létre a fájlt vagy töltötte fel akkor null az értéke.
+    *user_id* mezőben lévő ID-val rendelkező felhasználónak. Ha a felhasználó saját magának<br>
+    hozta létre a fájlt vagy töltötte fel akkor null az értéke.
 
