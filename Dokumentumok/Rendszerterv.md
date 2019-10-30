@@ -1,5 +1,86 @@
 # 1. A rendszer célja:
 # 2. Projekt terv:
+
+ ### <b>Ütemterv:</b>
+  * 2019.10.01 - Fejlesztői csapat megalakul.
+  * 2019.11.04- A dokumentáció elkészítése befejezésre kerül, ekkora <br>
+    elérhetőek a következő dokumentumok:
+    * Követelmény specifikáció 
+    * Funkcionális specifikáció 
+    * Rendszerterv
+  * 2019.11.05 - A fejlesztés elkezdődik.
+  * 2019.12.01 - A fejlesztés befejeződik.
+  * 2019.12.02 - A tesztelés elkezdődik.
+  * 2019.12.10 - Ekorra elérhető a teljes rendszer tesztelve, átadás<br> 
+  megegyezés szerint 2019. december 10.-e után.
+
+<b>A projekt teljesen befejezett verzióáig a tesztelést beleértve *35 nap* áll<br>
+rendelkezésere.</b>
+
+A projekt ütemtervével kapcsolataban a projekt fejlesztésének kezdete és az <br>
+projekt átadása közötti események meghatározás alatt vannak a követelményspecifikációban<br>
+említett Agilis szoftverfejlesztési szemlélet miatt. A Sprint-ek időpontja<br>
+számossága és a konkrét funkciók, eredmények melyeknek egy sprint alatt kell<br>
+elkészülniük még nem körvonalazódtak ki .<br>
+
+![ ](http://www.inf.u-szeged.hu/~beszedes/teaching/agilspec/Agile_Development_Process.png)
+
+
+<b>*A projekt mérföldköveinek a sprinteket kell tekinteni!*</b>
+
+### <b>Projekt szerepkörök és felelősségük:</b>
+
+*/A szoftverfejlesztéssel kapcsolatos szerepkörök és felelősségeik/*<br> 
+
+  * <b>Front End fejlesztő:</b> Az alkalmazás kinézetéért felelős szakember<br>
+      a front end megjeleníti az információt a felhasználónak.
+  * <b>Back End fejlesztő:</b> A szerveren futó logika megírásáért felel pl.:<br>
+      Üzleti logika, Adatbázis modell.
+  * <b>Szoftvertesztelő:</b> Unit tesztek megírásáért felelős továbbá <br>
+      a megrendelő által a szoftverrel szemben támasztott elvárásoknak történő megfelelést vizsgálja.
+
+*/Az Agilis szoftverfejlesztéssel kapcsolatos szerepkörök és felelősségeik[Scrum]/*<br>
+
+  * <b>Scrum master:</b>A Scrum főbb szerepkörei a „Scrum Master”, aki a <br>
+  folyamatot felügyeli és a projektmenedzserrel ellentétben, a csapat önálló<br>
+  munkavégzését edzőként segíti.
+  * <b>Product Owner(terméktulajdonos):</b>A projektben érdekelt döntéshozókat<br>
+      képviseli.
+
+<b>Sprint:</b> A csapatban megegyezés szerint 2 hét egy sprint.<br>
+Lényege: A csapatunk egy működő szoftveregységet hoz létre. A futam során<br>
+megvalósítandó funkciók a „Backlog”-ból kerülnek ki, ami az elvégzendő munka<br>
+magas szintű követelményeiből álló, fontossági sorrendbe állított lista ami a<br>
+projektmenedzsmentet segítő szoftverben van deklarálva(Trello-ban).
+ 
+
+A projekt elkészítésért <b>4</b> junior programozó felelős:
+* Kállai Roland
+* Szabó Ferenc
+* Hidi Erik Zoltán
+* Szűcs Gergő
+ 
+ ### <b>A szerepkörökhöz tartozó felelősségek a specifikálása:</b><br>
+ *A projekt kisméretűségéből adódóan, a szerepkörök között átfedések lehetnek.*
+
+* Szűcs Gergő: A design, illetve front-endért felelős személy. Az ő feladata<br>
+a megfelelő user-interface létrehozása.
+* Szabó Ferenc: A perzisztencia osztályok létrehozása, a szükséges adatbázis<br>
+műveletek implementálása továbbá az alkalmazás architektúrájának, struktúrájának<br>
+a megtervezése.(Back-end)<br>
+* Hidi Erik: Az alkalmazás üzleti logikájának egy részének implementálása.(Back-end)<br>
+* Kállai Roland: Az alkalmazás üzleti logikájának implementálása illetve <br>
+ szintén az alkalmazás struktúrájának tervezése.(Back-end)
+
+
+
+
+Ütemterv, Mérföldkövek:
+A projekt 2019.09.09.-én kezdődött, és a határidő 2019.09.30.
+
+
+2019.09.30-ra elérhető a teljes rendszer tesztelve, átadás megegyezés szerint 2019. szeptember 30.-a után.
+
 # 3. Üzleti folyamatok modellje:
 * **Üzleti Szereplők:**
     * A cég alkalmazottai: A szerepkör a webes felületen történő            regisztrációval<br>
