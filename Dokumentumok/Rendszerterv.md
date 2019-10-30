@@ -18,12 +18,14 @@
     * Felhasználó Regisztrálás:<br>
       A felhasználónak ki kell töltenie a regisztráláshoz egy regisztrációs <br>
       űrlapot kell kitölteni bizonyos megkötésekkel. Az űrlap kitöltéséhez a<br> következő adatokra van szükség:
+      
       |Adat|Megszorítás|
       |----|-----------|
       |Felhasználónév|Legalább 3 karakter hosszú és egyedi|
       |Jelszó|Legalább 3 karakter hosszú|
       |Jelszó megerősítés|Megegyezik a Jelszóval|
       |email|Valós email formátum és egyedi|  
+
       A program feldolgozza az adatokat amennyiben minden megszorításnak<br>
       eleget tesz feltölti az adatokat az adatbázisba ami után a felhasználó<br>
       már be tud jelentkezni a felületre ellenkező esetben a megfelelő<br>
@@ -85,6 +87,7 @@
 
 * Üzleti entitások 
   * User: Regisztrálás során vihető fel az adatbázisba segítségével a         felhasználók képesek végrehajtani az üzleti folyamatokat. Bejelentkezni   csak regisztrált userel lehetséges. Az objektum váza:
+
     | USER | 
     |  -   |
     | long(id)|
@@ -94,6 +97,7 @@
 
   * File: A felhasználókhoz tartozik a felhasználók hozhatnak létre vagy<br>
     tölthetnek fel és kaphatnak más felhasználóktól. Az objektum váza:
+
     | File |
     |   -  |
     |long(fileId)|
@@ -103,6 +107,7 @@
     |String(fileType)|
     |int(fileSize)|
     |Date(modifyDate)|
+
 # 4. Követelmények:
 # 5. Funkcionális terv:
 # 6. Fizikai környezet:
