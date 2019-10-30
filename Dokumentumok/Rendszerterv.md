@@ -23,6 +23,7 @@ említett Agilis szoftverfejlesztési szemlélet miatt. A Sprint-ek időpontja<b
 számossága és a konkrét funkciók, eredmények melyeknek egy sprint alatt kell<br>
 elkészülniük még nem körvonalazódtak ki .<br>
 
+Agilis szoftverfejlesztés:
 ![ ](http://www.inf.u-szeged.hu/~beszedes/teaching/agilspec/Agile_Development_Process.png)
 
 
@@ -61,7 +62,7 @@ A projekt elkészítésért <b>4</b> junior programozó felelős:
 * Szűcs Gergő
  
  ### <b>A szerepkörökhöz tartozó felelősségek a specifikálása:</b><br>
- *A projekt kisméretűségéből adódóan, a szerepkörök között átfedések lehetnek.*
+ *A szerepkörök között átfedések lehetnek a munka során.*
 
 * Szűcs Gergő: A design, illetve front-endért felelős személy. Az ő feladata<br>
 a megfelelő user-interface létrehozása.
@@ -71,15 +72,6 @@ a megtervezése.(Back-end)<br>
 * Hidi Erik: Az alkalmazás üzleti logikájának egy részének implementálása.(Back-end)<br>
 * Kállai Roland: Az alkalmazás üzleti logikájának implementálása illetve <br>
  szintén az alkalmazás struktúrájának tervezése.(Back-end)
-
-
-
-
-Ütemterv, Mérföldkövek:
-A projekt 2019.09.09.-én kezdődött, és a határidő 2019.09.30.
-
-
-2019.09.30-ra elérhető a teljes rendszer tesztelve, átadás megegyezés szerint 2019. szeptember 30.-a után.
 
 # 3. Üzleti folyamatok modellje:
 * **Üzleti Szereplők:**
