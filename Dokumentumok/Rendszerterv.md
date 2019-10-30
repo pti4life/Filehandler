@@ -14,7 +14,7 @@
       bevittel amennyiben igen sikeresen tovább jut a fájl lista felületre<br>
       ellenkező esetben pedig a megfelelő hiba üzenetet kapja a felhasználó.
 
-      ![ ](kép)
+      ![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/login.jpg)
     * Felhasználó Regisztrálás:<br>
       A felhasználónak ki kell töltenie a regisztráláshoz egy regisztrációs <br>
       űrlapot kell kitölteni bizonyos megkötésekkel. Az űrlap kitöltéséhez a<br> következő adatokra van szükség:
@@ -29,7 +29,7 @@
       már be tud jelentkezni a felületre ellenkező esetben a megfelelő<br>
       hiba üzenetet kapja  felhasználó.
 
-      ![ ](kép)
+      ![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/Regisztr%C3%A1ci%C3%B3.jpg)
     * Felhasználó módosítás: <br>
       A felhasználó módosíthatja felhasználó nevét valamint jelszavát <br>
       Az új adatnak is meg kell felelnie a megszorításoknak ammenyiben a <br>
