@@ -1,6 +1,16 @@
 # Fájlkezelő
 
 ## 1. Vezetői összefoglaló
+A projekt célja egy magáncégen belüli használatra megfelelő fájlkezelő program<br>
+létrehozása. Jelenleg a cégen belül nem üzemel elektronikus rendszer a fájlok <br>
+tárolására, így a program elkészítése a nulláról fog kezdődni. Elvárás a programmal <br>
+szemben, hogy az alkalmazottak tudjanak saját felhasználót létrehozni és a tevékenységik <br>
+ehhez a progilhoz legyenek kötve. A fájlokkal egy átlátható és könnyen kezelhető felületen<br>
+lehessen a következő műveleteket végrehajtani: megtekintés, keresés, feltöltés, letöltés,<br>
+törlés és küldés különböző felhasználók között. Ezek mellet elsődleges a dokumentumok<br>
+biztonságának biztosítása, ne lehessen megfelelő hozzáférés nélkül a fájlokat elérni és <br>
+az esetleges adatlopás ellen is védekezni kell. Összességében szeretnénk elérni a <br>
+rendszer modernizálásával, hogy a cégen belüli fájlok átvitele gyorsabb és átláthatóbb legyen. <br> 
 
 ## 2. Jelenlegi helyzet
 A cég egy gyár, ahol szorosan egymásra épülő gyártási folyamatok vannak így <br>
