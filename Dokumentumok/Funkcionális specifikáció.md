@@ -130,6 +130,11 @@ az igényekhez szabott felhasználói felületet, ami ezáltal nagyon felhaszná
 is egyben. Ez még azt a pozitívumot is magával vonja, hogy egy új munkatárs <br>
 bekerülése esetén nem vesz igénybe sok időt a betanítása. Későbbiekben akár a <br>
 betanítási folyamat is automatizálható. <br>
+  Jelenleg úgy gondoljuk, hogy a szóban forgó platform lefejlesztésével nem csak <br>
+a biztonságot tudjuk tovább növelni, valamint a dolgozók munkáját egyszerűsíteni, <br>
+hanem ezeken felül az átfogó produktivitást is tudjuk növelni, mivel a kolégáknak <br>
+nem kell időt tölteni azzal, hogy melyik fájlt hol osszák meg, valamint könnyen <br>
+tudják elérni munkatársaikat, amennyiben szügség van az egyes feladatok megbeszéléséhez. <br>
 
 ## 5. Igényelt üzleti feladatok
 
