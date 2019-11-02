@@ -1,4 +1,18 @@
 # 1. A rendszer célja:
+
+  A projekt elsődleges célja egy fájlkezelő-/fájlmegosztó-rendszer fejlesztése, <br>
+amely megfellő funkcionalitást implementál a cég dolgozói számára. Alkalmazása <br>
+egységesítené a cégen belüli kommunikációt és a szükséges dokumentumok elérhetővé <br>
+tételét a megfelelő személyek számára. Ezek mellet elsődleges a dokumentumok<br>
+biztonságának biztosítása, ne lehessen megfelelő hozzáférés nélkül a fájlokat <br>
+elérni és az esetleges adatlopás ellen is védekezni kell. Összességében szeretnénk <br>
+elérni a rendszer modernizálásával, hogy a cégen belüli fájlok átvitele gyorsabb, <br>
+átláthatóbb és biztonságosabb legyen. <br>
+  A rendszer célja még, hogy alkalmazásával háttérbe szoritsuk a harmadik féltől <br>
+származó platformok kommunikációs célra történő használatát, azaz szeretnénk <br>
+saját platformunk segítségével elérni, hogy kizárólag azon keresztül történjen <br>
+a cégen belüli kommunikáció. <br> 
+
 # 2. Projekt terv:
 
  ### <b>Ütemterv:</b>

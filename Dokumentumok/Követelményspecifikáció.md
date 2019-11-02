@@ -72,7 +72,7 @@ apró figyelmetlenség miatt. Nyilvános láthatósági jelzővel ellátott fáj
 mappákat bárki megtekinthet esetleg módosíthat is rajtuk, amennyiben rájuk bukkan. <br>
 Nyilvánvaló, hogy ezzel is jelentős kockázat jár a cég jövőjére nézve. <br>
   Ezeket és ezekhez hasonló biztonsági réseket hivatott betömni a mi rendszerünk. <br>
-A biztonsági szint javulásn kívül a rendszer egységesíti is ezeket a müveleteket. <br>
+A biztonsági szint javulásán kívül a rendszer egységesíti is ezeket a müveleteket. <br>
 Ez azt is jelenti, hogy kisebb az esély felhasználók által elkövetett hibákra, <br>
 mivel csak olyan funkciók kerülnek implementálásra, amelyek feltétlen szükségesek. <br>
 Továbbá, az esetleges hibázás esetén - aminek az esélye minimalizálva van - könnyű <br>
@@ -86,7 +86,7 @@ a pontok a rendszerben, amelyeken még elvárnak valamilyen módosítást. Így 
 a felhasználók igényére szabható a platform. Ez maximalizálja a felhasználóbarát <br>
 felület megalkotását és minimalizálja a betanuló időt egy új kolléga bekerülése <br>
 esetén. <br>
-  A rendszer biztonságát természetesen még az is növeli, hogy kizrólag cégres <br>
+  A rendszer biztonságát természetesen még az is növeli, hogy kizárólag céges <br>
 hálózatról lehet elérni. Ez növel ugyan a biztonságon, viszont egyes esetekben <br>
 kényelmetlenséget is okozhat. Ez abban mutatkozik meg, hogy előfordul olyan <br>
 eset amikor munkaidőn kívül kell hozzáférni egy dokumentumhoz, azaz nincs lehetőség <br>
