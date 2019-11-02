@@ -352,6 +352,14 @@ Logikai adatmodell:
 
 A szoftver Oracle SQL adatbázist fog használni, a felhasználók azonosítására illetve<br>
 a fájlok és az egyéb a szoftver működéséhez szükséges adatok tárolására.<br>
+  Okok, amiért az ORACLE SQL-re esett a választás: <br>
+* Vállalati 0/24 support az év bármelyik napján. <br>
+* Architektúra semleges. <br>
+* Karbantártási müveletek adatbázis leállás nélkül. <br>
+* Minimális karbantartási igény (szinte minden automatizált). <br>
+* Robusztus magasszintű biztonság. <br>
+* Beépített folyamatfigyelők. <br>
+
 Az adatbázis 2 táblából fog felépülni:<br>
 * Users
 * Files
@@ -367,14 +375,14 @@ van szó.<br>
 
   Az okok, ami miatt a Hibernate keretrendszrre esett a választás: <br>
 * A keretrendszer magához az adatbázishoz csatlakozik és HQL-t használ a lekérdezések <br>
-kivitelezéséhez.
+kivitelezéséhez. <br>
 * Az objektumok mapelését mi tudjuk konfigurálni a "Hibernate configuration XML" fájl <br>
-segítségével.
+segítségével. <br>
 * Az úgynevezett impedancia eltérések előfordulása esetén a Híbernate többynire <br>
 külső beavatkozás nélkül tudja elhárítani a hibát. <br>
 * Adatbázis táblázat változás esetén minimálisan kell a kódot változtatnunk. <br>
 * Minimális a kódduplikáció (ellentétben a JDBC-vel) <br>
-* "try-catch" blokkok hanyagolhatóak.
+* "try-catch" blokkok hanyagolhatóak. <br>
   A fenti okokból kifolyólag nyilvánvalóvá válik, hogy a Hibernate sok szempontból <br>
 nagyon jó választás. Nem csak a teljesítményt növeli, de fejlesztési időt is nagy <br>
 mértékben csökkenti, ezáltal kevesebb erőforrást igényel a fejlesztési folyamat. <br>
