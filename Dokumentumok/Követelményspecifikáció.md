@@ -77,7 +77,33 @@ Ez azt is jelenti, hogy kisebb az esély felhasználók által elkövetett hibá
 mivel csak olyan funkciók kerülnek implementálásra, amelyek feltétlen szükségesek. <br>
 Továbbá, az esetleges hibázás esetén - aminek az esélye minimalizálva van - könnyű <br>
 megtalálni és orvosolni a hibát. Ez szintén annak köszönhető, hogy egységes a <br>
-rendszer.  
+rendszer. <br>
+  A saját rendszernek természetesen még a felsoroltaknál is több előnye van.<br>
+Igény esetén nagyon könnyű és egyszerű további funkciókat lefejleszteni. Fejlesztési <br>
+folyamat elkezdése előtt a cég dolgozói tudnak javaslatokat tenni, valamint <br>
+folyamatosan tudják kommentálni, mi az ami jól sikerült és, esetleg, melyek azok <br>
+a pontok a rendszerben, amelyeken még elvárnak valamilyen módosítást. Így teljesmértékben <br>
+a felhasználók igényére szabható a platform. Ez maximalizálja a felhasználóbarát <br>
+felület megalkotását és minimalizálja a betanuló időt egy új kolléga bekerülése <br>
+esetén. <br>
+  A rendszer biztonságát természetesen még az is növeli, hogy kizrólag cégres <br>
+hálózatról lehet elérni. Ez növel ugyan a biztonságon, viszont egyes esetekben <br>
+kényelmetlenséget is okozhat. Ez abban mutatkozik meg, hogy előfordul olyan <br>
+eset amikor munkaidőn kívül kell hozzáférni egy dokumentumhoz, azaz nincs lehetőség <br>
+közvetlen kapcsolatra a rendszerrel, mivel nem a céges hálózaton vagyunk. Erre a <br>
+problémára is van megoldás, még pedig az, hogy először csatlakozunk a céges hálózatra <br>
+(erre eddig is volt lehetőség, viszont szükség hiányában nem volt kihasználva) és <br>
+csak ezután, már céges hálózaton belül, csatlakozunk a rendszerre. Tehát külső <br>
+elérés esetén gyakorlatilag még egy biztonsági falat húzunk. Így, ha a cég egyik <br>
+dolgozója külső hálózatról szeretne csatlakozni, akkor egy két lépcsős biztonsági <br>
+vizsgálaton kell átesnie. <br>
+  Végső konkluzióként arra jutottunk, hogy nyilvánvalóan rengeteg előnnyel jár <br>
+egy ilyen rendszer lefejlesztése, továbbá a szükséges erőforrások is rendelkezésre <br>
+állnak, és igénybevételük nem jelent peoduktivitás visszaesést a fejlesztési idő <br> 
+alatt sem. Valamint még arra a következtetésre jutottunk, hogy a rendszer elkészülte <br>
+pozitav hatással lesz munkára, mivel időt spórolnak majd a felhasználók, ha nem <br>
+kell harmadik féltől származó platformokon keresztül kommunikálniuk és kevesebb <br>
+időt vesz majd igénybe a láthatóság, valamint jogosultságok kezelése is. <br> 
 
 
 ## 5. Igényelt üzleti feladatok
