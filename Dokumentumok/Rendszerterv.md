@@ -394,7 +394,7 @@ logikát implementáló függvények szükségszerűen JUnit tesztek segitségé
 tesztelés alá. Ezen kívül további manuális teszt vár a programra élesítés előtt. <br>
 Tesztesetek megtekinthetőek az alábbi táblázatban:
 
-| Sorszám | Teszt leírása | Elvárt eredmény|
+| Sorszám | Teszt leírása | Elvárt viselkedés |
 |---|---|---|
 | MT01 | A program elindítása | A program sikeresen induljon el|
 | MT02 | A regisztrációs felület elérése | A felület legyen elérhető |
@@ -413,6 +413,35 @@ Tesztesetek megtekinthetőek az alábbi táblázatban:
 | MT16 | Fájl szerkesztése megfelelő jogosultsággal nélkül | Sikertelen szerkesztés, jogosultság hiányának jelzése |
 | MT17 | A platform elérése céges hálózatról | Sikeres elérés |
 | MT18 | A platform elérése külső hálózatról | Sikertelen elérés, hiba jelzése |
+| MT19 | A platform elérése külső hálózatról céges hálózaton keresztül | Sikeres elérés |
+| MT20 | Felhasználói adatok módosítása a megszorításokat kielégítve | Sikeres módosítás |
+| MT20 | Felhasználói adatok módosítása helytelen adatokkal | Sikertelen módosítás, hiba jelzése |
+| MT21 | Fájl törlése megfelelő jogosultsággal | Sikeres törlés |
+| MT22 | Fájl törlése megfelelő jogosultsággal nélkül | Sikertelen törlés, jogosultság hiányának jelzése |
+| MT23 | Fájl keresés létező felhasználónév szerint | Sikeres keresés, találatok megjelenítve |
+| MT25 | Fájl keresés nem létező felhasználónév | Sikeres keresés, nemlétező felhasználónév jelzése |
+| MT26 | Fájl küldése létező felhasználónak | Sikeres fájlküldés, 2. felhasználó megkapja az üzenetet és emailt |
+| MT27 | Fájl küldése nem létező felhasználónak | Sikertelen fájlküldés, hiba jelzése |
+
+  A manuális tesztek elvégzését a fejlesztők végzik el egymástól függetlenül.
+Megszorítások a manuális tesztek elvégzésével kapcsolatban:
+* Minden tesztet legalább három alkalommal kell elvégezni.
+* Amennyiben a teszt megkövetel valamilyen input információt, úgy ennek az <br>
+információnak minden alkalommal változnia kell. <br>
+* Amennyiben valamelyik teszt eset során a szoftver nem az elvárt viselkedést <br>
+produkálja, úgy jegyjőkönyv készítése <b>KÖTELEZŐ!</b>. A jegyzőkönyv magába kell, <br>
+hogy foglalja a teszteset kódját, az input adatokat (amennyiben létezik) és a <br>
+viselkedés pontos leírását. Képernyőfelvételek csatolása nem kötelező, egyes <br>
+esetekben ajánlott. Ez az eseti jegyzőkönyv nem helyettesíti az átfogó tesztelési <br>
+jegyzőkönyvet. Azt mindenképp külön kell elkészíteni, valamint feltölteni a megfelelő <br>
+helyre. <br>
+* Minden tesztelő személy a teszt elvégzése során tesztelési jegyzőkönyvet kell, hogy <br>
+készítsen. Az ajánlott formátum jegyzőkönyv számára egy táblázat, hasonló a fentihez. <br>
+A harmadik oszlopban kell különbözniük: "Elvárt viselkedés" helyett "Valós viselkedés". <br>
+A harmadik oszlopban kétféle eredmény szerepelhet: "Sikeres teszt" vagy "Sikertelen <br>
+teszt". Amennyiben sikertelen volt a teszt, abban az esetben a "Sikertelen teszt" <br>
+jelzőn kívül be kell linkelni a sikertelen teszt jegyzőkönyvét is, amely megszorításait <br>
+fentebb már olvashattuk. <br>
 
 # 11. Telepítési Terv:
   
