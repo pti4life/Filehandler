@@ -364,6 +364,21 @@ Az webalkalmazás adatbázishoz való kapcsolódásához a Hybernate<br>
 keretrendszer megoldásait fogjuk használni az adatbázis műveletekhez<br>
 mert egy jól kiforrott, nagy felhasználóbázissal rendelkező keretrendszerről<br>
 van szó.<br>
+
+  Az okok, ami miatt a Hibernate keretrendszrre esett a választás: <br>
+* A keretrendszer magához az adatbázishoz csatlakozik és HQL-t használ a lekérdezések <br>
+kivitelezéséhez.
+* Az objektumok mapelését mi tudjuk konfigurálni a "Hibernate configuration XML" fájl <br>
+segítségével.
+* Az úgynevezett impedancia eltérések előfordulása esetén a Híbernate többynire <br>
+külső beavatkozás nélkül tudja elhárítani a hibát. <br>
+* Adatbázis táblázat változás esetén minimálisan kell a kódot változtatnunk. <br>
+* Minimális a kódduplikáció (ellentétben a JDBC-vel) <br>
+* "try-catch" blokkok hanyagolhatóak.
+  A fenti okokból kifolyólag nyilvánvalóvá válik, hogy a Hibernate sok szempontból <br>
+nagyon jó választás. Nem csak a teljesítményt növeli, de fejlesztési időt is nagy <br>
+mértékben csökkenti, ezáltal kevesebb erőforrást igényel a fejlesztési folyamat. <br>
+
 ### Adatbázis modell:<br>
 ![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/database.jpg)
 
