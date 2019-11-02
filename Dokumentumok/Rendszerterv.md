@@ -250,6 +250,16 @@ keretrendszerrel.
 
 
 # 7. Absztrakt domain modell:
+
+  A projekt absztrakció szempontjából három részre osztható fel:
+* Felhasználó
+* Szerver
+* További felhasználók
+
+  Kapcsolatukat a szerver biztosítja.
+
+![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/Untitled_Diagram.svg)
+
 # 8. Architekturális terv:
 Az architekturális minta a Modell-View-Controller sémára fog épülni kisebb<br>
 módosításokkal amelyeket a SpringMVC keretrendszer bíztosít számunkra.<br>
