@@ -375,3 +375,14 @@ Tesztesetek megtekinthetőek az alábbi táblázatban:
   Egy böngészőből elérhető rendszerről beszélünk, így a telepítés csupán <br>
 a szerver környezetben szükséges. Ezt a telepítést a fejlesztők végzik el <br>
 különböző keretrendszerek segítségével. <br>
+
+# 12. Karbantartási Terv:
+
+  A platform nem igényel jelentős karbantartást. Elavult, valamint nem releváns <br>
+fájlok törlése elengedhetetlen, azonban ezeket a müveleteket a megfelelő jogosultsággal <br>
+rendelkező felhasználók kivitelezhetik bármikor, így ez nem igényel külsős <br>
+segítségét. <br>
+  Funkcionalitás bővítése esetén merülhetnek fel kompatibilitási problémák, ezen <br>
+problémák elkerülésének érdekében bővítés esetén precízen kell megtervezni az <br>
+új verziókat. Új releváns tesztek létrehozása és futtatása is szükszéges lehet <br>
+egyes esetekben. <br>
