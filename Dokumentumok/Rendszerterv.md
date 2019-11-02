@@ -1,6 +1,17 @@
 # 1. A rendszer célja:
 
-  A projekt elsődleges célja egy fájlkezelő-/fájlmegosztó-rendszer fejlesztése, <br>
+  Jelenleg a cég dolgozói különböző platformokat használnak a szükséges fájlok<br>
+megosztásához (pl. Google Drive, Facebook Messenger stb). Ez nem csupán azt jelenti, <br>
+hogy nem egységes a dokumentummegosztás, de biztonsági kockázatokat is nagy mértékben <br>
+növeli. Harmadik féltől származó üzenetküldési platformokon nagyon könnyű félre<br>
+kattintani, ennek következményében olyan személyek juthatnak céges információkhoz, <br>
+akik semmilyen kapcsolatban nem állnak a céggel. Ez súlyos következményekhez vezethet, <br>
+akár jogi ügy is keletkezhet belőle. Fájlmegosztó platformokon sem nehéz hibázni <br>
+apró figyelmetlenség miatt. Nyilvános láthatósági jelzővel ellátott fájlokat és <br>
+mappákat bárki megtekinthet esetleg módosíthat is rajtuk, amennyiben rájuk bukkan. <br>
+Nyilvánvaló, hogy ezzel is jelentős kockázat jár a cég jövőjére nézve. Célunk ezt<br>
+a kockázatott minimalizálni. <br>
+  A projekt célja továbbá egy fájlkezelő-/fájlmegosztó-rendszer fejlesztése, <br>
 amely megfellő funkcionalitást implementál a cég dolgozói számára. Alkalmazása <br>
 egységesítené a cégen belüli kommunikációt és a szükséges dokumentumok elérhetővé <br>
 tételét a megfelelő személyek számára. Ezek mellet elsődleges a dokumentumok<br>
@@ -12,6 +23,29 @@ elérni a rendszer modernizálásával, hogy a cégen belüli fájlok átvitele 
 származó platformok kommunikációs célra történő használatát, azaz szeretnénk <br>
 saját platformunk segítségével elérni, hogy kizárólag azon keresztül történjen <br>
 a cégen belüli kommunikáció. <br> 
+  Felhasználóknak lehetőségük legyen egymás közötti kommunikációs csatorna létrehozására <br>
+a platformon belül. Az adott csatorna lehetőséget nyújt szöveges üzenet küldésére <br>
+valós időben, valamint fájlok küldésére és fogadására is. <br>
+  A felhasználóknak legyen lehetőségük azon dokumentumok szerkesztésére platformon <br>
+belül, amelyekhez megvan a megfelelő jogosultságuk. <br>
+  Cél, hogy a felülethez csupán céges hálózatról lehet hozzáférni, viszont szükséges <br>
+lehet egyes esetekben, hogy külső hálózatról is elérhető legyen a rendszer. Ennek a <br>
+problémának a kiküszöbölésére egyszerű a megoldás. Először is a céges hálózat <br>
+elérhető külső hálózatokról is a dolgozók számára. Csatlakozás után, már lehetőség <br>
+nyílik a szoftver elérésére is minden felhasználó számára. Ez azt jelenti, hogy <br>
+külső csatlakozás esetén minden felhasználónak egy kétlépcsős hitelesítésen kell <br>
+átesnie, ami természetesen még biztonságosabbá teszi a platformot. <br>
+  Továbbá a célok közé tartozik az is, hogy saját rendszerünk előnyei közé soroljuk <br>
+még a teljesmértékben az igényekhez szabott felhasználói felületet, ami ezáltal <br>
+nagyon felhasználóbarát is egyben. Ez még azt a pozitívumot is magával vonja, <br>
+hogy egy új munkatárs bekerülése esetén nem vesz igénybe sok időt a betanítása. <br>
+Későbbiekben akár a betanítási folyamat is automatizálható. <br>
+  Jelenleg úgy gondoljuk, hogy a szóban forgó platform lefejlesztésével az összes <br>
+említett cél elérhető, valamint a biztonságot is tovább tudjuk növelni, illetve <br>
+a dolgozók munkáját egyszerűsíteni, hanem ezeken felül az átfogó produktivitást <br>
+is tudjuk növelni, mivel a kollégáknak nem kell időt tölteni azzal, hogy melyik <br>
+fájlt hol osszák meg, valamint könnyen tudják elérni munkatársaikat, amennyiben <br>
+szükség van az egyes feladatok megbeszéléséhez. <br>
 
 # 2. Projekt terv:
 
