@@ -18,53 +18,53 @@ a dokumentáció kiemelt figyelmet igényel, hisz egy nagy cégnél több részl
 állhat a gyártási folyamat. Ezek a részlegek egymással kommunikálnak hosszú<br>
 dokumentációk, képek, tervrajzok és hanganyag formájában is, illetve ezeknek a <br>
 kommunikációs folyamatoknak is nyomonkövethetőnek kell lennie. A cégnél a dokumentációs<br>
-munkálatok nagyrészt papír alapon működnek amelyek rendkívül lassúak pedig az<br>
+munkálatok nagyrészt papír alapon működnek, amelyek rendkívül lassúak pedig az<br>
 internet és a hálózatok megjelenésével jelentősen lehet gyorsítani a manuálisan <br>
 elvégezhető munkák nagy részét, ez az egyik fő ok amiért szeretnénk forradalmasítani<br>
-a gyár működését. Ezen kívül amikor a dokumentációs és egyéb a gyártási folyamathoz<br>
+a gyár működését. Ezen kívül, amikor a dokumentációs és egyéb a gyártási folyamathoz<br>
 szükséges anyagok leadása/átvitele történik az illetékes személyhez/személyekhez<br>
 mindkét félnek jelen kell lennie az átadásnál mert más esetben nyomonkövethetetlen<br>
-lenne a dokumentumok áramlása ami további problémákhoz vezethet. Ezek könnyen <br>
-automatizálható folyamatok amelyek, további időt vesznek el a tényleges munkaidőből<br>
+lenne a dokumentumok áramlása, ami további problémákhoz vezethet. Ezek könnyen <br>
+automatizálható folyamatok, amelyek további időt vesznek el a tényleges munkaidőből<br>
 azaz csökken a gyár effektív munkavégzése. Ezek mellett az emberi hiba esélye is<br>
-sokkal nagyobb hisz fenn áll a veszélye, hogy a dokumentációk nem jutnak el időben<br>
+sokkal nagyobb hisz fennáll a veszélye, hogy a dokumentációk nem jutnak el időben<br>
 a cég többi részlegéhez, esetleges illetékes emberekhez. Biztonsági kockázatok is<br>
-fennállnak mert fizikailag a dokumentumokat el kell helyezni valahol, és fenn áll<br>
+fennállnak mert fizikailag a dokumentumokat el kell helyezni valahol, és fennáll<br>
 a veszélye, hogy ezekhez illetéktelen személyek is hozzáférnek. Egy professzionális<br>
 rendszer ezeket a folyamatokat gyökeresen megváltoztatná, a cég működése mérföldekkel<br>
 effektívebb, biztonságosabb lenne hisz bármilyen dokumentum másolata továbbítható<br>
-a rendszerben szereplő felhasználóknak amiről automatikus értesítést kap a célszemély<br>
+a rendszerben szereplő felhasználóknak, amiről automatikus értesítést kap a célszemély<br>
 akinek a dokumentumok el lettek küldve.
 
 ## 3. Vágyálom rendszer
-A cél egy oylan rendszer konstruálása amely segítségével a cég képes a belső <br>
-folyamatait jelentősen gyorsítani, hatákonyabbá tenni. Nem elhanyagolható szempont<br>
+A cél egy olyan rendszer konstruálása, amely segítségével a cég képes a belső <br>
+folyamatait jelentősen gyorsítani, hatékonyabbá tenni. Nem elhanyagolható szempont<br>
 a továbbfejleszthetőség. Tehát a rendszer és annak bármilyen állapotától függetlenül<br>
 könnyen, gyorsan és olcsón továbbfejleszthető legyen. A rendszernek teljesen <br> 
-biztonságosnak kell lennie, hisz a munka hatákonyabbá tételén kívül a biztonság<br>
+biztonságosnak kell lennie, hisz a munka hatékonyabbá tételén kívül a biztonság<br>
 garantálása.<br>
 További célok:
 * Biztonságosabb legyen mint a fizikai, automatizálás nélküli üzleti folyamatok.<br> 
-* Olyan fájlkezelő rendszerre van szükség amely webböngészőből elérhető.
-* Fontos hogy az adatok könnyen nyomon követhetőek legyenek a bizalmas<br>
+* Olyan fájlkezelő rendszerre van szükség, amely webböngészőből elérhető.
+* Fontos, hogy az adatok könnyen nyomon követhetőek legyenek a bizalmas<br>
 információk kiszivárgásának elkerülése végett. 
 * A felhasználók adatait adatbázisban tárolja a szoftver míg a fájlokat a szerveren<br>
  felhasználók szerint különböző mappákban. 
-* Regisztrációkor minden felhasználó User jogosultsággal rendelezzen.
-* Felhasználók törlésére csak az adatbázis adminisztátornak lehessen lehetősége.
-* Webes védelemről gondoskodik az is hogy helyi lokális szerveren fog futni az alkalmazás
+* Regisztrációkor minden felhasználó User jogosultsággal rendelkezzen.
+* Felhasználók törlésére csak az adatbázis adminisztrátornak lehessen lehetősége.
+* Webes védelemről gondoskodik az is, hogy helyi lokális szerveren fog futni az alkalmazás
 így csak az itt dolgozók férhetnek hozzá.
 
 Ezzel a szolgáltatással leginkább a dokumentáció, papírmunka menedzselése válik <br> 
 könnyebbé. Mivel egy fájlkezelő szolgáltatásról beszélünk ezért más egyéb dolgokra<br>
-is használható ahol értelmezhető fájlokkal való munka.
+is használható, ahol értelmezhető fájlokkal való munka.
 
 ## 4. Jelenlegi üzleti folyamatok
 
-  Jelenleg a cég dolgozói külónböző platformokat használnak a szükséges fájlok<br>
+  Jelenleg a cég dolgozói különböző platformokat használnak a szükséges fájlok<br>
 megosztásához (pl. Google Drive, Facebook Messenger stb). Ez nem csupán azt jelenti, <br>
 hogy nem egységes a dokumentummegosztás, de biztonsági kockázatokat is nagy mértékben <br>
-növeli. Harmadik féltől száramzó üzenetküldési platformokon nagyon könnyű félre<br>
+növeli. Harmadik féltől származó üzenetküldési platformokon nagyon könnyű félre<br>
 kattintani, ennek következményében olyan személyek juthatnak céges információkhoz, <br>
 akik semmilyen kapcsolatban nem állnak a céggel. Ez súlyos következményekhez vezethet, <br>
 akár jogi ügy is keletkezhet belőle. Fájlmegosztó platformokon sem nehéz hibázni <br>
@@ -72,7 +72,7 @@ apró figyelmetlenség miatt. Nyilvános láthatósági jelzővel ellátott fáj
 mappákat bárki megtekinthet esetleg módosíthat is rajtuk, amennyiben rájuk bukkan. <br>
 Nyilvánvaló, hogy ezzel is jelentős kockázat jár a cég jövőjére nézve. <br>
   Ezeket és ezekhez hasonló biztonsági réseket hivatott betömni a mi rendszerünk. <br>
-A biztonsági szint javulásn kívül a rendszer egységesíti is ezeket a müveleteket. <br>
+A biztonsági szint javulásán kívül a rendszer egységesíti is ezeket a műveleteket. <br>
 Ez azt is jelenti, hogy kisebb az esély felhasználók által elkövetett hibákra, <br>
 mivel csak olyan funkciók kerülnek implementálásra, amelyek feltétlen szükségesek. <br>
 Továbbá, az esetleges hibázás esetén - aminek az esélye minimalizálva van - könnyű <br>
@@ -86,7 +86,7 @@ a pontok a rendszerben, amelyeken még elvárnak valamilyen módosítást. Így 
 a felhasználók igényére szabható a platform. Ez maximalizálja a felhasználóbarát <br>
 felület megalkotását és minimalizálja a betanuló időt egy új kolléga bekerülése <br>
 esetén. <br>
-  A rendszer biztonságát természetesen még az is növeli, hogy kizrólag cégres <br>
+  A rendszer biztonságát természetesen még az is növeli, hogy kizárólag céges <br>
 hálózatról lehet elérni. Ez növel ugyan a biztonságon, viszont egyes esetekben <br>
 kényelmetlenséget is okozhat. Ez abban mutatkozik meg, hogy előfordul olyan <br>
 eset amikor munkaidőn kívül kell hozzáférni egy dokumentumhoz, azaz nincs lehetőség <br>
@@ -97,11 +97,11 @@ csak ezután, már céges hálózaton belül, csatlakozunk a rendszerre. Tehát 
 elérés esetén gyakorlatilag még egy biztonsági falat húzunk. Így, ha a cég egyik <br>
 dolgozója külső hálózatról szeretne csatlakozni, akkor egy két lépcsős biztonsági <br>
 vizsgálaton kell átesnie. <br>
-  Végső konkluzióként arra jutottunk, hogy nyilvánvalóan rengeteg előnnyel jár <br>
+  Végső konklúzióként arra jutottunk, hogy nyilvánvalóan rengeteg előnnyel jár <br>
 egy ilyen rendszer lefejlesztése, továbbá a szükséges erőforrások is rendelkezésre <br>
-állnak, és igénybevételük nem jelent peoduktivitás visszaesést a fejlesztési idő <br> 
+állnak, és igénybevételük nem jelent produktivitás visszaesést a fejlesztési idő <br> 
 alatt sem. Valamint még arra a következtetésre jutottunk, hogy a rendszer elkészülte <br>
-pozitav hatással lesz munkára, mivel időt spórolnak majd a felhasználók, ha nem <br>
+pozitív hatással lesz munkára, mivel időt spórolnak majd a felhasználók, ha nem <br>
 kell harmadik féltől származó platformokon keresztül kommunikálniuk és kevesebb <br>
 időt vesz majd igénybe a láthatóság, valamint jogosultságok kezelése is. <br> 
 
@@ -109,10 +109,10 @@ időt vesz majd igénybe a láthatóság, valamint jogosultságok kezelése is. 
 ## 5. Igényelt üzleti feladatok
 
 * Regisztráció:<br>
-  A Regisztrációhoz egyedi és valós email-cím,egyedi felhasználónév továbbá<br>
-  jelszó és jelszó megőrősítést adjon meg a felhasználó amellyeknek mindegyikét<br>
-  validálni is kell hogy helyesen töltette-e ki az adatokat amenyiben nem<br>
-  megfelelő hiba üzenet jelenik meg amenyiben helyes át irányítjuk a bejelentkezésre.
+  A Regisztrációhoz egyedi és valós email-cím, egyedi felhasználónév továbbá<br>
+  jelszó és jelszó megerősítést adjon meg a felhasználó amelyeknek mindegyikét<br>
+  validálni is kell, hogy helyesen töltette-e ki az adatokat amennyiben nem<br>
+  megfelelő hiba üzenet jelenik meg amennyiben helyes át irányítjuk a bejelentkezésre.
 
 * Bejelentkezés:<br>
   A már regisztrált felhasználóknak felhasználónevet és jelszót kell megadjanak<br>
@@ -123,26 +123,26 @@ időt vesz majd igénybe a láthatóság, valamint jogosultságok kezelése is. 
 
 * Fájlok megjelenítése:<br>
   A felület csak a bejelentkezett felhasználók számára elérhető Egy listában <br>
-  jelenik meg a tárolt fájlok neve módosítási dátuma mérete.A lista továbbá<br>
-  rendezhető alapértelmezetten név szerint rendezett és öttösével jelenik meg egy lapon<br>
+  jelenik meg a tárolt fájlok neve módosítási dátuma mérete. A lista továbbá<br>
+  rendezhető alapértelmezetten név szerint rendezett és ötösével jelenik meg egy lapon<br>
 
 * Fájl keresése:<br>
   A felhasználónak fájl név megadásával lehetősége van fájlok keresésére a listából
 
 * Fájl feltöltés:<br>
-  A felhasználó saját gépéről való tallózásal tud új fájlokat feltölteni amely <br>
+  A felhasználó saját gépéről való tallózással tud új fájlokat feltölteni amely <br>
   sikeres feltöltés után a listában jelenik meg és eltárolódik a megfelelő helyen.
 
 * Fájl törlése:<br>
-  A felhasználó a listából tud fájlokat törölni.Törlés után a fájl törlődik<br>
+  A felhasználó a listából tud fájlokat törölni. Törlés után a fájl törlődik<br>
   mind a listából mind a tárolási helyről és az adatbázisból.
 
 * Fájl letöltése:<br>
   A felhasználó a listából kiválasztott fájlt letölti a saját számítógépére. 
 
 * Fájl küldése:<br>
-  A felhasználó tud  a listából kijelöléssel egy,vagy egyszerre több fájlt<br>
-  tövábbítani más felhasználóknak ehhez meg kell adniuk a címzett felhasználónevét.<br>
+  A felhasználó tud a listából kijelöléssel egy, vagy egyszerre több fájlt<br>
+  továbbítani más felhasználóknak ehhez meg kell adniuk a címzett felhasználónevét.<br>
   Sikeres küldéskor a fájlokról a másik felhasználó másolatot kap. Az ilyen<br> 
   módon kapott fájlokat is ugyanúgy lehet látni és kezelni, mint a saját maga<br>
   által létrehozott fájlokat. A másolatokról láthatónak kell lennie,<br> 
@@ -153,14 +153,14 @@ időt vesz majd igénybe a láthatóság, valamint jogosultságok kezelése is. 
 
 * Szöveges fájl készítése:<br>
   A felhasználó tud új szöveges fájlt létrehozni és az oldalon keresztül<br>
-  felvinni a tartalmát.Ezek a fájlok mentés után ugy úgy tárolódnak mint<br>
-  a feltöltött fájlok és megjelennek a listában és végre hajthatóak rajta<br>
-  a műveletek.Megadhatóak azonos névvel is fájlok
+  felvinni a tartalmát. Ezek a fájlok mentés után úgy tárolódnak mint<br>
+  a feltöltött fájlok és megjelennek a listában és végrehajthatóak rajta<br>
+  a műveletek. Megadhatóak azonos névvel is fájlok.
 
 
 * Szöveges fájl szerkesztése:<br>
   A felhasználó mind a feltöltött a fogadott és a felületen készített szöveges<br>
-  fájlokat eléri és tudja szerkeszteni azok tartalmár mentés után visza kerül<br>
+  fájlokat eléri és tudja szerkeszteni azok tartalmát mentés után vissza kerül<br>
   a listába az új módosítási dátummal
 
 * Felhasználó név módosítás:<br>
@@ -178,4 +178,4 @@ időt vesz majd igénybe a láthatóság, valamint jogosultságok kezelése is. 
 ### 6. Fogalom szótár
 * regisztrált felhasználó: Az a felhasználója a szolgáltatásnak, amely a regisztrációs folyamatot<br> 
 sikeresen végrehajtotta ezáltal bekerült a rendszerbe és az adatait használva sikeres bejelentkezést tud végrehajtani.
-* bejelentkezés: Az a folyamat amely után a regisztrált felhasználó elérheti a webszolgáltatás által nyújtott funkciók lényegi részét. 
+* bejelentkezés: Az a folyamat, amely után a regisztrált felhasználó elérheti a webszolgáltatás által nyújtott funkciók lényegi részét.
