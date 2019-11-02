@@ -3,9 +3,9 @@
 ## 1. Vezetői összefoglaló
 
   A projekt elsődleges célja egy fájlkezelő-/fájlmegosztó-rendszer fejlesztése, <br>
-amely megfellő funkcionalitást implementál a cég dolgozói számára. Alkalmazása <br>
+amely megfelelő funkcionalitást implementál a cég dolgozói számára. Alkalmazása <br>
 egységesítené a cégen belüli kommunikációt és a szükséges dokumentumok elérhetővé <br>
-tételét a megfelelő személyek számára. Sajnos jelnleg nem üzemel olyan belső <br>
+tételét a megfelelő személyek számára. Sajnos jelenleg nem üzemel olyan belső <br>
 rendszer a cégnél, amely ezeket a feladatokat el tudná látni, viszont már jelentős <br>
 igényt látunk egy ilyen platform létrehozására. <br>
   A szoftver lehetőséget kell, hogy biztosítson új felhasználó létrehozására. A <br>
@@ -34,12 +34,12 @@ személyes tapasztalatokat figyelembe véve legmegfelelőbb technológiai hátte
 a szerver oldalon a PHP programozási nyelvet találtuk. Továbbá a webalkalmazást <br>
 futtató szerver szolgáltatás könnyen és olcsón található, széles a választék mert <br>
 egy nagyon népszerű technológiáról beszélünk. A projekthez végig verziókezelő <br>
-rendszert fogunk használni ami lehetővé teszi, hogy a csapat minden tagja, bármikor <br>
+rendszert fogunk használni, ami lehetővé teszi, hogy a csapat minden tagja, bármikor <br>
 bárhonnan akár egyszerre tudjon dolgozni úgy, hogy az egész fejlesztési folyamat nem <br>
 omlik össze. A fejlesztést agilis módszertan szerint fogjuk végezni. Ez azt jelenti <br>
 Önöknek, hogy a projekt elkészítése Sprintekre lesz bontva és minden Sprint végén <br> 
 törekszünk olyan eredményre, amit a felhasználó ki tud próbálni, interaktálni tud vele. <br>
-Ennek következtében az ügyfél nem a végén kap egy teljesen kész projektet hanem fokozatosan <br>
+Ennek következtében az ügyfél nem a végén kap egy teljesen kész projektet, hanem fokozatosan <br>
 az új funkciókkal ismerkedve kapja kézhez a projektjét. Ennek egyik előnye, hogy<br>
 végig követhető a fejlesztés másik előnye, hogy az ügyféllel minden sprint végén<br>
 egy meeting keretein validálhatjuk, összefoglalhatjuk az eddig elért eredményeket<br>
@@ -48,10 +48,10 @@ egy meeting keretein validálhatjuk, összefoglalhatjuk az eddig elért eredmén
 
 
 ## 3. Vágyálom rendszer
-  A Programot a cég alkamazottai fogják főképpen használni céges folyamatok<br>
+  A Programot a cég alkalmazottai fogják főképpen használni céges folyamatok<br>
   megkönnyítésére és gyorsítására ezért elsődleges szempont lehet a biztonság<br>
   ezért a program a cég lokális hálózatáról lesz csak és kizárólag elérhető<br>
-  ezzel elér hogy kivülről ne lehessen hozzá férni. A cég szempontjából <br>
+  ezzel elér, hogy kívülről ne lehessen hozzá férni. A cég szempontjából <br>
   szükség van erőforrásra a fájlok és adatok tárolása miatt továbbá az adatbázishoz<br>
   Megvalósításhoz php-t fog használni backendre és mysql adatbázist a hiszen erre a célra<br>
   ez a legoptimálisabb megoldás. Az sql adatbázis miatt könnyen tudjuk majd<br>
@@ -63,38 +63,38 @@ egy meeting keretein validálhatjuk, összefoglalhatjuk az eddig elért eredmén
   fájlokat ez növelné a biztonságot hiszen minden felhasználót nyomon lehet<br>
   követni egy egyszerűen használható felületről további lehetősége a rendszergazdának<br>
   felhasználók törlése elfelejtett jelszó esetén pedig új jelszó adása <br>
-  amennyiben valóban jogosult rá a felhasználó.Jelenleg viszont a program<br>
-  korábbi változataiban ezeket a lehetőségeket az adatbázis adminisztátornak<br>
-  kell elvégeznie.A felhasználóknak regisztráció után majd bejelentkezéshez<br>
-  kötött ez a jelenlegi változatban csak ahoz lesz kötve hogy a cég hálózatáról<br>
+  amennyiben valóban jogosult rá a felhasználó. Jelenleg viszont a program<br>
+  korábbi változataiban ezeket a lehetőségeket az adatbázis adminisztrátornak<br>
+  kell elvégeznie. A felhasználóknak regisztráció után majd bejelentkezéshez<br>
+  kötött ez a jelenlegi változatban csak ahhoz lesz kötve, hogy a cég hálózatáról<br>
   lép be a rendszerbe a felhasználó későbbi változatban referencia felhasználóhoz<br>
-  lesz kötve a regisztrálás aki emailt-kap és meg kell erősítenie a regisztrálást<br>
-  ezzel kiszűrve a jogosulatlan hozzá féréseket amely tovább növeli a biztonságot<br>
-  A felhasználók egyszerű tallózásal tölthetnek fel fájlokat későbbi <br>
+  lesz kötve a regisztrálás, aki emailt-kap és meg kell erősítenie a regisztrálást<br>
+  ezzel kiszűrve a jogosulatlan hozzáféréseket, amely tovább növeli a biztonságot<br>
+  A felhasználók egyszerű tallózással tölthetnek fel fájlokat későbbi <br>
   változatban az egyszerűbb és gyorsabb használhatóság miatt elég lesz <br>
   csupán a fájlt behúzni a böngésző ablakba. Sikeres feltöltésnél az adatbázis<br>
-  és a szerver megfelelő particiója tárolja  a fájlt.További lehetőséget<br>
-  nyújt fájlok törlésére és továbbításra a cimzett felhasználó nevének <br>
+  és a szerver megfelelő partíciója tárolja a fájlt. További lehetőséget<br>
+  nyújt fájlok törlésére és továbbításra a címzett felhasználó nevének <br>
   megadásával továbbítható egyszerre egy vagy akár több fájl is kijelöléssel<br>
-  a cimzett másolatot fog kapni a fájlról és ezeket ugyan úgy éri el mint az <br>
-  általa feltöltött fájlokat. A címzett email értesíst kap amely tartalmazza <br>
-  a küldő felhasználónevét és az elküldött fájl nevét. A program  későbbi verziójában <br>
+  a címzett másolatot fog kapni a fájlról és ezeket ugyan úgy éri el mint az <br>
+  általa feltöltött fájlokat. A címzett email értésest kap, amely tartalmazza <br>
+  a küldő felhasználónevét és az elküldött fájl nevét. A program későbbi verziójában <br>
   lehetőség lesz ezeket a fájlokat titkosítva küldeni növelve ez által a biztonságot<br>
-  továbbá a felhasználónév irásakor a program automatikus kiegészítésel<br>
-  teszi még könnyebé a felhasználó dolgát.Lehetőség lesz a meglévő fájlok között<br>
+  továbbá a felhasználónév írásakor a program automatikus kiegészítéssel<br>
+  teszi még könnyebé a felhasználó dolgát. Lehetőség lesz a meglévő fájlok között<br>
   keresni későbbiekben szintén használva az automatikus kiegészítést<br>
-  a kereséshez a fájlokat egy listában jelenitjük meg ahol végre hajthatóak<br>
+  a kereséshez a fájlokat egy listában jelenítjük meg ahol végrehajthatóak<br>
   rajtuk a fent említett műveletek továbbá lehetőség van fájlok letöltésére<br>
   a fájloknál feltűntetjük azok nevét méretét típusát és opcionálisan<br>
   amennyiben a fájlt küldték a küldő felhasználó nevét ezzel növelve a <br>
-  nyomonkövethetőséget továbbá a módosítás dátumát is fel tűntetjük.<br>
+  nyomonkövethetőséget továbbá a módosítás dátumát is feltűntetjük.<br>
   A felhasználóknak az alkalmazás egy külön lapján van lehetősége szöveges<br>
   formátumú fájlok létrehozására azok tartalmának megírására és szerkesztésére<br>
-  az igy készített fájlokat is ugyan úgy tároljuk mint a hagyományosan<br>
-  feltöltött fájlokat.Továbbá lehetőség lesz a felhasználóknak a felhasználónév<br>
-  és a jelszó módosítársára. A fájl kezelőt nem csak asztali számítógépről lehet<br>
-  használni ezért a weboldalnak reszponzívnak kell lennie hogy azt pc-ről<br>
-  táblagépről és telefonról egyaránt használható és át tekinthető  legyen.
+  az igy készített fájlokat is ugyan úgy tároljuk, mint a hagyományosan<br>
+  feltöltött fájlokat. Továbbá lehetőség lesz a felhasználóknak a felhasználónév<br>
+  és a jelszó módosítására. A fájl kezelőt nem csak asztali számítógépről lehet<br>
+  használni ezért a weboldalnak reszponzívnak kell lennie, hogy azt pc-ről<br>
+  táblagépről és telefonról egyaránt használható és át tekinthető legyen.
 
 ## 4. Jelenlegi üzleti folyamatok
 
@@ -102,7 +102,7 @@ egy meeting keretein validálhatjuk, összefoglalhatjuk az eddig elért eredmén
 a munkatársak közötti kommunikációt és fájlmegosztást. Ennek következtében az <br>
 alkalmazottak arra vannak kényszerítve, hogy valamely harmadik féltől származó <br>
 szoftver segítségével valósítsák meg ezeket a feladataikat. Ez a módszer több <br>
-problémát is hordoz magával. Legnagyobb figyelmet egyértleműen a biztonság érdemli. <br>
+problémát is hordoz magával. Legnagyobb figyelmet egyértelműen a biztonság érdemli. <br>
 Mivel az sincs megszabva milyen platformokat használhatnak, akár minden alkalommal <br>
 más szoftvert is igénybe vehetnek. Ezáltal nagyon sok csatornán keresztül terjednek, <br>
 az esetenként nagyon bizalmas, céges adatok. <br>
@@ -132,16 +132,16 @@ bekerülése esetén nem vesz igénybe sok időt a betanítása. Későbbiekben 
 betanítási folyamat is automatizálható. <br>
   Jelenleg úgy gondoljuk, hogy a szóban forgó platform lefejlesztésével nem csak <br>
 a biztonságot tudjuk tovább növelni, valamint a dolgozók munkáját egyszerűsíteni, <br>
-hanem ezeken felül az átfogó produktivitást is tudjuk növelni, mivel a kolégáknak <br>
+hanem ezeken felül az átfogó produktivitást is tudjuk növelni, mivel a kollégáknak <br>
 nem kell időt tölteni azzal, hogy melyik fájlt hol osszák meg, valamint könnyen <br>
-tudják elérni munkatársaikat, amennyiben szügség van az egyes feladatok megbeszéléséhez. <br>
+tudják elérni munkatársaikat, amennyiben szükség van az egyes feladatok megbeszéléséhez. <br>
 
 ## 5. Igényelt üzleti feladatok
 
-* A szolgáltatásnak 3 fő része legyen, a bejelntkezés, regisztráció, és a nyitó oldal<br>
+* A szolgáltatásnak 3 fő része legyen, a bejelentkezés, regisztráció, és a nyitó oldal<br>
 * A felhasználó először a nyitóoldallal találkozzon.
 
-* A rendszer használata előzetes regisztrációhoz kötött amit helyen kitöltve <br>
+* A rendszer használata előzetes regisztrációhoz kötött, amit helyen kitöltve <br>
 a felhasználó bekerül az adatbázisba, így bejelentkezés után használhatja a rendszert. <br>
 Sikeres regisztrációhoz szükség van:
     * E-mail címre
@@ -157,13 +157,13 @@ a beírt adatokon:
     * Létezik-e a felhasználó
     * Ha létezik a felhasználó akkor jó-e a jelszava
 
-* A validcáiós folyamatok megfelelő visszajelzést is adnak eredményükről.<br>
+* A validációs folyamatok megfelelő visszajelzést is adnak eredményükről.<br>
 * Sikertelen bejelentkezés esetén egy hibaüzenetet olvashat a felhasználó.<br>
 * Sikeres bejelentkezés esetén átirányít a fájl listára és több funkció is <br>
 elérhetővé válik a sikeres bejelentkezést követően.<br>
 
 
-* Fontos hogy a fájl lista akkor és csak akkor látható ha a felhasználó<br>
+* Fontos, hogy a fájl lista akkor és csak akkor látható ha a felhasználó<br>
   sikeresen bejelentkezett!
 * A fájl listán egy táblázatban látható a fájlok:
     * neve
@@ -172,18 +172,18 @@ elérhetővé válik a sikeres bejelentkezést követően.<br>
     * ki küldte a fájlt
 * Egy oldalon 5 fájl jelenjen meg.
 * Alapértelmezetten betűrendben.
-* A fájl küldésének folyamatának tudnia kell egyszerre több fájlt küldeni illetve<br>
+* A fájl küldésének folyamatának tudnia kell egyszerre több fájlt küldeni, illetve<br>
 * A fájlok kijelölése checkbox-ok bepipálásával történik.
 * A fájlok küldése egy küldés gomb lenyomásával történik.
 * Küldésnél az alábbi validációs folyamatok történnek:
     * Van-e kijelölt fájl? Ha nincs hibaüzenettel tájékoztatjuk a felhasználót.
-    * Létezik-e a felhasználó akinek szeretnénk küldeni? Ha nincs hibaüzenettel<br>
-      tájékoztatjük a felhasználót
+    * Létezik-e a felhasználó, akinek szeretnénk küldeni? Ha nincs hibaüzenettel<br>
+      tájékoztatjuk a felhasználót
     * Sikeres küldés esetén is üzenetet kap a felhasználó. Ekkor az elküldött <br>
     fájl a LEMÁSOLÓDIK és a másolat átkerül az szerveren lévő mappájába. <br>
     és bekerül az adatbázisába is.
 
-* Fájlaink között keresést tudunk végrehajtani. A fájl nevére lehet keresni<br>
+* Fájljaink között keresést tudunk végrehajtani. A fájl nevére lehet keresni<br>
   teljes egyezőség szerint.
 
 
@@ -196,16 +196,16 @@ Megfelelő név esetén a fájl eltárolásra kerül a szerveren és az adatbáz
 * Fájl törlésére is van lehetőség. A felhasználó kiválaszthatja a törlést a <br>
 műveleteknél.
 
-* Fájl letöltés: A felhasználó kiválaszthatja a letöltést a fájlthoz tartozó <br> műveleteknél.
+* Fájl letöltés: A felhasználó kiválaszthatja a letöltést a fájlhoz tartozó <br> műveleteknél.
 
 * Szöveges fájl létrehozása: A fájl lista oldalán található lesz egy gomb amire <br>
-kattintva elérhetővé válik egy felület ahol a felhasználó szöveges fájlt hozhat létre. <br>
+kattintva elérhetővé válik egy felület, ahol a felhasználó szöveges fájlt hozhat létre. <br>
 A fájl mentését követően a fájlnév validálásra kerül és ha megfelelő eltárolódik <br>
 a szerveren és az adatbázisban is.
 
 * Szöveges fájl szerkesztése: A fájl listában, a fájl műveleteknél elérhető lesz a<br>
-"szerkesztés" művelet amire kattintva elnavigál a szöveges fájl lérehozásánál is <br>
-használt felületre, csak a fájlt tartalmának helye nem üres lesz hanem a szerkesztett<br>
+"szerkesztés" művelet amire kattintva elnavigál a szöveges fájl létrehozásánál is <br>
+használt felületre, csak a fájlt tartalmának helye nem üres lesz, hanem a szerkesztett<br>
 fájl tartalma.
 
 * Felhasználónév módosítás: A felhasználónak lehetősége van a profilján felhasználó neve <br>
@@ -215,7 +215,7 @@ módosítására. Az alábbi validációs folyamatok futnak le ilyenkor:
      amiről szintén értesítést kap.
 
 * Jelszó módosítás: A felhasználó a profil menüpont alatt jelszavát módosíthatja <br>
-Ha az új jelszó megfelel a hozzá tartozó validációs folyamatnak akkor a jelszó megváltozi, egyébként nem. Mindkettőről értesítést kap a felhasználó.
+Ha az új jelszó megfelel a hozzá tartozó validációs folyamatnak akkor a jelszó megváltozik, egyébként nem. Mindkettőről értesítést kap a felhasználó.
 
 ## Képernyőtervek
 
