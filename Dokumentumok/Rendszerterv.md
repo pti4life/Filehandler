@@ -459,3 +459,12 @@ segítségét. <br>
 problémák elkerülésének érdekében bővítés esetén precízen kell megtervezni az <br>
 új verziókat. Új releváns tesztek létrehozása és futtatása is szükszéges lehet <br>
 egyes esetekben. <br>
+  Karbantartást megkönnyítő funkcióként tervben van a jövőre egy olyan funkció, <br>
+amely a régi (régi konkrét jelentését később tudjuk definiálni, amikor figyelembe <br>
+vesszük a felhasználók szokásait) nemhasznált fájlok észlelése esetén jelez a <br>
+felhasználónak a platformon, valamint e-mailt küld. Többszöri jelzés ignorálása <br>
+esetén a rendszer jelez egy Admin felhasználónak, aki el tud járni az ügyben. <br>
+  Lehetőség lesz továbbá a fájlok "védett" cimkével történő megjelölésére. Az <br>
+ilyen jelzővel ellátott fájlokat nem fogja vizsgálni a platform, így ezek miatt <br>
+a felhasználók nem kapnak majd értesítést. Ilyen cimkével kizárólag Admin felhasználók <br>
+tudnak majd fájlokat ellátni. <br>
