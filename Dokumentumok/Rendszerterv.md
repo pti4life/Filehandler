@@ -69,7 +69,7 @@ magas szintű követelményeiből álló, fontossági sorrendbe állított lista
 projektmenedzsmentet segítő szoftverben van deklarálva(Trello-ban).
  
 
-A projekt elkészítésért <b>4</b> junior programozó felelős:
+A projekt elkészítésért <b>4</b> kiváló junior programozó felelős:
 * Kállai Roland
 * Szabó Ferenc
 * Hidi Erik Zoltán
@@ -342,3 +342,30 @@ van szó.<br>
     *user_id* mezőben lévő ID-val rendelkező felhasználónak. Ha a felhasználó saját magának<br>
     hozta létre a fájlt vagy töltötte fel akkor null az értéke.
 
+# 10. Tesztterv:
+
+  A platform megfelelő müködéséhez elengedhetetlenek a tesztesetek kipróbálása. <br>
+Törekedni kell minél nagyobb lefedetségre kódtesztelés szempontjából. Üzleti <br>
+logikát implementáló függvények szükségszerűen JUnit tesztek segitségével kreülnek <br>
+tesztelés alá. Ezen kívül további manuális teszt vár a programra élesítés előtt. <br>
+Tesztesetek megtekinthetőek az alábbi táblázatban:
+
+| Sorszám | Teszt leírása | Elvárt eredmény|
+|---|---|---|
+| MT01 | A program elindítása | A program sikeresen induljon el|
+| MT02 | A regisztrációs felület elérése | A felület legyen elérhető |
+| MT04 | A regisztrációs felület kipróbálása helyes adatokkal | Sikeres regisztráció |
+| MT05 | A regisztrációs felület kipróbálása helytelen adatokkal | Sikertelen regisztráció, hiba jelzése |
+| MT06 | A regisztrációs felület kipróbálása létező felhasználói adatokkal | Sikertelen regisztáció, hiba jelzése |
+| MT07 | A bejelentkező felület elérése | A felület legyen elérhető |
+| MT08 | A bejelentkező felület kipróbálása helyes adatokkal | Sikeres bejelentkezés |
+| MT09 | A bejelentkező felület kipróbálása helytelen adatokkal | Sikertelen bejelentkezés, hiba jelzése |
+| MT10 | A bejelentkező felület kipróbálása nem létező felhasználói adatokkal | Sikertelen bejelntkezés, nem létező felhasználó jelzése |
+| MT11 | Üzenet küldése létező felhasználónak | Sikeres üzenetküldés, 2. felhasználó megkapja az üzenetet |
+| MT12 | Üzenet küldése nem létező felhasználónak | Sikertelen üzenetküldés, hiba jelzése |
+| MT13 | Fájl letöltés megfelelő jogosultsággal | Sikeres lwtöltés |
+| MT14 | Fájl letöltés megfelelő jogosultsággal nélkül | Sikertelen letöltés, jogosultság hiányának jelzése |
+| MT15 | Fájl szerkesztése megfelelő jogosultsággal | Sikeres szerkesztés |
+| MT16 | Fájl szerkesztése megfelelő jogosultsággal nélkül | Sikertelen szerkesztés, jogosultság hiányának jelzése |
+| MT17 | A platform elérése céges hálózatról | Sikeres elérés |
+| MT18 | A platform elérése külső hálózatról | Sikertelen elérés, hiba jelzése |
