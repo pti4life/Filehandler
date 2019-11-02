@@ -2,6 +2,29 @@
 
 ## 1. Vezetői összefoglaló
 
+  A projekt elsődleges célja egy fájlkezelő-/fájlmegosztó-rendszer fejlesztése, <br>
+amely megfellő funkcionalitást implementál a cég dolgozói számára. Alkalmazása <br>
+egységesítené a cégen belüli kommunikációt és a szükséges dokumentumok elérhetővé <br>
+tételét a megfelelő személyek számára. Sajnos jelnleg nem üzemel olyan belső <br>
+rendszer a cégnél, amely ezeket a feladatokat el tudná látni, viszont már jelentős <br>
+igényt látunk egy ilyen platform létrehozására. <br>
+  A szoftver lehetőséget kell, hogy biztosítson új felhasználó létrehozására. A <br>
+felhasználók számára szükséges jogokat adni, tehát nem fér hozzá mindenki minden
+információhoz, dokumentumhoz. Minden felhasználó csak a számára releváns dokumentumhoz <br>
+fér hozzá, illetve, amihez jogosultságot kapott. <br>
+  Biztosítani kell még a felhasználók számára egy felületet, ahol egyszerűen tudnak <br>
+hozzáférni az általuk látható fájlokhoz. A felület segítségével felhasználók <br>
+számára lehetőség nyílik megtekinteni/szerkeszteni dokumentumokat, valamint <br>
+letölteni és feltölteni fájlokat. Lehetőségük legyen továbbá felvenni a kapcsolatot <br>
+más felhasználókkal is. Felhasználók között szintén legyen lehetőség fájlok megosztására, <br>
+illetve szöveges üzenet küldésére is. <br>
+  Összességében, végső következtetésként annyit tudunk még megjegyezni, hogy a rendszer <br>
+számos előnyt hoz majd magával. Többek között egységes kommunikációra és fájlmegosztásra <br>
+ad lehetőséget, ezen kívül a biztonságosabbá teszi a céges információk kezelését. <br>
+Csökkenti az esélyt a céges adatok kiszivárgására. <br>
+  Igény esetén egyszerűen implementálható plusz funkcionalitás, valamint a meglévő <br>
+funkciók könnyen módosíthatók, ha szükséges. <br>
+
 ## 2. Jelenlegi helyzet
 A projekt funkcióinak kidolgozása ebben a dokumentumban fog megvalósulni a <br>
 a követelményspecifikációban megfogalmazottak alapján. Ezek alapján és a <br>
