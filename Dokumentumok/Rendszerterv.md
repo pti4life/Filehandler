@@ -369,3 +369,9 @@ Tesztesetek megtekinthetőek az alábbi táblázatban:
 | MT16 | Fájl szerkesztése megfelelő jogosultsággal nélkül | Sikertelen szerkesztés, jogosultság hiányának jelzése |
 | MT17 | A platform elérése céges hálózatról | Sikeres elérés |
 | MT18 | A platform elérése külső hálózatról | Sikertelen elérés, hiba jelzése |
+
+# 11. Telepítési Terv:
+  
+  Egy böngészőből elérhető rendszerről beszélünk, így a telepítés csupán <br>
+a szerver környezetben szükséges. Ezt a telepítést a fejlesztők végzik el <br>
+különböző keretrendszerek segítségével. <br>
