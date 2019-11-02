@@ -21,7 +21,9 @@ illetve szöveges üzenet küldésére is. <br>
   Összességében, végső következtetésként annyit tudunk még megjegyezni, hogy a rendszer <br>
 számos előnyt hoz majd magával. Többek között egységes kommunikációra és fájlmegosztásra <br>
 ad lehetőséget, ezen kívül a biztonságosabbá teszi a céges információk kezelését. <br>
-Csökkenti az esélyt a céges adatok kiszivárgására. <br>
+Csökkenti az esélyt a céges adatok kiszivárgására. Rendszer bevezetése után meg <br>
+lehet követelni a dolgozóktól, hogy harmadik féltől származó platformokat hanyagolják <br>
+és munkaidőben csak a céges felületet használják. <br>
   Igény esetén egyszerűen implementálható plusz funkcionalitás, valamint a meglévő <br>
 funkciók könnyen módosíthatók, ha szükséges. <br>
 
@@ -93,7 +95,41 @@ egy meeting keretein validálhatjuk, összefoglalhatjuk az eddig elért eredmén
   és a jelszó módosítársára. A fájl kezelőt nem csak asztali számítógépről lehet<br>
   használni ezért a weboldalnak reszponzívnak kell lennie hogy azt pc-ről<br>
   táblagépről és telefonról egyaránt használható és át tekinthető  legyen.
+
 ## 4. Jelenlegi üzleti folyamatok
+
+  Jelenleg a cégnél nem üzemel semmilyen platform, amely egyszerre lehetővé tenné <br>
+a munkatársak közötti kommunikációt és fájlmegosztást. Ennek következtében az <br>
+alkalmazottak arra vannak kényszerítve, hogy valamely harmadik féltől származó <br>
+szoftver segítségével valósítsák meg ezeket a feladataikat. Ez a módszer több <br>
+problémát is hordoz magával. Legnagyobb figyelmet egyértleműen a biztonság érdemli. <br>
+Mivel az sincs megszabva milyen platformokat használhatnak, akár minden alkalommal <br>
+más szoftvert is igénybe vehetnek. Ezáltal nagyon sok csatornán keresztül terjednek, <br>
+az esetenként nagyon bizalmas, céges adatok. <br>
+  Ezt a problémát elegánsan és egyszerűen old meg egy saját platform lefejlesztése. <br>
+Alkalmazásával elég egy csatorna használata, amely egyszerűsíti a dolgozók munkáját <br>
+és a biztonságon is jelentősen javít. Ezáltal minimalizálja az adatszivárgás <br>
+lehetőségét is. <br>
+  Minden felhasználónak rendelkeznie kell jogosultságokkal, ezzel biztosítva, hogy <br>
+minden felhasználó csak olyan adathoz férjen hozzá, amelyre feltétlen szüksége <br>
+van. <br>
+  Felhasználóknak lehetőségük van egymás közötti kommunikációs csatorna létrehozására <br>
+a platformon belül. Az adat csatorna lehetőséget nyújt szöveges üzenet küldésére <br>
+valós időben, valamint fájlok küldésére és fogadására is. <br>
+  A felhasználóknak lehetőségük van azon dokumentumok szerkesztésére platformon <br>
+belül, amelyekhez megvan a megfelelő jogosultságuk. <br>
+  A felülethez csupán céges hálózatról lehet hozzáférni, viszont szükséges lehet <br>
+egyes esetekben, hogy külső hálózatról is elérhető legyen a rendszer. Ennek a <br>
+problémának a kiküszöbölésére egyszerű a megoldás. Először is a céges hálózat <br>
+elérhető külső hálózatokról is a dolgozók számára. Csatlakozás után, már lehetőség <br>
+nyílik a szoftver elérésére is minden felhasználó számára. Ez azt jelenti, hogy <br>
+külső csatlakozás esetén minden felhasználónak egy kétlépcsős hitelesítésen kell <br>
+átesnie, ami természetesen még biztonságosabbá teszi a platformot. <br>
+  A saját rendszer további előnyeiként még meg tudjuk említeni a teljesmértékben <br>
+az igényekhez szabott felhasználói felületet, ami ezáltal nagyon felhasználóbarát <br>
+is egyben. Ez még azt a pozitívumot is magával vonja, hogy egy új munkatárs <br>
+bekerülése esetén nem vesz igénybe sok időt a betanítása. Későbbiekben akár a <br>
+betanítási folyamat is automatizálható. <br>
 
 ## 5. Igényelt üzleti feladatok
 
