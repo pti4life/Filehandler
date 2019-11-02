@@ -4,8 +4,8 @@
 A projekt célja egy magáncégen belüli használatra megfelelő fájlkezelő program<br>
 létrehozása. Jelenleg a cégen belül nem üzemel elektronikus rendszer a fájlok <br>
 tárolására, így a program elkészítése a nulláról fog kezdődni. Elvárás a programmal <br>
-szemben, hogy az alkalmazottak tudjanak saját felhasználót létrehozni és a tevékenységik <br>
-ehhez a progilhoz legyenek kötve. A fájlokkal egy átlátható és könnyen kezelhető felületen<br>
+szemben, hogy az alkalmazottak tudjanak saját felhasználót létrehozni és a tevékenységeik <br>
+ehhez a profilhoz legyenek kötve. A fájlokkal egy átlátható és könnyen kezelhető felületen<br>
 lehessen a következő műveleteket végrehajtani: megtekintés, keresés, feltöltés, letöltés,<br>
 törlés és küldés különböző felhasználók között. Ezek mellet elsődleges a dokumentumok<br>
 biztonságának biztosítása, ne lehessen megfelelő hozzáférés nélkül a fájlokat elérni és <br>
@@ -60,6 +60,24 @@ könnyebbé. Mivel egy fájlkezelő szolgáltatásról beszélünk ezért más e
 is használható ahol értelmezhető fájlokkal való munka.
 
 ## 4. Jelenlegi üzleti folyamatok
+
+  Jelenleg a cég dolgozói külónböző platformokat használnak a szükséges fájlok<br>
+megosztásához (pl. Google Drive, Facebook Messenger stb). Ez nem csupán azt jelenti, <br>
+hogy nem egységes a dokumentummegosztás, de biztonsági kockázatokat is nagy mértékben <br>
+növeli. Harmadik féltől száramzó üzenetküldési platformokon nagyon könnyű félre<br>
+kattintani, ennek következményében olyan személyek juthatnak céges információkhoz, <br>
+akik semmilyen kapcsolatban nem állnak a céggel. Ez súlyos következményekhez vezethet, <br>
+akár jogi ügy is keletkezhet belőle. Fájlmegosztó platformokon sem nehéz hibázni <br>
+apró figyelmetlenség miatt. Nyilvános láthatósági jelzővel ellátott fájlokat és <br>
+mappákat bárki megtekinthet esetleg módosíthat is rajtuk, amennyiben rájuk bukkan. <br>
+Nyilvánvaló, hogy ezzel is jelentős kockázat jár a cég jövőjére nézve. <br>
+  Ezeket és ezekhez hasonló biztonsági réseket hivatott betömni a mi rendszerünk. <br>
+A biztonsági szint javulásn kívül a rendszer egységesíti is ezeket a müveleteket. <br>
+Ez azt is jelenti, hogy kisebb az esély felhasználók által elkövetett hibákra, <br>
+mivel csak olyan funkciók kerülnek implementálásra, amelyek feltétlen szükségesek. <br>
+Továbbá, az esetleges hibázás esetén - aminek az esélye minimalizálva van - könnyű <br>
+megtalálni és orvosolni a hibát. Ez szintén annak köszönhető, hogy egységes a <br>
+rendszer.  
 
 
 ## 5. Igényelt üzleti feladatok
