@@ -246,6 +246,34 @@ a megtervezése.(Back-end)<br>
     megfelelően kell tárolni, az nem kerülhet harmadik fél kezébe előzetes beleegyezés nélkül.
   * Az elkészült program a cég tulajdona, illetéktelenül nem lehet felhasználni más projektekben az itt elkészített forráskódot. 
 # 5. Funkcionális terv:
+## Képernyőképek:
+* <b>Regisztráció.html</b> <br>
+![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/Prototípus/Regisztráció.jpg)<br>
+A program használatához az alkalmazottaknak regisztrálniuk kell majd ezen az oldalon.<br>
+Az adatbázisba való felvételhez meg kell adni teljes nevet, a céges email címet, <br>
+egy a majd a rendszerben látható felhasználónevet és egy megfelelően erős jelszót.<br>
+Ha bármilyen hiba történik kitöltéskor(pl. valamilyen adat nincs megadva vagy a felhasználó már létezik) <br>
+egy hibaüzenettel figyelmeztetjük a usert és megkérjük, hogy próbálja újra. <br>
+Ezen és minden oldalon a Fájlkezelő emblémára kattintva visszajutunk a főoldalra, <br>
+a rólunk link pedig egy kis leíráshoz visz minket a programról. Ha sikeres a regisztráció <br>
+a bejelentkezésre kattintva beléphetünk és használhatjuk a szoftvert.  <br>
+* <b>Profil.html</b> <br>
+![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/Prototípus/Profil.jpg)<br>
+Ha bejelentkeztünk a profilunkba elérhetővé válik a profil ás fájlok opció is. <br>
+A profilunkban megtekinthetjük a regisztrációkor megadott adatokat(teljes név, felhasználónév, email cím) <br>
+és megváltoztathatjuk a jelenlegi jelszavunkat és felhasználónevünket. A jelszó megváltoztatásához<br>
+meg kell adni a régi és új jelszavunk, felhasználónévnél csak az újat szükséges megadni.<br>
+Ezen felül mivel most már be vagyunk jelentkezve megjelenik a kijelentkezés gomb <br>
+amire kattintva vissza kerülünk a főoldalra.<br>
+* <b>Fájlok.html</b> <br>
+![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/Prototípus/Fájlok.jpg)<br>
+A fájlok oldal projektünk legfontosabb része, itt történik a fájlok kezelése.<br>
+Lehetőségünk van az igényelt üzleti feladatokban megállapított összes műveletet elvégezni. <br>
+Egy kereső mezőben megadhatjuk a kívánt fájl nevét, amit az alatta lévő táblázatban meg is<br>
+jelenítünk minden szükséges tulajdonságával együtt. A kereső mező mellett pedig<br>
+lehetőségünk van fájlokat létrehozni és küldeni egy regisztrált felhasználónak a megfelelő<br>
+gombok használatával. A táblázat mellet található gombok segítségével pedig tallózhatunk egy <br>
+fájlt a saját számítógépünkről és a feltöltés gombbal feltölthetjük a cég szerverére.<br>
 # 6. Fizikai környezet:
 Az alkalmazás Java platformon lesz megvalósítva, a végeredmény egy webalkalmazás <br>
 ami alatt egy Apache Tomcat 9.0-ás Java servlet fog futni. Mivel a Java platformfüggetlen<br>
