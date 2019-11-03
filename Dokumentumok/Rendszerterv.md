@@ -230,6 +230,21 @@ a megtervezése.(Back-end)<br>
     |Date(modifyDate)|
 
 # 4. Követelmények:
+* Funkcionális követelmények:
+  * A webes felületnek rezponzívnak kell lennie, minden eszközön és webböngészőben működjön.
+  * A fájlokkal végezhető összes műveletet megfelelően kell végrehajtania, a kivánt művelet <br> 
+    esetén annak is kell végrehajtódnia.
+  * Bármilyen hibás input vagy nem megfelelő művelet esetén a felhasználót tájékoztatni kell róla.<br>
+    Ezt követően újra lehessen próbálkozni a művelettel.
+* Nem funkcionális követelmények:
+  * A felhasználói felület könnyen kezelhető legyen a számítógépek terén nem tapasztalt dolgozók számára is.<br>
+    Ennek az elérésehez egyszerű, letisztult grefikus felhasználói felületet kell terveznünk.
+  * A szerverrel való komunikációban gyors válaszidőre van szügség, nem engedhetjük meg, hogy egy<br> 
+    oldal betöltése vagy egy fájl mozgatása sokáig tartson.
+* Jogi követelmények:
+  * A felhasználói fiókok adatait és a tárhely fájljait az adatvédelmi szabványoknak<br> 
+    megfelelően kell tárolni, az nem kerülhet harmadik fél kezébe előzetes beleegyezés nélkül.
+  * Az elkészült program a cég tulajdona, illetéktelenül nem lehet felhasználni más projektekben az itt elkészített forráskódot. 
 # 5. Funkcionális terv:
 # 6. Fizikai környezet:
 Az alkalmazás Java platformon lesz megvalósítva, a végeredmény egy webalkalmazás <br>
