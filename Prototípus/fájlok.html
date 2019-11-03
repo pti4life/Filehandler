@@ -15,47 +15,65 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="font-size:28px;">
-        <div class="container"><a class="navbar-brand" href="regisztráció.html" style="font-size:47px;">Fájlkezelő</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand" href="rólunk.html" style="font-size:47px;">Fájlkezelő</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav mr-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="rólunk.html">Rólunk</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="fájlok.html">Fájlok</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href=#>Profil</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="profil.html">Profil</a></li>
                 </ul>
                 <ul class="nav navbar-nav mr-auto"></ul><span class="navbar-text actions"> <a class="btn btn-light action-button" role="button" href="#">Kijelentkezés</a></span></div>
         </div>
     </nav>
     <div class="container">
-        <h2>Fájlok</h2>
-        <div class="table-responsive" style="padding-top:1.5em;">
-            <table class="table">
-                <thead>
-                    <tr style="text-align:center;">
-                        <th>Fájlnév</th>
-                        <th>Méret</th>
-                        <th>Módosítás dátuma</th>
-                        <th>Műveletek</th>
-                        <th>Küldte</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Cell 1</td>
-                        <td>Cell 2</td>
-                        <td>Cell 2</td>
-                        <td>Cell 2</td>
-                        <td>Cell 2</td>
-                    </tr>
-                    <tr>
-                        <td>Cell 3</td>
-                        <td>Cell 4</td>
-                        <td>Cell 4</td>
-                        <td>Cell 4</td>
-                        <td>Cell 4</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="row">
+            <div class="col"><input type="search" style="padding-right:5em;"><button class="btn btn-primary" type="button">Keresés</button></div>
+            <div class="col">
+                <div>
+                    <div class="col"><button class="btn btn-primary" type="button">Fájl létrehozása</button><button class="btn btn-primary" type="button">Fájl küldése</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2 style="padding-top:0.5em;">Fájlok</h2>
+                <div class="table-responsive" style="padding-top:1.5em;">
+                    <table class="table">
+                        <thead>
+                            <tr style="text-align:center;">
+                                <th>Fájlnév</th>
+                                <th>Méret</th>
+                                <th>Módosítás dátuma</th>
+                                <th>Műveletek</th>
+                                <th>Küldte</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cell 1</td>
+                                <td>Cell 2</td>
+                                <td>Cell 2</td>
+                                <td>Cell 2</td>
+                                <td>Cell 2</td>
+                            </tr>
+                            <tr>
+                                <td>Cell 3</td>
+                                <td>Cell 4</td>
+                                <td>Cell 4</td>
+                                <td>Cell 4</td>
+                                <td>Cell 4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col" style="padding-top:5em;">
+                <div style="border:1px solid;padding:0.5em;"><label>Fájl feltöltése</label>
+                    <div class="row">
+                        <div class="col" style="padding-bottom:1em;"><button class="btn btn-primary" type="button">Tallózás</button><label class="col-form-label" style="padding-left:1em;">.........</label></div>
+                    </div><button class="btn btn-primary" type="button">Feltöltés</button></div>
+            </div>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
