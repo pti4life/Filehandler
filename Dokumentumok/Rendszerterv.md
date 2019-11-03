@@ -491,3 +491,23 @@ esetén a rendszer jelez egy Admin felhasználónak, aki el tud járni az ügybe
 ilyen jelzővel ellátott fájlokat nem fogja vizsgálni a platform, így ezek miatt <br>
 a felhasználók nem kapnak majd értesítést. Ilyen cimkével kizárólag Admin felhasználók <br>
 tudnak majd fájlokat ellátni. <br>
+
+# 13. Implementációs terv
+
+Modell osztályok: A modell osztályokból képezhetjük le az adatbázis elemeit<br>
+ objektumként valamint tölthetünk fel az adatbázisba objektumokat ehez a Hibernate<br> megoldásait fogja használni a szoftver.Két darab entitás osztályra lesz szükségünk egy a fájlok tárolására egy pedig a felhasználók tárolására ezek kapcsolatban is állnak egymással amelyet @oneToMany és @manyToOne annotációval jeleznünk kell a forditó számára. Az osztályok modellje:<br>
+ ![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/UML/Modell.JPG)
+
+ Controller osztályok:Csapatunk a Spring MVC keretrendszert fogja használni <br>
+ így a el kell látnunk ezeket az osztályok a @Controller annotációval ezen kivül<br>
+ controller osztályok kapcsolatban állnak mind az adatbázissal mind a felhasználóval.<br>
+ Az osztályok feladata a felhasználó által megadott adatok validálása valamint<br>
+ kéréseinek vezérlése végrehajtása.Az osztályok modellje:<br>
+ ![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/UML/controller.JPG)
+
+ Repository Osztályok:A repository osztályok esetünkben a DAO osztályokat<br>
+ jelenti amelyeket szintén egy speciális @Repository annotációval kell ellátni<br>
+ ezekben az osztályokban kell implementálni az adatbázis műveleteket az alapvető<br>
+ úgy nevezett CRUD műveleteket(create,read,update,delete) egy generikus <br>
+ absztrakt osztály fogja bíztosítani számunkra. Az osztályok modellje:<br>
+ ![ ](https://github.com/pti4life/Filehandler/blob/master/Dokumentumok/K%C3%A9pek/UML/repository.JPG)
