@@ -382,7 +382,16 @@ egyszerű feladat.Továbbá az MVC 3 rétegű architekturális minta követése 
 a külömböző rétegek egymástól jól elkülönítettek így a kód a jövőben is könnyen<br>
 karbantartható lesz és új funkciókal való bővítése is egyszerűen implementálható lesz. 
 
-Csapatunk  a biztonsági funkciókhoz a Spring által nyújtott Spring <br>
+Az alkalmazás fejlesztése során a biztonság kiemelten fontos. Különösen <br>
+figyelünk az alábbi hackelési technikákra mert ezeket viszonylag egyszerűen<br>
+kivitelezhetőek és népszerűek, ezáltal ezek figyelmenkívül hagyása súlyos<br>
+biztonsági kockázatot jelent.<br>
+* SQL Injection: Az alkalmazás adatbázisának egésze ellopható, megkárosítható<br>
+és akár törölhető is input mezőbe beírt SQL utasításokat használva.<br>
+* cross-site scripting: Rossz indulatú javascript kód beágyazása, ami <br>
+a felhasználó böngészőjében fut, ezáltal akár az egész fájlrendszerhez<br>
+is hozzáférést szerezhet.<br>
+Továbbá csapatunk a biztonsági funkciókhoz a Spring által nyújtott Spring <br>
 Security keretrendszert fogja használni. A Spring Security egy könnyedén <br> 
 testreszabható hitelesítést és hozzáférést-vezérlő keretrendszer.Ez a gyakorlatban<br>
 használt szabvány Spring alapú alkalmazásokhoz. Spring Security valódi előny abban<br>
@@ -513,7 +522,17 @@ fentebb már olvashattuk. <br>
   
   Egy böngészőből elérhető rendszerről beszélünk, így a telepítés csupán <br>
 a szerver környezetben szükséges. Ezt a telepítést a fejlesztők végzik el <br>
-különböző keretrendszerek segítségével. <br>
+különböző keretrendszerek segítségével. 
+* Ubuntu linux telepítése a Fizikai környezetben megadott számítógépre.
+* Konfigurációk beállítása, erre a célra csapatunknak található egy <br>
+erre a célra kifejlesztett szkript.
+* Jogrendszer beállítása a biztonság érdekében.
+* Apache Tomcat 9.0.x webszerver telepítése
+* Apache Tomcat webszerver konfigurálása.
+* Oracle SQL adatbázis szerver telepítése
+* Oracle SQL adatbázis szerver konfigurálása.
+* A webalkalmazás végeredménye egy .war kiterjesztésű fájl lesz<br>
+amit csak futtatni kell a szerveren.
 
 # 12. Karbantartási Terv:
 
@@ -525,6 +544,14 @@ segítségét. <br>
 problémák elkerülésének érdekében bővítés esetén precízen kell megtervezni az <br>
 új verziókat. Új releváns tesztek létrehozása és futtatása is szükszéges lehet <br>
 egyes esetekben. <br>
+A weboldalon különböző médiafájlok találhatóak például kép, és amikor egy honlapot<br>
+először látogatunk meg akkor a böngésző néhány objektum pl. kép tárolásra kerül<br>
+annak érdekében, hogy amikor legközelebb a weboldalra látogatunk gyorsabb legyen<br>
+a betöltés. Ezt a folyamatot cachelésnek nevezzük, ezért amikor egy képet lecserélünk<br>
+vagy a kinézeten változtatnak a fejlesztők előfordulhat, hogy a felhasználónak a régi<br>
+verzió jelenik meg a cachelés miatt. Ekkor szükséges a cache fájlok törlése, vagy<br>
+általában elég a ctrl+F5(Google chrome böngésző alatt) billentyűkombináció lenyomása.<br>
+Ez a folyamat karbantartás szempontjából kiemelten fontos.<br>
   Karbantartást megkönnyítő funkcióként tervben van a jövőre egy olyan funkció, <br>
 amely a régi (régi konkrét jelentését később tudjuk definiálni, amikor figyelembe <br>
 vesszük a felhasználók szokásait) nemhasznált fájlok észlelése esetén jelez a <br>
