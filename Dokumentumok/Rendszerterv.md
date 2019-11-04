@@ -535,6 +535,14 @@ segítségét. <br>
 problémák elkerülésének érdekében bővítés esetén precízen kell megtervezni az <br>
 új verziókat. Új releváns tesztek létrehozása és futtatása is szükszéges lehet <br>
 egyes esetekben. <br>
+A weboldalon különböző médiafájlok találhatóak például kép, és amikor egy honlapot<br>
+először látogatunk meg akkor a böngésző néhány objektum pl. kép tárolásra kerül<br>
+annak érdekében, hogy amikor legközelebb a weboldalra látogatunk gyorsabb legyen<br>
+a betöltés. Ezt a folyamatot cachelésnek nevezzük, ezért amikor egy képet lecserélünk<br>
+vagy a kinézeten változtatnak a fejlesztők előfordulhat, hogy a felhasználónak a régi<br>
+verzió jelenik meg a cachelés miatt. Ekkor szükséges a cache fájlok törlése, vagy<br>
+általában elég a ctrl+F5(Google chrome böngésző alatt) billentyűkombináció lenyomása.<br>
+Ez a folyamat karbantartás szempontjából kiemelten fontos.<br>
   Karbantartást megkönnyítő funkcióként tervben van a jövőre egy olyan funkció, <br>
 amely a régi (régi konkrét jelentését később tudjuk definiálni, amikor figyelembe <br>
 vesszük a felhasználók szokásait) nemhasznált fájlok észlelése esetén jelez a <br>
