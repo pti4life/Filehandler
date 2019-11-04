@@ -513,7 +513,17 @@ fentebb már olvashattuk. <br>
   
   Egy böngészőből elérhető rendszerről beszélünk, így a telepítés csupán <br>
 a szerver környezetben szükséges. Ezt a telepítést a fejlesztők végzik el <br>
-különböző keretrendszerek segítségével. <br>
+különböző keretrendszerek segítségével. 
+* Ubuntu linux telepítése a Fizikai környezetben megadott számítógépre.
+* Konfigurációk beállítása, erre a célra csapatunknak található egy <br>
+erre a célra kifejlesztett szkript.
+* Jogrendszer beállítása a biztonság érdekében.
+* Apache Tomcat 9.0.x webszerver telepítése
+* Apache Tomcat webszerver konfigurálása.
+* Oracle SQL adatbázis szerver telepítése
+* Oracle SQL adatbázis szerver konfigurálása.
+* A webalkalmazás végeredménye egy .war kiterjesztésű fájl lesz<br>
+amit csak futtatni kell a szerveren.
 
 # 12. Karbantartási Terv:
 
