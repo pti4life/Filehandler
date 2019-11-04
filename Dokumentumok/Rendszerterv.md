@@ -382,7 +382,16 @@ egyszerű feladat.Továbbá az MVC 3 rétegű architekturális minta követése 
 a külömböző rétegek egymástól jól elkülönítettek így a kód a jövőben is könnyen<br>
 karbantartható lesz és új funkciókal való bővítése is egyszerűen implementálható lesz. 
 
-Csapatunk  a biztonsági funkciókhoz a Spring által nyújtott Spring <br>
+Az alkalmazás fejlesztése során a biztonság kiemelten fontos. Különösen <br>
+figyelünk az alábbi hackelési technikákra mert ezeket viszonylag egyszerűen<br>
+kivitelezhetőek és népszerűek, ezáltal ezek figyelmenkívül hagyása súlyos<br>
+biztonsági kockázatot jelent.<br>
+* SQL Injection: Az alkalmazás adatbázisának egésze ellopható, megkárosítható<br>
+és akár törölhető is input mezőbe beírt SQL utasításokat használva.<br>
+* cross-site scripting: Rossz indulatú javascript kód beágyazása, ami <br>
+a felhasználó böngészőjében fut, ezáltal akár az egész fájlrendszerhez<br>
+is hozzáférést szerezhet.<br>
+Továbbá csapatunk a biztonsági funkciókhoz a Spring által nyújtott Spring <br>
 Security keretrendszert fogja használni. A Spring Security egy könnyedén <br> 
 testreszabható hitelesítést és hozzáférést-vezérlő keretrendszer.Ez a gyakorlatban<br>
 használt szabvány Spring alapú alkalmazásokhoz. Spring Security valódi előny abban<br>
