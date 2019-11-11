@@ -29,19 +29,19 @@ public class AppConfig {
 
 
 	//Jdbc connection attributes
-	@Value("${mysql.dialect}")
+	@Value("${database.dialect}")
 	private String dialect;
 
-	@Value("${mysql.driverClass}")
+	@Value("${database.driverClass}")
 	private String driverClass;
 
-	@Value("${mysql.username}")
+	@Value("${database.username}")
 	private String username;
 
-	@Value("${mysql.password}")
+	@Value("${database.password}")
 	private String password;
 
-	@Value("${mysql.url}")
+	@Value("${database.url}")
 	private String url;
 
 	// define a bean for ViewResolver
