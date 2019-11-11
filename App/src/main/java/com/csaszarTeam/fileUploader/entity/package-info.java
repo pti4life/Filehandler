@@ -1,1 +1,1 @@
-package com.csaszarTeam.fileUploader.entity;
+package com.csaszarteam.fileuploader.entity;

@@ -1,4 +1,4 @@
-package com.csaszarTeam.fileUploader.entity;
+package com.csaszarteam.fileuploader.entity;
 
 import javax.persistence.*;
 import java.util.Set;

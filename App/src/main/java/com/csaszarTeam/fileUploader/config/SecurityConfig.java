@@ -1,4 +1,4 @@
-package com.csaszarTeam.fileUploader.config;
+package com.csaszarteam.fileuploader.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

@@ -1,1 +1,1 @@
-package com.csaszarTeam.fileUploader.repository;
+package com.csaszarteam.fileuploader.repository;

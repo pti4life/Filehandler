@@ -1,4 +1,4 @@
-package com.csaszarTeam.fileUploader.dto;
+package com.csaszarteam.fileuploader.dto;
 
 import java.util.Set;
 

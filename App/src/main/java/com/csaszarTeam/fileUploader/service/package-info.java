@@ -1,1 +1,1 @@
-package com.csaszarTeam.fileUploader.service;
+package com.csaszarteam.fileuploader.service;

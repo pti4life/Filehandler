@@ -1,4 +1,4 @@
-package com.csaszarTeam.fileUploader.config;
+package com.csaszarteam.fileuploader.config;
 
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 import org.hibernate.SessionFactory;
@@ -19,10 +19,10 @@ import java.util.Properties;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages="com.csaszarTeam.fileUploader")
+@ComponentScan(basePackages="com.csaszarteam.fileuploader")
 @EnableTransactionManagement
 @PropertySource("classpath:database.properties")
-@EnableJpaRepositories(value = "com.csaszarTeam.fileUploader.repository",entityManagerFactoryRef ="sessionFactory")
+@EnableJpaRepositories(value = "com.csaszarteam.fileuploader.repository",entityManagerFactoryRef ="sessionFactory")
 
 
 public class AppConfig {
@@ -61,7 +61,7 @@ public class AppConfig {
 	public SessionFactory sessionFactory() {
 		LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource());
 		builder
-				.scanPackages("com.csaszarTeam.fileUploader.entity")
+				.scanPackages("com.csaszarteam.fileuploader.entity")
 				.addProperties(getHibernateProperties());
 
 

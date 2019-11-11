@@ -1,7 +1,7 @@
-package com.csaszarTeam.fileUploader.repository;
+package com.csaszarteam.fileuploader.repository;
 
 
-import com.csaszarTeam.fileUploader.entity.User;
+import com.csaszarteam.fileuploader.entity.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

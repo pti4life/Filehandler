@@ -1,4 +1,4 @@
-package com.csaszarTeam.fileUploader.config;
+package com.csaszarteam.fileuploader.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
