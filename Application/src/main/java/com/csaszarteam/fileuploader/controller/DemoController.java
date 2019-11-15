@@ -1,7 +1,9 @@
 package com.csaszarteam.fileuploader.controller;
 
 
+import com.csaszarteam.fileuploader.service.UserService;
 import com.csaszarteam.fileuploader.service.domain.UserDTO;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -14,6 +16,8 @@ import java.util.Arrays;
 @Controller
 public class DemoController {
 
+	@Autowired
+	UserService userservice;
 
 	@RequestMapping("/")
 	public String showHome(Model model) {
@@ -25,6 +29,7 @@ public class DemoController {
 
 	@PostMapping("read")
 	public String show( @ModelAttribute UserDTO test){
+		userservice.saveUser(test);
 		System.out.println(test);
 		return "home";
 	}
