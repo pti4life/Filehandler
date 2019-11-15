@@ -1,6 +1,7 @@
 package com.csaszarteam.fileuploader.database.entity;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 
@@ -9,40 +10,51 @@ import java.util.Set;
 public class User {
     @Id
     @GeneratedValue
+    @Column(name="user_id")
     private Long id;
 
-  //  @UniqueElements
+    private String name;
+
+    private String email;
+
     private String username;
 
     private String password;
 
-    private boolean enabled;
 
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    private Set<com.csaszarteam.fileuploader.database.entity.UserRole> UserRole;
+    private Set<UserRole> userRoles;
 
-    public Set<com.csaszarteam.fileuploader.database.entity.UserRole> getUserRole() {
-        return UserRole;
+    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+    private List<File> files;
+
+    public Set<UserRole> getUserRoles() {
+        return userRoles;
     }
 
 
     public User(){}
-    public User(String username, String password) {
-        this.username = username;
-        this.password = password;
-        this.enabled = true;
+    public User(String name, String email, String username, String password) {
+        this.name=name;
+        this.email=email;
+        this.username=username;
+        this.password=password;
     }
 
-    public void setUserRole(Set<com.csaszarteam.fileuploader.database.entity.UserRole> userRole) {
-        this.UserRole = userRole;
+    public String getName() {
+        return name;
     }
 
-    public boolean isEnabled() {
-        return enabled;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getUsername() {
@@ -61,18 +73,24 @@ public class User {
         this.password = password;
     }
 
-    public Long getId() {
-        return id;
+    public void setUserRoles(Set<UserRole> userRoles) {
+        this.userRoles = userRoles;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public List<File> getFiles() {
+        return files;
+    }
+
+    public void setFiles(List<File> files) {
+        this.files = files;
     }
 
     @Override
     public String toString() {
         return "users{" +
                 "id=" + id +
+                ", name="+name+
+                ", email="+email+
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';
