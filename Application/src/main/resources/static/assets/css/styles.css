@@ -1,0 +1,21 @@
+.btn-sq-xs {
+    width: 30px !important;
+    height: 30px !important;
+    padding:2px;
+}
+
+.btn-secondary{
+    margin-left: 10px;
+    padding-bottom: 5px;
+}
+
+.search {
+    width: 80%;
+    padding: 3px;
+}
+
+.table{
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
