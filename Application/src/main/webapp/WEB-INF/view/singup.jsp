@@ -6,7 +6,7 @@
 	</head>
 
 	<body>
-		<form:form action="${pageContext.request.contextPath}/read" modelAttribute="userDTO" method="post">
+		<form:form action="${pageContext.request.contextPath}/signup" modelAttribute="userDTO" method="post">
 			Name: <form:input path="name"/> <br>
 			email: <form:input path="email"/> <br>
 			username: <form:input path="username"/> <br>
