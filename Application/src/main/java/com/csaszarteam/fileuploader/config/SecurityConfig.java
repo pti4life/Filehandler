@@ -15,15 +15,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	UserDetailService userDetailService;
 
+
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
+			auth.userDetailsService(userDetailService);
 	}
 
+	/*
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-
-	}
+  		http.authorizeRequests().antMatchers("upload/").hasAuthority("user")
+		.and().formLogin().and().authorizeRequests().antMatchers("/").permitAll();
+	}*/
 }
 
 
