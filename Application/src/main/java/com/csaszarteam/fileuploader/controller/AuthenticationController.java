@@ -9,10 +9,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 @Controller
 public class AuthenticationController {
@@ -23,13 +19,21 @@ public class AuthenticationController {
 	@GetMapping("/signup")
 	public String showSignupPage(Model model) {
 		model.addAttribute("userDTO",new UserDTO());
-		return "singup";
+		return "public/singup";
+	}
+
+	@GetMapping("/login")
+	public String showLoginPage(Model model) {
+		model.addAttribute("userDTO",new UserDTO());
+		return "public/login";
 	}
 
 	@PostMapping("/signup")
 	public String doSignup(@ModelAttribute UserDTO test){
 		userservice.saveUser(test);
 		System.out.println(test);
-		return "singup";
+		return "public/singup";
 	}
+
+
 }

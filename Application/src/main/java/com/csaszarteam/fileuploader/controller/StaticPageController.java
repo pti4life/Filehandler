@@ -8,6 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class StaticPageController {
     @RequestMapping("/")
     public String showSignupPage(Model model) {
-        return "home";
+        return "public/home";
     }
 }
