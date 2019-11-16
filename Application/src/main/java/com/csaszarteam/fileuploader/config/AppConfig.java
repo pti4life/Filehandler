@@ -1,6 +1,10 @@
 package com.csaszarteam.fileuploader.config;
 
+import com.csaszarteam.fileuploader.service.UserService;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
+import org.h2.tools.Server;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -13,10 +17,15 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import javax.annotation.PostConstruct;
+import java.sql.SQLException;
 import java.util.Properties;
 
 @Configuration
@@ -91,7 +100,18 @@ public class AppConfig {
 		return  new JpaTransactionManager(sessionFactory());
 	}
 
-	
+
+	@Bean
+	public MultipartResolver multipartResolver() {
+		return new StandardServletMultipartResolver();
+	}
+	/*
+	@Bean("multipartResolver")
+	public CommonsMultipartResolver multipartResolver(){
+		CommonsMultipartResolver resolver=new CommonsMultipartResolver();
+		resolver.setDefaultEncoding("utf-8");
+		return resolver;
+	}*/
 }
 
 

@@ -16,7 +16,7 @@ public class File {
 
     private String mimeType;
 
-    @JoinColumn(name ="user_id")
+    @JoinColumn(name ="sender_id")
     private long senderID;
 
     @ManyToOne
