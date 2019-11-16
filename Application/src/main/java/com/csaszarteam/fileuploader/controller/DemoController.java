@@ -24,13 +24,13 @@ public class DemoController {
 		ArrayList<Integer> lista=new ArrayList<>(Arrays.asList(1,2,3,4));
 		model.addAttribute("set",lista);
 		model.addAttribute("userDTO",new UserDTO());
-		return "home";
+		return "singup";
 	}
 
 	@PostMapping("read")
 	public String show( @ModelAttribute UserDTO test){
 		userservice.saveUser(test);
 		System.out.println(test);
-		return "home";
+		return "singup";
 	}
 }
