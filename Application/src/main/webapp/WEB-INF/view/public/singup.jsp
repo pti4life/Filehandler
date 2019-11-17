@@ -20,7 +20,7 @@
 <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="font-size:28px;">
     <div class="container">
         <img src="${pageContext.request.contextPath}/resources/images/share_icon.png" class="icon" alt="filemanager_icon">
-        <a class="navbar-brand" href="${pageContext.request.contextPath}/home" style="font-size:47px;">Fájlkezelő</a>
+        <a class="navbar-brand" href="${pageContext.request.contextPath}/" style="font-size:47px;">Fájlkezelő</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
             <span class="sr-only">Toggle navigation</span>
             <span class="navbar-toggler-icon"></span>
@@ -28,11 +28,11 @@
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/home">Rólunk</a>
+                    <a class="nav-link" href="${pageContext.request.contextPath}/">Rólunk</a>
                 </li>
             </ul>
             <span class="navbar-text actions">
-                <a href="${pageContext.request.contextPath}/filelist" class="login">Bejelentkezés</a>
+                <a href="${pageContext.request.contextPath}/login" class="login">Bejelentkezés</a>
                 <a class="btn btn-light action-button" role="button" href="${pageContext.request.contextPath}/signup">Regisztráció</a>
             </span>
         </div>
@@ -49,5 +49,7 @@
     <div class="form-group"><form:input path="password" class="form-control" type="password" name="password" placeholder="Jelszó"/></div>
     <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Regisztráció</button></div>
 </form:form>
+<script src="${pageContext.request.contextPath}/resources/css/js/jquery.min.js"></script>
+<script src="${pageContext.request.contextPath}/resources/css/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
