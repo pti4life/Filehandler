@@ -22,6 +22,8 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import javax.annotation.PostConstruct;
@@ -35,7 +37,7 @@ import java.util.Properties;
 @PropertySource("classpath:database.properties")
 @EnableJpaRepositories(value = "com.csaszarteam.fileuploader.database.repository",entityManagerFactoryRef ="sessionFactory")
 
-public class AppConfig {
+public class AppConfig  implements WebMvcConfigurer {
 
 
 	//Jdbc connection attributes
@@ -58,13 +60,18 @@ public class AppConfig {
 
 	@Bean
 	public ViewResolver viewResolver() {
-		
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 		viewResolver.setPrefix("/WEB-INF/view/");
 		viewResolver.setSuffix(".jsp");
 		
 		return viewResolver;
 	}
+
+	@Override
+	public void addResourceHandlers(final ResourceHandlerRegistry registry) {
+		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+	}
+
 
 	//Session Factory bean
 	@Bean
