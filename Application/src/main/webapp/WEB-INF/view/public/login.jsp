@@ -17,12 +17,24 @@
 
 <body>
 <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="font-size:28px;">
-    <div class="container"><a class="navbar-brand" href="rólunk.html" style="font-size:47px;">Fájlkezelő</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-        <div
-                class="collapse navbar-collapse" id="navcol-1">
+    <div class="container">
+        <img src="${pageContext.request.contextPath}/resources/images/share_icon.png" class="icon" alt="filemanager_icon">
+        <a class="navbar-brand" href="${pageContext.request.contextPath}/home" style="font-size:47px;">Fájlkezelő</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item" role="presentation"><a class="nav-link" href="rólunk.html">Rólunk</a></li>
-            </ul><span class="navbar-text actions"> <a href="fájlok.html" class="login">Bejelentkezés</a><a class="btn btn-light action-button" role="button" href="untitled.html">Regisztráció</a></span></div>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" href="${pageContext.request.contextPath}/home">Rólunk</a>
+                </li>
+            </ul>
+            <span class="navbar-text actions">
+                <a href="${pageContext.request.contextPath}/filelist.jsp" class="login">Bejelentkezés</a>
+                <a class="btn btn-light action-button" role="button" href="${pageContext.request.contextPath}/signup">Regisztráció</a>
+            </span>
+        </div>
     </div>
 </nav>
 
@@ -31,7 +43,10 @@
     <div class="illustration"></div>
     <div class="form-group"><form:input path="username" class="form-control" type="text" name="Felhasználónév" placeholder="Felhasználónév"/></div>
     <div class="form-group"><form:input path="password" class="form-control" type="password" name="password" placeholder="Jelszó"/></div>
-    <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Bejelentkezés</button></div><a href="#" class="forgot" style="align-content:center;">Elfelejtett jelszó vagy felhasználó név?</a>
+    <div class="form-group">
+        <button class="btn btn-primary btn-block" type="submit">Bejelentkezés</button>
+    </div>
+    <a href="#" class="forgot" style="align-content:center;">Elfelejtett jelszó vagy felhasználó név?</a>
 </form:form>
 <script src="${pageContext.request.contextPath}/resources/css/js/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/css/bootstrap/js/bootstrap.min.js"></script>
