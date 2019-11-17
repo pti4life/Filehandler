@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
         System.out.println("SERVICE CREATED");
         String hashedPassword=new BCryptPasswordEncoder().encode(userdto.getPassword());
         User userentity=new User(userdto.getName(), userdto.getEmail(), userdto.getUsername(), hashedPassword);
-        UserRole ur=new UserRole(userentity,"user");
+            UserRole ur=new UserRole(userentity,"USER");
         Set<UserRole> userRoles= new HashSet<>();
         userRoles.add(ur);
         userentity.setUserRoles(userRoles);
