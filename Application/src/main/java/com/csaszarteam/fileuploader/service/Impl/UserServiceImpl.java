@@ -32,6 +32,5 @@ public class UserServiceImpl implements UserService {
         userRoles.add(ur);
         userentity.setUserRoles(userRoles);
         userdao.save(userentity);
-
     }
 }

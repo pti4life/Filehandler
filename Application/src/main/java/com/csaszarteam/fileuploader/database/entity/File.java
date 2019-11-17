@@ -1,10 +1,16 @@
 package com.csaszarteam.fileuploader.database.entity;
 
+import lombok.*;
+
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
 @Table(name="files")
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Builder
 public class File {
     @Id
     @GeneratedValue
@@ -16,8 +22,8 @@ public class File {
 
     private String mimeType;
 
-    @JoinColumn(name ="user_id")
-    private long senderID;
+    @Column(name = "sender_id",nullable = true)
+    private Long sender;
 
     @ManyToOne
     private User user;

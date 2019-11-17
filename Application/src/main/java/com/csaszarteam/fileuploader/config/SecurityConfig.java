@@ -8,6 +8,9 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Configuration
 @EnableWebSecurity
@@ -16,36 +19,36 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
 	UserDetailService userDetailService;
 
-	//private static
+	@Autowired
+	AuthenticationSuccess authenticationSuccess;
+
+
 
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailService).passwordEncoder(new BCryptPasswordEncoder());
-
 	}
 
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-				.antMatchers("/home","/login","/signup")
-					.permitAll()
-				.antMatchers("/filelist","/profile")
-					.hasAuthority("USER")
+				.antMatchers("/home", "/login", "/signup")
+				.permitAll()
+				.antMatchers("/filelist", "/profile")
+				.hasAuthority("USER")
 				.and()
-					.formLogin()
-					.loginPage("/login")
-					.defaultSuccessUrl("/filelist")
-					.failureUrl("/login?error=true")
-					.permitAll()
+				.formLogin()
+				.loginPage("/login")
+				.defaultSuccessUrl("/filelist")
+				.failureUrl("/login?error=true")
+				.permitAll()
 				.and()
-					.logout()
-					.logoutSuccessUrl("/login?logout=true")
-					.invalidateHttpSession(true)
-					.permitAll();
-
+				.logout()
+				.logoutSuccessUrl("/login?logout=true")
+				.invalidateHttpSession(true)
+				.permitAll();
 	}
-
 }
 
 
