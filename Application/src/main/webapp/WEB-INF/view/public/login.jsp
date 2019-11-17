@@ -41,8 +41,8 @@
 <form:form action="${pageContext.request.contextPath}/login"  modelAttribute="userDTO"  class="flex-row justify-content-center align-items-center align-content-center align-self-center" method="post">
     <div><h2 style="padding-bottom:0.5em">Bejelentkezés</h2></div>
     <div class="illustration"></div>
-    <div class="form-group"><form:input path="username" class="form-control" type="text" name="Felhasználónév" placeholder="Felhasználónév"/></div>
-    <div class="form-group"><form:input path="password" class="form-control" type="password" name="password" placeholder="Jelszó"/></div>
+    <div class="form-group"><form:input path="username" class="form-control" required="required" type="text" name="Felhasználónév" placeholder="Felhasználónév"/></div>
+    <div class="form-group"><form:input path="password" class="form-control" required="required" type="password" name="password" placeholder="Jelszó"/></div>
     <div class="form-group">
         <button class="btn btn-primary btn-block" type="submit">Bejelentkezés</button>
     </div>
