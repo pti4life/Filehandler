@@ -3,37 +3,39 @@ package com.csaszarteam.fileuploader.controller;
 
 import com.csaszarteam.fileuploader.service.UserService;
 import com.csaszarteam.fileuploader.service.domain.UserDTO;
-import org.h2.tools.Server;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 @Controller
-public class DemoController {
+@Scope("session")
+public class AuthenticationController {
 
 	@Autowired
 	UserService userservice;
 
-
-	@RequestMapping("/")
-	public String showHome(Model model) throws SQLException {
-		ArrayList<Integer> lista=new ArrayList<>(Arrays.asList(1,2,3,4));
-		model.addAttribute("set",lista);
+	@GetMapping("/signup")
+	public String showSignupPage(Model model) {
 		model.addAttribute("userDTO",new UserDTO());
-		return "home";
+		return "public/singup";
 	}
 
-	@PostMapping("read")
-	public String show( @ModelAttribute UserDTO test){
+	@GetMapping("/login")
+	public String showLoginPage(Model model) {
+		model.addAttribute("userDTO",new UserDTO());
+		return "public/login";
+	}
+
+	@PostMapping("/signup")
+	public String doSignup(@ModelAttribute UserDTO test){
 		userservice.saveUser(test);
 		System.out.println(test);
-		return "home";
+		return "public/singup";
 	}
+
+
 }

@@ -80,7 +80,7 @@ public class AppConfig {
 
 	private Properties getHibernateProperties() {
 		Properties prop = new Properties();
-		prop.put("hibernate.hbm2ddl.auto","create-drop");
+		prop.put("hibernate.hbm2ddl.auto","update");
 		prop.put("hibernate.dialect", dialect);
 		return prop;
 	}
