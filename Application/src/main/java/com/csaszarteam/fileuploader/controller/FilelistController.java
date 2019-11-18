@@ -33,10 +33,11 @@ public class FilelistController {
                 .getAuthentication().getName();
 
         User user=(User) request.getSession().getAttribute("user");
-        UPLOADED_FOLDER=UPLOADED_FOLDER+user.getId()+"\\";
+        String directory=UPLOADED_FOLDER+user.getId()+"\\";
+       // UPLOADED_FOLDER=UPLOADED_FOLDER+user.getId()+"\\";
         System.out.println("controller:"+user+" file:"+file.getOriginalFilename());
         if(!file.isEmpty()) {
-            fileService.save(file, UPLOADED_FOLDER,user);
+            fileService.save(file, directory,user);
         }
 
         return "secured/filelist";

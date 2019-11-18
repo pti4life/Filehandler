@@ -28,7 +28,7 @@ public class FileServiceImpl implements FileService {
             System.out.println(last);
             byte[] bytes = file.getBytes();
             Files.createDirectories(Paths.get(UPLOADED_FOLDER));
-            Path path = Paths.get(UPLOADED_FOLDER+last.getId()+"."
+            Path path = Paths.get(UPLOADED_FOLDER,last.getId()+"."
                                  + FilenameUtils.getExtension(file.getOriginalFilename()));
             System.out.println(path);
             Files.write(path, bytes);
