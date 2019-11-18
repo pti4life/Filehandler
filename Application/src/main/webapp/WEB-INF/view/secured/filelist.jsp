@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
@@ -95,14 +96,15 @@
                 </div>
             </div>
             <div class="col-4" style="padding-top:5.3em;">
+                <form:form method="POST" action="${pageContext.request.contextPath}/save" enctype="multipart/form-data">
                 <div style="border:1px solid;padding:0.5em;"><label>Fájl feltöltése</label>
                     <div class="row">
                         <div class="col" style="padding-bottom:1em;">
-                            <button class="btn btn-primary" type="button">Tallózás</button>
-                            <label class="col-form-label" style="padding-left:1em;">.........</label>
+                            <input class="btn btn-primary"  type="file" name="file" value="Tallózás"/>
                         </div>
-                    </div><button class="btn btn-primary" type="button">Feltöltés</button>
+                    </div><input class="btn btn-primary" type="submit" value="Feltöltés">
                 </div>
+                </form:form>
             </div>
         </div>
     </div>

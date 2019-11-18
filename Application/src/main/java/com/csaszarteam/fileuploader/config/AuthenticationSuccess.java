@@ -25,7 +25,7 @@ public class AuthenticationSuccess implements AuthenticationSuccessHandler {
         request.getSession().setAttribute("user",userDAO.findByUsername(authentication.getName()));
        // response.sendRedirect(request.getContextPath()+"/upload");
         System.out.println(request.getSession().getAttribute("user"));
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/upload");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/filelist");
         dispatcher.forward(request, response);
 
     }
