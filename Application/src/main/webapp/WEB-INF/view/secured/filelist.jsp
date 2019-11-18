@@ -36,7 +36,7 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-8"><input type="search" class="search"><button class="btn btn-secondary"
+            <div class="col-8"><input required="required" type="search" class="search"><button class="btn btn-secondary"
                                                                            type="button">Keresés</button></div>
             <div class="col-4">
                 <div>
