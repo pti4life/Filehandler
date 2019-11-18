@@ -3,6 +3,8 @@ package com.csaszarteam.fileuploader.service;
 
 import com.csaszarteam.fileuploader.service.domain.UserDTO;
 
+import java.util.List;
+
 public interface UserService {
-    void saveUser(UserDTO udto);
+    List<String> saveUser(UserDTO udto);
 }

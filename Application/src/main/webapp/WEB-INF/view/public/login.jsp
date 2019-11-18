@@ -1,5 +1,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 
@@ -40,6 +42,13 @@
 
 <form:form action="${pageContext.request.contextPath}/login"  modelAttribute="userDTO"  class="flex-row justify-content-center align-items-center align-content-center align-self-center" method="post">
     <div><h2 style="padding-bottom:0.5em">Bejelentkezés</h2></div>
+
+    <c:if test="${param.error != null}">
+    <div class="alert alert-danger col-xs-offset-1 col-xs-10">
+        Invalid username or password.
+    </div>
+    </c:if>
+
     <div class="illustration"></div>
     <div class="form-group"><form:input path="username" class="form-control" required="required" type="text" name="Felhasználónév" placeholder="Felhasználónév"/></div>
     <div class="form-group"><form:input path="password" class="form-control" required="required" type="password" name="password" placeholder="Jelszó"/></div>

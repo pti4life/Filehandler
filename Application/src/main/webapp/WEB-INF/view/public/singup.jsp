@@ -42,6 +42,18 @@
 <form:form action="${pageContext.request.contextPath}/read" modelAttribute="userDTO" method="post"/>
 <form:form action="${pageContext.request.contextPath}/signup" modelAttribute="userDTO"  class="flex-row justify-content-center align-items-center align-content-center align-self-center" method="post">
     <h2 style="padding-bottom: 0.5em">Regisztráció</h2>
+    <c:if test="${!empty errors}">
+        <div class="alert alert-danger col-xs-offset-1 col-xs-10">
+            <c:forEach items="${errors}" var="error">
+                <c:out value = "${error}"/><p>
+            </c:forEach>
+        </div>
+    </c:if>
+    <c:if test="${empty errors && errors!=null}">
+        <div class="alert alert-success col-xs-offset-1 col-xs-10">
+            Sikeres Regisztráció
+        </div>
+    </c:if>
     <div class="illustration"></div>
     <div class="form-group"><form:input path="name" class="form-control" required="required" type="text" name="Teljes név" placeholder="Teljes név"/></div>
     <div class="form-group"><form:input path="email" class="form-control" required="required" type="email" name="E-mail" placeholder="E-mail"/></div>

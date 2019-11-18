@@ -6,6 +6,7 @@ import com.csaszarteam.fileuploader.database.entity.UserRole;
 import com.csaszarteam.fileuploader.database.repository.UserDAO;
 import com.csaszarteam.fileuploader.service.UserService;
 import com.csaszarteam.fileuploader.service.domain.UserDTO;
+import com.csaszarteam.fileuploader.service.validator.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Service("userservice")
@@ -21,16 +23,33 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserDAO userdao;
 
+    @Autowired
+    UserValidator userValidator;
+
     @Override
     @Transactional("transactionManager")
-    public void saveUser(UserDTO userdto) {
+    public List<String> saveUser(UserDTO userdto) {
         System.out.println("SERVICE CREATED");
-        String hashedPassword=new BCryptPasswordEncoder().encode(userdto.getPassword());
-        User userentity=new User(userdto.getName(), userdto.getEmail(), userdto.getUsername(), hashedPassword);
-            UserRole ur=new UserRole(userentity,"USER");
-        Set<UserRole> userRoles= new HashSet<>();
-        userRoles.add(ur);
-        userentity.setUserRoles(userRoles);
-        userdao.save(userentity);
+        userValidator.setUserDTO(userdto);
+        List<String> errors=userValidator.ErrorList();
+        if(errors.isEmpty()) {
+            String hashedPassword = new BCryptPasswordEncoder().encode(userdto.getPassword());
+            User userentity = new User(userdto.getName(), userdto.getEmail(), userdto.getUsername(), hashedPassword);
+            UserRole ur = new UserRole(userentity, "USER");
+            Set<UserRole> userRoles = new HashSet<>();
+            userRoles.add(ur);
+            userentity.setUserRoles(userRoles);
+            userdao.save(userentity);
+        }
+        return errors;
+
     }
+
+    private static String isSuccess(String msg){
+        if(msg.equals("success")){
+            return "";
+        }else return msg;
+    }
+
+
 }

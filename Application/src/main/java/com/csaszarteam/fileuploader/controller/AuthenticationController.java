@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 @Scope("session")
 public class AuthenticationController {
@@ -31,8 +33,10 @@ public class AuthenticationController {
 	}
 
 	@PostMapping("/signup")
-	public String doSignup(@ModelAttribute UserDTO test){
-		userservice.saveUser(test);
+	public String doSignup(@ModelAttribute UserDTO test,Model model){
+		List errors=userservice.saveUser(test);
+		System.out.println(errors);
+		model.addAttribute("errors",errors);
 		System.out.println(test);
 		return "public/singup";
 	}
