@@ -1,11 +1,16 @@
 package com.csaszarteam.fileuploader.database.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+
 import javax.persistence.*;
 import java.util.List;
 import java.util.Set;
 
 
 @Entity
+@Builder
+@AllArgsConstructor
 @Table(name = "users")
 public class User {
     @Id

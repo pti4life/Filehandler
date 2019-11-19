@@ -39,7 +39,6 @@
     </div>
 </nav>
 
-<form:form action="${pageContext.request.contextPath}/read" modelAttribute="userDTO" method="post"/>
 <form:form action="${pageContext.request.contextPath}/signup" modelAttribute="userDTO"  class="flex-row justify-content-center align-items-center align-content-center align-self-center" method="post">
     <h2 style="padding-bottom: 0.5em">Regisztráció</h2>
     <c:if test="${!empty errors}">

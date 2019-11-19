@@ -1,7 +1,13 @@
 package com.csaszarteam.fileuploader.service.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
 
+@Builder
+@AllArgsConstructor
 public class UserDTO {
+    private Long id;
 
     private String name;
 
@@ -18,6 +24,12 @@ public class UserDTO {
         this.email=email;
         this.username = username;
         this.password = password;
+    }
+
+    public Long getId(){return id;}
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
