@@ -6,6 +6,7 @@ import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 import org.h2.tools.Server;
 import org.hibernate.SessionFactory;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -111,6 +112,11 @@ public class AppConfig  implements WebMvcConfigurer {
 	@Bean
 	public MultipartResolver multipartResolver() {
 		return new StandardServletMultipartResolver();
+	}
+
+	@Bean
+	public ModelMapper modelMapper() {
+		return new ModelMapper();
 	}
 	/*
 	@Bean("multipartResolver")
