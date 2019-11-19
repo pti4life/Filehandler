@@ -23,12 +23,10 @@ public class FileServiceImpl implements FileService {
     @Override
     public void save(MultipartFile file, String UPLOADED_FOLDER, User user) {
         try {
-            uploadDatabase(file,user);
-            File last=fileDAO.findTopByOrderByIdDesc();
-            System.out.println(last);
+            long fileID=uploadDatabase(file,user);
             byte[] bytes = file.getBytes();
             Files.createDirectories(Paths.get(UPLOADED_FOLDER));
-            Path path = Paths.get(UPLOADED_FOLDER,last.getId()+"."
+            Path path = Paths.get(UPLOADED_FOLDER,fileID+"."
                                  + FilenameUtils.getExtension(file.getOriginalFilename()));
             System.out.println(path);
             Files.write(path, bytes);
@@ -40,10 +38,12 @@ public class FileServiceImpl implements FileService {
     }
 
     @Transactional("transactionManager")
-    void uploadDatabase(MultipartFile file, User user) throws IOException {
+    long uploadDatabase(MultipartFile file, User user) throws IOException {
         File newfile=File.builder().fileName(file.getOriginalFilename())
                 .mimeType(file.getContentType()).fileSize(file.getBytes().length)
                 .user(user).build();
+
         fileDAO.save(newfile);
+        return newfile.getId();
     }
 }
