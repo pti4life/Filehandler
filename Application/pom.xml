@@ -131,6 +131,7 @@
         </dependency>
 
 
+        <!-- File upload-->
         <dependency>
             <groupId>commons-fileupload</groupId>
             <artifactId>commons-fileupload</artifactId>
@@ -142,6 +143,7 @@
             <version>2.4</version>
         </dependency>
 
+        <!--Other devices -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

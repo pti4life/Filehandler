@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -32,24 +33,20 @@ public class UserServiceImpl implements UserService {
         System.out.println("SERVICE CREATED");
         userValidator.setUserDTO(userdto);
         List<String> errors=userValidator.ErrorList();
-        if(errors.isEmpty()) {
-            String hashedPassword = new BCryptPasswordEncoder().encode(userdto.getPassword());
-            User userentity = new User(userdto.getName(), userdto.getEmail(), userdto.getUsername(), hashedPassword);
-            UserRole ur = new UserRole(userentity, "USER");
-            Set<UserRole> userRoles = new HashSet<>();
-            userRoles.add(ur);
-            userentity.setUserRoles(userRoles);
-            userdao.save(userentity);
-        }
+
+       if(errors.isEmpty()) {
+           String hashedPassword = new BCryptPasswordEncoder().encode(userdto.getPassword());
+           User userentity = User.builder().id(userdto.getId()).username(userdto.getUsername()).email(userdto.getEmail())
+                   .password(hashedPassword).build();
+           //User userentity = new User(userdto.getName(), userdto.getEmail(), userdto.getUsername(), hashedPassword);
+           UserRole ur = new UserRole(userentity, "USER");
+           Set<UserRole> userRoles = new HashSet<>();
+           userRoles.add(ur);
+           userentity.setUserRoles(userRoles);
+           System.out.println(userdao.save(userentity).getId());
+       }
+        System.out.println(errors);
         return errors;
-
     }
-
-    private static String isSuccess(String msg){
-        if(msg.equals("success")){
-            return "";
-        }else return msg;
-    }
-
 
 }
