@@ -1,6 +1,5 @@
 package com.csaszarteam.fileuploader.controller;
 
-
 import com.csaszarteam.fileuploader.service.UserService;
 import com.csaszarteam.fileuploader.service.domain.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +39,4 @@ public class AuthenticationController {
 		System.out.println(test);
 		return "public/singup";
 	}
-
-
 }
