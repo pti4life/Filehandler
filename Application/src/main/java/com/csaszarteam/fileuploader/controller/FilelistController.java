@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -26,8 +27,10 @@ public class FilelistController {
 
     @RequestMapping("/filelist")
     public String showFilelist(HttpServletRequest request) {
-       // UserDTO userDTO=(UserDTO) request.getSession().getAttribute("user");
-       // System.out.println(modelMapper.map());
+        UserDTO userDTO=(UserDTO) request.getSession().getAttribute("user");
+        System.out.println("át konvertált"+userDTO);
+        User user=modelMapper.map(userDTO,User.class);
+        System.out.println("visza konvertált:"+user+" "+user.getFiles());
         return "secured/filelist";
     }
 
@@ -36,7 +39,7 @@ public class FilelistController {
                            RedirectAttributes redirectAttributes, HttpServletRequest request){
 
 
-        User user=(User) request.getSession().getAttribute("user");
+        UserDTO user=(UserDTO) request.getSession().getAttribute("user");
         String directory=UPLOADED_FOLDER+user.getId()+"\\";
        // UPLOADED_FOLDER=UPLOADED_FOLDER+user.getId()+"\\";
         System.out.println("controller:"+user+" file:"+file.getOriginalFilename());

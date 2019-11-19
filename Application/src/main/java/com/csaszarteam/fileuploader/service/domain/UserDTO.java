@@ -1,10 +1,12 @@
 package com.csaszarteam.fileuploader.service.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.util.List;
 
 @Builder
+@Getter
+@Setter
 @AllArgsConstructor
 public class UserDTO {
     private Long id;
@@ -16,6 +18,8 @@ public class UserDTO {
     private String username;
 
     private String password;
+
+    private List<FileDTO> files;
 
     public UserDTO(){}
 
