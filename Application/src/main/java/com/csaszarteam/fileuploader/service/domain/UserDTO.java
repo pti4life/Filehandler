@@ -66,7 +66,7 @@ public class UserDTO {
 
     @Override
     public String toString() {
-        return "users{" +
+        return "users dto{" +
                 " name="+name+
                 ", email="+email+
                 ", username='" + username + '\'' +

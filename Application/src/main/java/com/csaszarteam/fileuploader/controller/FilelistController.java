@@ -2,6 +2,8 @@ package com.csaszarteam.fileuploader.controller;
 
 import com.csaszarteam.fileuploader.database.entity.User;
 import com.csaszarteam.fileuploader.service.FileService;
+import com.csaszarteam.fileuploader.service.domain.UserDTO;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -19,18 +21,21 @@ public class FilelistController {
     @Autowired
     FileService fileService;
 
+    @Autowired
+    ModelMapper modelMapper;
     private static String UPLOADED_FOLDER = "D:\\TMP\\";
 
     @RequestMapping("/filelist")
-    public String showFilelist() {
+    public String showFilelist(HttpServletRequest request) {
+       // UserDTO userDTO=(UserDTO) request.getSession().getAttribute("user");
+       // System.out.println(modelMapper.map());
         return "secured/filelist";
     }
 
     @RequestMapping("/save")
     public String savefile(@RequestParam("file") MultipartFile file,
                            RedirectAttributes redirectAttributes, HttpServletRequest request){
-        String currentPrincipalName = SecurityContextHolder.getContext()
-                .getAuthentication().getName();
+
 
         User user=(User) request.getSession().getAttribute("user");
         String directory=UPLOADED_FOLDER+user.getId()+"\\";

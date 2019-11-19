@@ -41,8 +41,8 @@ public class UserValidator {
         return errors;
     }
 
-    private String passwordValidator(String password){
-        if(password.isEmpty()){
+    public String passwordValidator(String password){
+        if(password==null||password.isEmpty()){
             return "empty";
         }
         if(password.length()<3){
@@ -51,7 +51,7 @@ public class UserValidator {
         return "success";
     }
 
-    private String userNameValidator(String username) {
+    public String userNameValidator(String username) {
         if (username==null||username.isEmpty()) {
             return "empty";
         }
@@ -64,8 +64,8 @@ public class UserValidator {
         return "success";
     }
 
-    private String emailValidator(String email){
-        if(email.isEmpty()){
+    public String emailValidator(String email){
+        if(email==null||email.isEmpty()){
             return "empty";
         }
         if(!EmailValidator.getInstance().isValid(email)){
@@ -77,8 +77,8 @@ public class UserValidator {
         return "success";
     }
 
-    private String nameValidator(String name){
-        if(name.isEmpty()){
+    public String nameValidator(String name){
+        if(name==null||name.isEmpty()){
             return "Nincs kitöltve a név";
         }else return "success";
     }
