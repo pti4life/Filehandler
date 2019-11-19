@@ -1,10 +1,6 @@
 package com.csaszarteam.fileuploader.config;
 
-import com.csaszarteam.fileuploader.service.UserService;
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.FileItemFactory;
 import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
-import org.h2.tools.Server;
 import org.hibernate.SessionFactory;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,13 +9,11 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.multipart.MultipartResolver;
-import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -27,8 +21,6 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import javax.annotation.PostConstruct;
-import java.sql.SQLException;
 import java.util.Properties;
 
 @Configuration
@@ -39,7 +31,6 @@ import java.util.Properties;
 @EnableJpaRepositories(value = "com.csaszarteam.fileuploader.database.repository",entityManagerFactoryRef ="sessionFactory")
 
 public class AppConfig  implements WebMvcConfigurer {
-
 
 	//Jdbc connection attributes
 	@Value("${database.dialect}")
@@ -73,7 +64,6 @@ public class AppConfig  implements WebMvcConfigurer {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}
 
-
 	//Session Factory bean
 	@Bean
 	public SessionFactory sessionFactory() {
@@ -84,7 +74,6 @@ public class AppConfig  implements WebMvcConfigurer {
 
 		return builder.buildSessionFactory();
 	}
-
 
 	private Properties getHibernateProperties() {
 		Properties prop = new Properties();
@@ -103,11 +92,11 @@ public class AppConfig  implements WebMvcConfigurer {
 		ds.setPassword(password);
 		return ds;
 	}
+
 	@Bean(name="transactionManager")
 	public PlatformTransactionManager dbTransactionManager() {
 		return  new JpaTransactionManager(sessionFactory());
 	}
-
 
 	@Bean
 	public MultipartResolver multipartResolver() {
@@ -126,12 +115,3 @@ public class AppConfig  implements WebMvcConfigurer {
 		return resolver;
 	}*/
 }
-
-
-
-
-
-
-
-
-
