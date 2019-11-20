@@ -3,6 +3,7 @@ package com.csaszarteam.fileuploader.database.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.Set;
 
 @Entity
@@ -28,4 +29,5 @@ public class File {
     @ManyToOne
     private User user;
 
+    private LocalDate modify;
 }

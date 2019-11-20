@@ -7,10 +7,12 @@ import com.csaszarteam.fileuploader.database.repository.UserDAO;
 import com.csaszarteam.fileuploader.service.UserService;
 import com.csaszarteam.fileuploader.service.domain.UserDTO;
 import com.csaszarteam.fileuploader.service.validator.UserValidator;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.ModelMap;
 
 
 import java.util.ArrayList;
@@ -27,23 +29,20 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserValidator userValidator;
 
+    @Autowired
+    ModelMapper modelMapper;
+
     @Override
     @Transactional("transactionManager")
     public List<String> saveUser(UserDTO userdto) {
         System.out.println("SERVICE CREATED");
         userValidator.setUserDTO(userdto);
         List<String> errors=userValidator.ErrorList();
-
        if(errors.isEmpty()) {
-           String hashedPassword = new BCryptPasswordEncoder().encode(userdto.getPassword());
-           User userentity = User.builder().id(userdto.getId()).username(userdto.getUsername()).email(userdto.getEmail())
-                   .password(hashedPassword).build();
-           //User userentity = new User(userdto.getName(), userdto.getEmail(), userdto.getUsername(), hashedPassword);
-           UserRole ur = new UserRole(userentity, "USER");
-           Set<UserRole> userRoles = new HashSet<>();
-           userRoles.add(ur);
-           userentity.setUserRoles(userRoles);
-           System.out.println(userdao.save(userentity).getId());
+           userdto.setPassword(new BCryptPasswordEncoder().encode(userdto.getPassword()));
+
+           User userentity=modelMapper.map(userdto,User.class);
+           userdao.save(userentity);
        }
         System.out.println(errors);
         return errors;

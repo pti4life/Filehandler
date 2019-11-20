@@ -19,8 +19,6 @@ public class UserDTO {
 
     private String password;
 
-    private List<FileDTO> files;
-
     public UserDTO(){}
 
     public UserDTO(String name, String email, String username, String password){
