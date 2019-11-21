@@ -84,6 +84,26 @@
     <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Frissítés</button></div>
 </form:form>
 
+<form:form action="${pageContext.request.contextPath}/profile/password" modelAttribute="userDTO"  class="flex-row justify-content-center align-items-center align-content-center align-self-center" method="post">
+    <h2 style="padding-bottom: 0.5em">Jelszó</h2>
+    <c:if test="${!empty errors}">
+        <div class="alert alert-danger col-xs-offset-1 col-xs-10">
+            <c:forEach items="${errors}" var="error">
+            <c:out value = "${error}"/><p>
+            </c:forEach>
+        </div>
+    </c:if>
+    <c:if test="${empty errors && errors!=null}">
+        <div class="alert alert-success col-xs-offset-1 col-xs-10">
+            Sikeres módosítás
+        </div>
+    </c:if>
+    <div class="illustration"></div>
+    <div class="form-group"><form:input path="password3" class="form-control" required="required" type="password" name="oldPass" placeholder="Régi jelszó"/></div>
+    <div class="form-group"><form:input path="password4" class="form-control" required="required" type="password" name="password" placeholder="Új Jelszó"/></div>
+    <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Frissítés</button></div>
+</form:form>
+
 </body>
 
 <script src="${pageContext.request.contextPath}/resources/css/js/jquery.min.js"></script>
