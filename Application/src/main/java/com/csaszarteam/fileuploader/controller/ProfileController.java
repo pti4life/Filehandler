@@ -43,5 +43,22 @@ public class ProfileController {
         return "secured/profile";
     }
 
+    @PostMapping("/profile/password")
+    public String updatePassword(@ModelAttribute UserDTO test, HttpServletRequest req) {
+        UserDTO userDTO = (UserDTO) req.getSession().getAttribute("user");
+        String currentHashedPass = userDTO.getPassword();
 
+        String givenPass = test.getPassword3();
+        String newPass = test.getPassword4();
+
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        boolean correctPass = passwordEncoder.matches(givenPass, currentHashedPass);
+
+        if(correctPass) {
+            userDTO.setPassword(test.getPassword4());
+            userservice.updatePassword(userDTO);
+        }
+
+        return "secured/profile";
+    }
 }
