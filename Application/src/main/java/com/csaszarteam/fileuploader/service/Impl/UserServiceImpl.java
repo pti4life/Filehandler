@@ -48,4 +48,46 @@ public class UserServiceImpl implements UserService {
         return errors;
     }
 
+    @Override
+    @Transactional("transactionManager")
+    public String updateEmail(UserDTO userDTO) {
+        String error = userValidator.emailValidator(userDTO.getEmail());
+
+        if(error.equals("success")) {
+            User user = modelMapper.map(userDTO, User.class);
+            userdao.save(user);
+        }
+
+        return error;
+    }
+
+    @Override
+    @Transactional("transactionManager")
+    public String updateUserName(UserDTO userDTO) {
+        String error = userValidator.userNameValidator(userDTO.getUsername());
+
+        if(error.equals("success")) {
+            User user = modelMapper.map(userDTO, User.class);
+            userdao.save(user);
+        }
+
+        return error;
+    }
+
+    @Override
+    @Transactional("transactionManager")
+    public String updatePassword(UserDTO userDTO) {
+        String error = userValidator.passwordValidator(userDTO.getPassword());
+
+        if(error.equals("success")) {
+            String newHashedPass = new BCryptPasswordEncoder().encode(userDTO.getPassword());
+            userDTO.setPassword(newHashedPass);
+
+            User user = modelMapper.map(userDTO, User.class);
+            userdao.save(user);
+        }
+
+        return error;
+    }
+
 }
