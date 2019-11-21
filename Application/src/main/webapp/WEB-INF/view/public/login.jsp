@@ -50,11 +50,10 @@
     </c:if>
 
     <div class="illustration"></div>
-    <div class="form-group"><form:input path="username" class="form-control" required="required" type="text" name="Felhasználónév" placeholder="Felhasználónév"/></div>
-    <div class="form-group"><form:input path="password" class="form-control" required="required" type="password" name="password" placeholder="Jelszó"/></div>
-    <div class="form-group">
-        <button class="btn btn-primary btn-block" type="submit">Bejelentkezés</button>
-    </div>
+    <form:input path="username" class="form-control form-group" required="required" type="text" name="Felhasználónév" placeholder="Felhasználónév"/>
+    <form:input path="password" class="form-control form-group" required="required" type="password" name="password" placeholder="Jelszó"/>
+    <button class="btn btn-primary btn-block form-group" type="submit">Bejelentkezés</button>
+
     <a href="#" class="forgot" style="align-content:center;">Elfelejtett jelszó vagy felhasználó név?</a>
 </form:form>
 <script src="${pageContext.request.contextPath}/resources/css/js/jquery.min.js"></script>
