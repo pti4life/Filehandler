@@ -79,4 +79,5 @@ public class ProfileController {
 
         return "secured/profile";
     }
+    
 }
