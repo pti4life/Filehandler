@@ -79,6 +79,7 @@ public class AppConfig  implements WebMvcConfigurer {
 		Properties prop = new Properties();
 		prop.put("hibernate.hbm2ddl.auto","update");
 		prop.put("hibernate.dialect", dialect);
+
 		return prop;
 	}
 

@@ -12,12 +12,14 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
@@ -60,6 +62,16 @@ public class FilelistController {
             files=fileService.getAllFiles(user);
         }
 
+        return "redirect:/filelist";
+    }
+
+    @PostMapping("/delete")
+    public String deleteFile(HttpServletRequest request, HttpServletResponse response){
+        System.out.println();
+        System.out.println();
+        System.out.println(request.getParameter("deletedFile"));
+        System.out.println();
+        System.out.println();
         return "redirect:/filelist";
     }
 }

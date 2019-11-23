@@ -67,15 +67,29 @@
                                 <td>${file.fileSize}</td>
                                 <td>${file.modify}</td>
                                 <td>${file.sender}</td>
-                                <td><a href="#" class="btn btn-sq-xs btn-danger">
-                                    <i class="fas fa-trash-alt" ></i><br />
-                                </a>
-                                    <a href="#" class="btn btn-sq-xs btn-light">
-                                        <i class="fas fa-download" ></i><br />
-                                    </a>
-                                    <a href="#" class="btn btn-sq-xs btn-light">
-                                        <i class="fas fa-share" ></i><br />
-                                    </a>
+                                <td  class="d-flex flex-row bd-highlight mb-3">
+                                    <form:form method="post" action="${pageContext.request.contextPath}/delete"
+                                    cssStyle="padding: 0em" >
+                                       <!-- <label for="del" ><i class="fas fa-trash-alt" ></i></label>-->
+                                        <input type="hidden" name="deletedFile" value="${file}">
+                                        <input id="del" type="submit" value="&#xf2ed;"  class="btn btn-sq-xs btn-danger"
+                                               style="font-family: 'Font Awesome 5 Free';">
+                                        <br/>
+                                    </form:form>
+                                    <form:form method="post" action="${pageContext.request.contextPath}/delete"
+                                               cssStyle="padding: 0em" >
+                                        <!-- <label for="del" ><i class="fas fa-trash-alt" ></i></label>-->
+                                        <input id="del" type="submit" value="&#xf2ed;"  class="btn btn-sq-xs btn-danger"
+                                               style="font-family: 'Font Awesome 5 Free';">
+                                        <br/>
+                                    </form:form>
+                                    <form:form method="post" action="${pageContext.request.contextPath}/delete"
+                                               cssStyle="padding: 0em" >
+                                        <!-- <label for="del" ><i class="fas fa-trash-alt" ></i></label>-->
+                                        <input id="del" type="submit" value="&#xf2ed;"  class="btn btn-sq-xs btn-danger"
+                                               style="font-family: 'Font Awesome 5 Free';">
+                                        <br/>
+                                    </form:form>
                                 </td>
                             </tr>
                         </c:forEach>
