@@ -75,7 +75,7 @@
                                     <form:form method="post" action="${pageContext.request.contextPath}/delete"
                                     cssStyle="padding: 0em" >
                                        <!-- <label for="del" ><i class="fas fa-trash-alt" ></i></label>-->
-                                        <input type="hidden" name="deletedFile" value="${file}">
+                                        <input type="hidden" name="deletedFile" value="${file.id}+${file.fileName}">
                                         <input id="del" type="submit" value="&#xf2ed;"  class="btn btn-sq-xs btn-danger"
                                                style="font-family: 'Font Awesome 5 Free';">
                                         <br/>

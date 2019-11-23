@@ -11,4 +11,6 @@ public interface FileService {
      void save(MultipartFile file, String UPLOADED_FOLDER, UserDTO user);
 
      List getAllFiles(UserDTO userDTO);
+
+     void deleteFile(String directory,String file,Long fileId);
 }

@@ -59,6 +59,24 @@ public class FileServiceImpl implements FileService {
         return filesDTO;
     }
 
+    @Override
+    public void deleteFile(String directory,String file,Long fileId) {
+        java.io.File folder=new java.io.File(directory);
+        java.io.File  tempFile = new java.io.File(directory+"\\"+file);
+        System.out.println(folder.isDirectory());
+        if(tempFile.isFile()){
+            deleteFromDatabase(fileId);
+            tempFile.delete();
+        }
+
+        if(folder.isDirectory()){
+            if(folder.listFiles().length==0){
+                folder.delete();
+            }
+        }
+
+    }
+
     @Transactional("transactionManager")
     long uploadDatabase(MultipartFile file, UserDTO userDTO) throws IOException {
         User userEntity=modelMapper.map(userDTO,User.class);
@@ -68,5 +86,10 @@ public class FileServiceImpl implements FileService {
 
         fileDAO.save(newfile);
         return newfile.getId();
+    }
+
+    @Transactional("transactionManager")
+    void deleteFromDatabase(Long id){
+        fileDAO.deleteById(id);
     }
 }

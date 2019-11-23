@@ -12,4 +12,6 @@ public interface FileDAO extends CrudRepository<File,Long> {
     public File findTopByOrderByIdDesc();
 
     public List<File> getAllByUser(User user);
+
+    public void  deleteById(Long id);
 }
