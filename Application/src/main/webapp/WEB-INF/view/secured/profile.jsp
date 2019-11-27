@@ -19,8 +19,8 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/css/Navigation-Clean.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/css/styles.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/font_awesome/css/all.css">
 </head>
-
 <body>
 <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="font-size:28px;">
     <div class="container">
@@ -32,13 +32,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navcol-1">
             <ul class="nav navbar-nav mr-auto">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" href="${pageContext.request.contextPath}/">Rólunk</a>
-                </li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="${pageContext.request.contextPath}/">Rólunk</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="${pageContext.request.contextPath}/filelist">Fájlok</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="${pageContext.request.contextPath}/profile">Profil</a></li>
             </ul>
             <span class="navbar-text actions">
-                <a href="${pageContext.request.contextPath}/login" class="login">Bejelentkezés</a>
-                <a class="btn btn-light action-button" role="button" href="${pageContext.request.contextPath}/signup">Regisztráció</a>
+                <a class="btn btn-light action-button" role="button" href="${pageContext.request.contextPath}/signup">Kijelentkezés</a>
             </span>
         </div>
     </div>
@@ -65,7 +64,7 @@
 </form:form>
 
 <form:form action="${pageContext.request.contextPath}/profile/username" modelAttribute="userDTO"  class="flex-row justify-content-center align-items-center align-content-center align-self-center" method="post">
-    <h2 style="padding-bottom: 0.5em">Profil</h2>
+    <h2 style="padding-bottom: 0.5em">Felhasználónév</h2>
     <c:if test="${!empty errors}">
         <div class="alert alert-danger col-xs-offset-1 col-xs-10">
             <c:forEach items="${errors}" var="error">
@@ -79,13 +78,13 @@
         </div>
     </c:if>
     <div class="illustration"></div>
-    <div class="form-group"><form:input path="username" class="form-control" required="required" type="text" name="Felhasználónév" placeholder="Felhasználónév"/></div>
-    <div class="form-group"><form:input path="password" class="form-control" required="required" type="password" name="password" placeholder="Jelszó"/></div>
+    <div class="form-group"><form:input path="username" class="form-control" required="required" type="text" name="username" placeholder="Felhasználónév"/></div>
+    <div class="form-group"><form:input path="password2" class="form-control" required="required" type="password" name="password" placeholder="Jelszó"/></div>
     <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Frissítés</button></div>
 </form:form>
 
-<form:form action="${pageContext.request.contextPath}/profile/username" modelAttribute="userDTO"  class="flex-row justify-content-center align-items-center align-content-center align-self-center" method="post">
-    <h2 style="padding-bottom: 0.5em">Profil</h2>
+<form:form action="${pageContext.request.contextPath}/profile/password" modelAttribute="userDTO"  class="flex-row justify-content-center align-items-center align-content-center align-self-center" method="post">
+    <h2 style="padding-bottom: 0.5em">Jelszó</h2>
     <c:if test="${!empty errors}">
         <div class="alert alert-danger col-xs-offset-1 col-xs-10">
             <c:forEach items="${errors}" var="error">
@@ -99,11 +98,10 @@
         </div>
     </c:if>
     <div class="illustration"></div>
-    <div class="form-group"><form:input path="password" class="form-control" required="required" type="password" name="password" placeholder="Új Jelszó"/></div>
-    <div class="form-group"><form:input path="password" class="form-control" required="required" type="password" name="password" placeholder="Régi Jelszó"/></div>
+    <div class="form-group"><form:input path="password3" class="form-control" required="required" type="password" name="oldPass" placeholder="Régi jelszó"/></div>
+    <div class="form-group"><form:input path="password4" class="form-control" required="required" type="password" name="password" placeholder="Új Jelszó"/></div>
     <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Frissítés</button></div>
 </form:form>
-
 
 </body>
 

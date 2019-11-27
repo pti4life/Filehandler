@@ -54,11 +54,11 @@
         </div>
     </c:if>
     <div class="illustration"></div>
-    <div class="form-group"><form:input path="name" class="form-control" required="required" type="text" name="Teljes név" placeholder="Teljes név"/></div>
-    <div class="form-group"><form:input path="email" class="form-control" required="required" type="email" name="E-mail" placeholder="E-mail"/></div>
-    <div class="form-group"><form:input path="username" class="form-control" required="required" type="text" name="Felhasználónév" placeholder="Felhasználónév"/></div>
-    <div class="form-group"><form:input path="password" class="form-control" required="required" type="password" name="password" placeholder="Jelszó"/></div>
-    <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Regisztráció</button></div>
+    <form:input path="name" class="form-control form-group" required="required" type="text" name="Teljes név" placeholder="Teljes név"/>
+    <form:input path="email" class="form-control form-group" required="required" type="email" name="E-mail" placeholder="E-mail"/>
+    <form:input path="username" class="form-control form-group" required="required" type="text" name="Felhasználónév" placeholder="Felhasználónév"/>
+    <form:input path="password" class="form-control form-group" required="required" type="password" name="password" placeholder="Jelszó"/>
+    <button class="btn btn-primary btn-block form-group" type="submit">Regisztráció</button>
 </form:form>
 <script src="${pageContext.request.contextPath}/resources/css/js/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/resources/css/bootstrap/js/bootstrap.min.js"></script>

@@ -14,6 +14,10 @@
         <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/css/Navigation-with-Button.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/css/styles.css">
         <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/font_awesome/css/all.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
     <body>
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button" style="font-size:28px;">
@@ -28,7 +32,7 @@
                 <ul class="nav navbar-nav mr-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="${pageContext.request.contextPath}/">Rólunk</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="${pageContext.request.contextPath}/filelist">Fájlok</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="">Profil</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="${pageContext.request.contextPath}/profile">Profil</a></li>
                 </ul>
                 <span class="navbar-text actions">
                 <a class="btn btn-light action-button" role="button" href="${pageContext.request.contextPath}/signup">Kijelentkezés</a>
@@ -42,7 +46,7 @@
                                                                            type="button">Keresés</button></div>
             <div class="col-4">
                 <div>
-                    <div class="col"><button class="btn btn-success" type="button">Fájl létrehozása</button></div>
+                   <a href="${pageContext.request.contextPath}/fileMake"> <div  class="col"><button class="btn btn-success" type="button" >Fájl létrehozása</button></div></a>
                 </div>
             </div>
         </div>
@@ -53,11 +57,11 @@
                     <table class="table">
                         <thead>
                         <tr style="text-align:center;">
-                            <th style="width:20%">Fájlnév</th>
-                            <th style="width:20%">Méret</th>
-                            <th style="width:20%">Módosítás dátuma</th>
-                            <th style="width:20%">Küldte</th>
-                            <th style="width:20%">Műveletek</th>
+                            <th >Fájlnév</th>
+                            <th >Méret</th>
+                            <th >Módosítás dátuma</th>
+                            <th >Küldte</th>
+                            <th >Műveletek</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -67,15 +71,37 @@
                                 <td>${file.fileSize}</td>
                                 <td>${file.modify}</td>
                                 <td>${file.sender}</td>
-                                <td><a href="#" class="btn btn-sq-xs btn-danger">
-                                    <i class="fas fa-trash-alt" ></i><br />
-                                </a>
-                                    <a href="#" class="btn btn-sq-xs btn-light">
-                                        <i class="fas fa-download" ></i><br />
-                                    </a>
-                                    <a href="#" class="btn btn-sq-xs btn-light">
-                                        <i class="fas fa-share" ></i><br />
-                                    </a>
+                                <td  class="d-flex flex-row bd-highlight mb-3">
+                                    <form:form method="post" action="${pageContext.request.contextPath}/delete"
+                                    cssStyle="padding: 0em" >
+                                       <!-- <label for="del" ><i class="fas fa-trash-alt" ></i></label>-->
+                                        <input type="hidden" name="deletedFile" value="${file.id}+${file.fileName}">
+                                        <input id="del" type="submit" value="&#xf2ed;"  class="btn btn-sq-xs btn-danger"
+                                               style="font-family: 'Font Awesome 5 Free';">
+                                        <br/>
+                                    </form:form>
+                                    <form:form method="post" action="${pageContext.request.contextPath}/"
+                                               cssStyle="padding: 0em" >
+                                        <!-- <label for="del" ><i class="fas fa-trash-alt" ></i></label>-->
+                                        <input id="del" type="submit" value="&#xf2ed;"  class="btn btn-sq-xs btn-light"
+                                               style="font-family: 'Font Awesome 5 Free';">
+                                        <br/>
+                                    </form:form>
+                                    <form:form method="post" action="${pageContext.request.contextPath}/"
+                                               cssStyle="padding: 0em" >
+                                        <!-- <label for="del" ><i class="fas fa-trash-alt" ></i></label>-->
+                                        <input id="del" type="submit" value="&#xf2ed;"  class="btn btn-sq-xs btn-light"
+                                               style="font-family: 'Font Awesome 5 Free';">
+                                        <br/>
+                                    </form:form>
+                                    <form:form method="post" action="${pageContext.request.contextPath}/fileMake"
+                                               cssStyle="padding: 0em" >
+                                        <!-- <label for="del" ><i class="fas fa-trash-alt" ></i></label>-->
+                                        <input type="hidden" name="modifyFile" value="${file.id}+${file.fileName}">
+                                        <input id="del" type="submit" value="&#xf044;"  class="btn btn-sq-xs btn-success"
+                                               style="font-family: 'Font Awesome 5 Free';">
+                                        <br/>
+                                    </form:form>
                                 </td>
                             </tr>
                         </c:forEach>
@@ -83,18 +109,25 @@
                     </table>
                 </div>
             </div>
-            <div class="col-4" style="padding-top:5.3em;">
+            <div class="col-4" id="upload" style="padding-top:3em;left: -1.8em;" >
                 <form:form method="POST" action="${pageContext.request.contextPath}/save" enctype="multipart/form-data">
-                <div style="border:1px solid;padding:0.5em;"><label>Fájl feltöltése</label>
-                    <div class="row">
-                        <div class="col" style="padding-bottom:1em;">
-                            <input class="btn btn-primary"  type="file" name="file" value="Tallózás"/>
-                        </div>
-                    </div><input class="btn btn-primary" type="submit" value="Feltöltés">
-                </div>
+                    <div class="custom-file" >
+                        <input  type="file" class="custom-file-input" name="file" id="customFile"/>
+                        <label class="custom-file-label" for="customFile">Tallózás</label>
+                    </div>
+                    <div id="submit">
+                        <input class="btn btn-primary" type="submit" value="Feltöltés">
+                    </div>
                 </form:form>
             </div>
         </div>
     </div>
+    <script>
+        // Add the following code if you want the name of the file appear on select
+        $(".custom-file-input").on("change", function() {
+            var fileName = $(this).val().split("\\").pop();
+            $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+        });
+    </script>
     </body>
 </html>
