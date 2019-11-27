@@ -41,9 +41,7 @@ public class FilelistController {
     @RequestMapping("/filelist")
     public String showFilelist(HttpServletRequest request, Model model) {
         UserDTO userDTO=(UserDTO) request.getSession().getAttribute("user");
-        if(!model.containsAttribute("files")){
-            files=fileService.getAllFiles(userDTO);
-        }
+        files=fileService.getAllFiles(userDTO);
         model.addAttribute("files",files);
         return "secured/filelist";
     }
@@ -68,11 +66,13 @@ public class FilelistController {
     public String deleteFile(HttpServletRequest request, HttpServletResponse response){
 
         String req=request.getParameter("deletedFile");
+        System.out.println(req);
         Long fileId=Long.parseLong(req.substring(0,req.indexOf("+")));
-        String type=req.substring(req.lastIndexOf("."));
+        String type= req.contains(".") ? req.substring(req.lastIndexOf(".")):"";
         UserDTO user=(UserDTO) request.getSession().getAttribute("user");
 
         if(files.stream().filter(fileDTO -> fileDTO.getId().equals(fileId)).count() ==1){
+            System.out.println(UPLOADED_FOLDER+"\\"+user.getId()+fileId+type);
             fileService.deleteFile(UPLOADED_FOLDER+"\\"+user.getId(),fileId+type,fileId);
             files=fileService.getAllFiles(user);
         }

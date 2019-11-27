@@ -3,21 +3,19 @@
 <html>
 <head>
     <title>Upload</title>
+    <meta charset="utf-8">
 </head>
 
 <body>
-    <form:form method="POST" action="${pageContext.request.contextPath}/save" enctype="multipart/form-data">
-        <table>
-            <tr>
-                <td><input type="file" name="file" /></td>
-            </tr>
-            <tr>
-                <td><input type="submit" value="Submit" /></td>
-            </tr>
-        </table>
+    <form:form method="POST" action="${pageContext.request.contextPath}/makeFile" >
+        <input type="text" name="newFileName" value="${pageContext.request.getAttribute("newFileName")}" placeholder="irja be a fájl nevét">
+        <input type="submit" value="Mentés" />
+        <br><br><br>
+        <label>
+            <textarea rows="20" cols="30" name="newFileContent"  >${pageContext.request.getAttribute("newFileContent")}  </textarea>
+        </label>
+
     </form:form>
-<form:form method="POST" action="${pageContext.request.contextPath}/read" enctype="multipart/form-data">
-    <input type="submit" value="gec">
-</form:form>
+
 </body>
 </html>

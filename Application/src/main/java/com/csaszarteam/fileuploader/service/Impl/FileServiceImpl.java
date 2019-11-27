@@ -8,13 +8,15 @@ import com.csaszarteam.fileuploader.service.FileService;
 import com.csaszarteam.fileuploader.service.domain.FileDTO;
 import com.csaszarteam.fileuploader.service.domain.UserDTO;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.IOUtils;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -34,7 +36,7 @@ public class FileServiceImpl implements FileService {
     @Override
     public void save(MultipartFile file, String UPLOADED_FOLDER, UserDTO user) {
         try {
-            long fileID=uploadDatabase(file,user);
+            long fileID=uploadDatabase(null,file,user);
             byte[] bytes = file.getBytes();
             Files.createDirectories(Paths.get(UPLOADED_FOLDER));
             Path path = Paths.get(UPLOADED_FOLDER,fileID+"."
@@ -77,10 +79,44 @@ public class FileServiceImpl implements FileService {
 
     }
 
+    @Override
+    public void makeFile(String folder,String name, String content,UserDTO userDTO,Long id) throws IOException {
+        String type=name.substring(name.lastIndexOf("."));
+        if(id==null){
+             id=uploadDatabase(id,converter(new java.io.File(""),name,content),userDTO);
+        }
+        java.io.File  file = new java.io.File(folder+id+type);
+        java.io.File directory=new java.io.File(folder);
+
+        if(!file.isFile()){
+            System.out.println("ujjj fajjjjl");
+            file.createNewFile();
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file, false));
+            writer.newLine();
+            writer.write(content);
+            writer.close();
+
+        }else {
+            System.out.println("nem ujj");
+            BufferedWriter writer = new BufferedWriter(new FileWriter(file, false));
+            System.out.println(writer);
+
+            writer.newLine();
+            writer.write(content);
+            writer.close();
+            uploadDatabase(id,converter(file,name,content),userDTO);
+        }
+        System.out.println(content);
+    }
+
+    public String getContent(String path) throws IOException {
+        return new String ( Files.readAllBytes( Paths.get(path) ) );
+    }
+
     @Transactional("transactionManager")
-    long uploadDatabase(MultipartFile file, UserDTO userDTO) throws IOException {
+    long uploadDatabase(Long id,MultipartFile file, UserDTO userDTO) throws IOException {
         User userEntity=modelMapper.map(userDTO,User.class);
-        File newfile=File.builder().fileName(file.getOriginalFilename())
+        File newfile=File.builder().id(id).fileName(file.getOriginalFilename())
                 .mimeType(file.getContentType()).fileSize(file.getBytes().length)
                 .user(userEntity).modify(LocalDate.now()).build();
 
@@ -92,4 +128,65 @@ public class FileServiceImpl implements FileService {
     void deleteFromDatabase(Long id){
         fileDAO.deleteById(id);
     }
+
+
+
+    private MultipartFile converter(java.io.File file,String fileName,String content){
+        return new MultipartFile() {
+            @Override
+            public String getName() {
+                return "file";
+            }
+
+            @Override
+            public String getOriginalFilename() {
+                return fileName;
+            }
+
+            @Override
+            public String getContentType() {
+                return "plain/text";
+            }
+
+            @Override
+            public boolean isEmpty() {
+                try {
+                    return IOUtils.toByteArray(new FileInputStream(file)).length==0;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    return true;
+                }
+            }
+
+            @Override
+            public long getSize() {
+                try {
+                    return  IOUtils.toByteArray(new FileInputStream(file)).length;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    return 0;
+                }
+            }
+
+            @Override
+            public byte[] getBytes() {
+                return content.getBytes();
+            }
+
+            @Override
+            public InputStream getInputStream()  {
+                try {
+                    return new FileInputStream(file);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                    return null;
+                }
+            }
+
+            @Override
+            public void transferTo(java.io.File dest) throws IOException, IllegalStateException {
+            }
+        };
+    }
+
 }

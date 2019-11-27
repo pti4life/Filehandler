@@ -46,7 +46,7 @@
                                                                            type="button">Keresés</button></div>
             <div class="col-4">
                 <div>
-                    <div class="col"><button class="btn btn-success" type="button">Fájl létrehozása</button></div>
+                   <a href="${pageContext.request.contextPath}/fileMake"> <div  class="col"><button class="btn btn-success" type="button" >Fájl létrehozása</button></div></a>
                 </div>
             </div>
         </div>
@@ -80,17 +80,25 @@
                                                style="font-family: 'Font Awesome 5 Free';">
                                         <br/>
                                     </form:form>
-                                    <form:form method="post" action="${pageContext.request.contextPath}/delete"
+                                    <form:form method="post" action="${pageContext.request.contextPath}/"
                                                cssStyle="padding: 0em" >
                                         <!-- <label for="del" ><i class="fas fa-trash-alt" ></i></label>-->
-                                        <input id="del" type="submit" value="&#xf2ed;"  class="btn btn-sq-xs btn-danger"
+                                        <input id="del" type="submit" value="&#xf2ed;"  class="btn btn-sq-xs btn-light"
                                                style="font-family: 'Font Awesome 5 Free';">
                                         <br/>
                                     </form:form>
-                                    <form:form method="post" action="${pageContext.request.contextPath}/delete"
+                                    <form:form method="post" action="${pageContext.request.contextPath}/"
                                                cssStyle="padding: 0em" >
                                         <!-- <label for="del" ><i class="fas fa-trash-alt" ></i></label>-->
-                                        <input id="del" type="submit" value="&#xf2ed;"  class="btn btn-sq-xs btn-danger"
+                                        <input id="del" type="submit" value="&#xf2ed;"  class="btn btn-sq-xs btn-light"
+                                               style="font-family: 'Font Awesome 5 Free';">
+                                        <br/>
+                                    </form:form>
+                                    <form:form method="post" action="${pageContext.request.contextPath}/fileMake"
+                                               cssStyle="padding: 0em" >
+                                        <!-- <label for="del" ><i class="fas fa-trash-alt" ></i></label>-->
+                                        <input type="hidden" name="modifyFile" value="${file.id}+${file.fileName}">
+                                        <input id="del" type="submit" value="&#xf044;"  class="btn btn-sq-xs btn-success"
                                                style="font-family: 'Font Awesome 5 Free';">
                                         <br/>
                                     </form:form>
