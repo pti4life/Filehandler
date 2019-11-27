@@ -80,10 +80,11 @@
                                                style="font-family: 'Font Awesome 5 Free';">
                                         <br/>
                                     </form:form>
-                                    <form:form method="post" action="${pageContext.request.contextPath}/"
+                                    <form:form method="post" action="${pageContext.request.contextPath}/download"
                                                cssStyle="padding: 0em" >
                                         <!-- <label for="del" ><i class="fas fa-trash-alt" ></i></label>-->
-                                        <input id="del" type="submit" value="&#xf2ed;"  class="btn btn-sq-xs btn-light"
+                                        <input type="hidden" name="fileID" value="${file.id}">
+                                        <input id="del" type="submit"  value="&#xf019"  class="btn btn-sq-xs btn-light"
                                                style="font-family: 'Font Awesome 5 Free';">
                                         <br/>
                                     </form:form>

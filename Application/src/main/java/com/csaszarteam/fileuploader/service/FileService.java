@@ -16,7 +16,7 @@ public interface FileService {
      List getAllFiles(UserDTO userDTO);
 
 
-     String downloadFile(FileDTO filedto,UserDTO user, HttpServletResponse resp);
+     String downloadFile(String id,UserDTO user, HttpServletResponse resp);
 
      void deleteFile(String directory,String file,Long fileId);
 

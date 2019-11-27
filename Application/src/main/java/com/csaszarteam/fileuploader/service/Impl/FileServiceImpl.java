@@ -27,6 +27,7 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 @Service("fileService")
 public class FileServiceImpl implements FileService {
@@ -71,14 +72,15 @@ public class FileServiceImpl implements FileService {
 
 
     @Override
-    public String downloadFile(FileDTO filedto ,UserDTO user,HttpServletResponse resp ) {
-        Path file = Paths.get(UPLOADED_FOLDER + filedto.getUser().getId() + "\\", filedto.getFileName());
+    public String downloadFile(String fileID ,UserDTO user,HttpServletResponse resp ) {
+        File file=fileDAO.findById(Long.parseLong(fileID)).get();
+        Path filePath = Paths.get(UPLOADED_FOLDER + file.getUser().getId()+ "\\", file.getFileName());
         User userentity = modelMapper.map(user, User.class);
-        if (Files.exists(file) && fileDAO.existsFileByUser(userentity)) {
-            resp.setContentType(filedto.getMimeType());
-            resp.addHeader("Content-Disposition", "attachment; filename=" + filedto.getFileName());
+        if (Files.exists(filePath) && fileDAO.existsFileByUser(userentity)) {
+            resp.setContentType(file.getMimeType());
+            resp.addHeader("Content-Disposition", "attachment; filename=" + file.getFileName());
             try {
-                Files.copy(file, resp.getOutputStream());
+                Files.copy(filePath, resp.getOutputStream());
                 resp.getOutputStream().flush();
             } catch (IOException ioex) {
                 ioex.printStackTrace();
@@ -146,6 +148,7 @@ public class FileServiceImpl implements FileService {
     @Transactional("transactionManager")
     long uploadDatabase(Long id,MultipartFile file, UserDTO userDTO) throws IOException {
         User userEntity=modelMapper.map(userDTO,User.class);
+        System.out.println(file.getOriginalFilename());
         File newfile=File.builder().id(id).fileName(file.getOriginalFilename())
                 .mimeType(file.getContentType()).fileSize(file.getBytes().length)
                 .user(userEntity).modify(LocalDate.now()).build();

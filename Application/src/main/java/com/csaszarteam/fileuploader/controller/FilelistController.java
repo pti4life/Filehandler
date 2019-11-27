@@ -64,11 +64,12 @@ public class FilelistController {
     }
 
 
-    @RequestMapping
-    public String downloadFile(@ModelAttribute FileDTO file, HttpServletRequest req, HttpServletResponse resp) {
+    @PostMapping("/download")
+    public String downloadFile(HttpServletRequest req, HttpServletResponse resp) {
         UserDTO user = (UserDTO) req.getSession().getAttribute("user");
-        //file=FileDTO.builder().fileName()
-        fileService.downloadFile(file, user, resp);
+        String id=req.getParameter("fileID");
+        fileService.downloadFile(id, user, resp);
+
 
         return "redirect:/filelist";
     }
