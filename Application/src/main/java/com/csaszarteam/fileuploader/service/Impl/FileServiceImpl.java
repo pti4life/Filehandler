@@ -14,7 +14,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -30,6 +33,8 @@ public class FileServiceImpl implements FileService {
 
     @Autowired
     private ModelMapper modelMapper;
+
+    private static String UPLOADED_FOLDER = "D:\\TMP\\";
 
     @Override
     public void save(MultipartFile file, String UPLOADED_FOLDER, UserDTO user) {
@@ -57,6 +62,28 @@ public class FileServiceImpl implements FileService {
             filesDTO.add(modelMapper.map(file,FileDTO.class));
         }
         return filesDTO;
+    }
+
+
+
+    @Override
+    public String downloadFile(FileDTO filedto ,UserDTO user,HttpServletResponse resp ) {
+        Path file=Paths.get(UPLOADED_FOLDER+filedto.getUser().getId()+"\\",filedto.getFileName());
+        User userentity=modelMapper.map(user,User.class);
+        if (Files.exists(file) && fileDAO.existsFileByUser(userentity)) {
+            resp.setContentType(filedto.getMimeType());
+            resp.addHeader("Content-Disposition", "attachment; filename="+filedto.getFileName());
+            try {
+                Files.copy(file,resp.getOutputStream());
+                resp.getOutputStream().flush();
+            } catch (IOException ioex) {
+                ioex.printStackTrace();
+            }
+
+        } else {
+            return "error";
+        }
+        return "success";
     }
 
     @Transactional("transactionManager")

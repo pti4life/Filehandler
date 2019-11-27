@@ -1,8 +1,9 @@
 package com.csaszarteam.fileuploader.service.domain;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import com.csaszarteam.fileuploader.database.entity.User;
+import jdk.nashorn.internal.objects.annotations.Constructor;
+import lombok.*;
+import org.springframework.context.annotation.Bean;
 
 import javax.persistence.Column;
 import java.time.LocalDate;
@@ -10,6 +11,8 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @ToString
+@Builder
+@AllArgsConstructor
 public class FileDTO {
     private Long id;
 
@@ -22,5 +25,7 @@ public class FileDTO {
     private Long sender;
 
     private LocalDate modify;
+
+    private User user;
 
 }

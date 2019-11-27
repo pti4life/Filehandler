@@ -1,7 +1,9 @@
 package com.csaszarteam.fileuploader.database.repository;
 
 
+import com.csaszarteam.fileuploader.database.entity.File;
 import com.csaszarteam.fileuploader.database.entity.User;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

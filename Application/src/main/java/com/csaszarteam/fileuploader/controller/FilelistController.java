@@ -1,9 +1,11 @@
 package com.csaszarteam.fileuploader.controller;
 
+import com.csaszarteam.fileuploader.database.entity.File;
 import com.csaszarteam.fileuploader.database.entity.User;
 import com.csaszarteam.fileuploader.database.repository.FileDAO;
 import com.csaszarteam.fileuploader.database.repository.UserDAO;
 import com.csaszarteam.fileuploader.service.FileService;
+import com.csaszarteam.fileuploader.service.domain.FileDTO;
 import com.csaszarteam.fileuploader.service.domain.UserDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -18,6 +20,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
@@ -60,6 +63,14 @@ public class FilelistController {
             files=fileService.getAllFiles(user);
         }
 
+        return "redirect:/filelist";
+    }
+
+    @RequestMapping
+    public String downloadFile(@ModelAttribute FileDTO file, HttpServletRequest req, HttpServletResponse resp) {
+        UserDTO user=(UserDTO)req.getSession().getAttribute("user");
+        //file=FileDTO.builder().fileName()
+        fileService.downloadFile(file,user,resp);
         return "redirect:/filelist";
     }
 }
