@@ -1,11 +1,7 @@
 package com.csaszarteam.fileuploader.service.domain;
 
 import com.csaszarteam.fileuploader.database.entity.User;
-import jdk.nashorn.internal.objects.annotations.Constructor;
 import lombok.*;
-import org.springframework.context.annotation.Bean;
-
-import javax.persistence.Column;
 import java.time.LocalDate;
 
 @Getter

@@ -13,9 +13,8 @@ public interface FileDAO extends CrudRepository<File,Long> {
 
     public List<File> getAllByUser(User user);
 
-<<<<<<< HEAD
+
     boolean existsFileByUser(User user);
-=======
+
     public void  deleteById(Long id);
->>>>>>> 7595fde569966357c7eaedba7f90448c76feca78
 }
