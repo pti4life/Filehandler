@@ -74,14 +74,29 @@ public class FileServiceImpl implements FileService {
     @Override
     public String downloadFile(String fileID ,UserDTO user,HttpServletResponse resp ) {
         File file=fileDAO.findById(Long.parseLong(fileID)).get();
-        Path filePath = Paths.get(UPLOADED_FOLDER + file.getUser().getId()+ "\\", file.getFileName());
+        String filename=file.getFileName().contains(".") ? file.getFileName().substring(file.getFileName().lastIndexOf(".")) : "";
+        filename=file.getId()+filename;
+        Path filePath = Paths.get(UPLOADED_FOLDER + file.getUser().getId()+ "\\",filename);
         User userentity = modelMapper.map(user, User.class);
+        System.out.println("filepath: "+filePath);
         if (Files.exists(filePath) && fileDAO.existsFileByUser(userentity)) {
-            resp.setContentType(file.getMimeType());
-            resp.addHeader("Content-Disposition", "attachment; filename=" + file.getFileName());
+
             try {
-                Files.copy(filePath, resp.getOutputStream());
-                resp.getOutputStream().flush();
+                java.io.File iofile=new java.io.File(UPLOADED_FOLDER+file.getUser().getId()+"\\"+filename);
+                resp.setContentType(file.getMimeType());
+                resp.addHeader("Content-Disposition", "attachment; filename=" + file.getFileName());
+                resp.setContentLength((int) file.getFileSize());
+                OutputStream os = resp.getOutputStream();
+                FileInputStream fis = new FileInputStream(iofile);
+                byte[] buffer = new byte[4096];
+                int b = -1;
+
+                while ((b = fis.read(buffer)) != -1) {
+                    os.write(buffer, 0, b);
+                }
+
+                fis.close();
+                os.close();
             } catch (IOException ioex) {
                 ioex.printStackTrace();
             }
