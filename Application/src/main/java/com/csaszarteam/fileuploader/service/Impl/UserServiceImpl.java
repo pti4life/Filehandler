@@ -2,7 +2,6 @@ package com.csaszarteam.fileuploader.service.Impl;
 
 
 import com.csaszarteam.fileuploader.database.entity.User;
-import com.csaszarteam.fileuploader.database.entity.UserRole;
 import com.csaszarteam.fileuploader.database.repository.UserDAO;
 import com.csaszarteam.fileuploader.service.UserService;
 import com.csaszarteam.fileuploader.service.domain.UserDTO;
@@ -12,13 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.ui.ModelMap;
-
-
-import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 @Service("userservice")
 public class UserServiceImpl implements UserService {

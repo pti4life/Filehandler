@@ -19,8 +19,11 @@ public class ProfileController {
     UserService userservice;
 
     @GetMapping("/profile")
-    public String showProfilePage(Model model) {
+    public String showProfilePage(Model model, HttpServletRequest req) {
         model.addAttribute("userDTO", new UserDTO());
+
+        UserDTO user = (UserDTO) req.getSession().getAttribute("user");
+        model.addAttribute("user", user);
 
         return "secured/profile";
     }

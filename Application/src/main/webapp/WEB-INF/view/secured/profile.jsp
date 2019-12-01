@@ -43,6 +43,13 @@
     </div>
 </nav>
 
+<div>
+    <span>Név: ${user.name}</span>
+    <span>Felhasználónév: ${user.username}</span>
+    <span>Email: ${user.email}</span>
+</div>
+
+<div>
 <form:form action="${pageContext.request.contextPath}/profile/email" modelAttribute="userDTO"  class="flex-row justify-content-center align-items-center align-content-center align-self-center" method="post">
     <h2 style="padding-bottom: 0.5em">Email</h2>
     <c:if test="${!empty errors}">
@@ -102,6 +109,7 @@
     <div class="form-group"><form:input path="password4" class="form-control" required="required" type="password" name="password" placeholder="Új Jelszó"/></div>
     <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Frissítés</button></div>
 </form:form>
+</div>
 
 </body>
 
