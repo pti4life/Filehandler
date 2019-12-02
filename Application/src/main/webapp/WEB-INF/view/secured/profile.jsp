@@ -44,7 +44,7 @@
 </nav>
 
 <div>
-    <span>Név: ${user.name}</span>
+    <span style="font-weight: bold;">Név: ${user.name}</span>
     <span>Felhasználónév: ${user.username}</span>
     <span>Email: ${user.email}</span>
 </div>
