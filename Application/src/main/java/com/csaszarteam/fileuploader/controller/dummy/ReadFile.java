@@ -1,4 +1,11 @@
 package com.csaszarteam.fileuploader.controller.dummy;
 
-public class ReadFile {
+import java.io.Reader;
+
+public interface ReadFile extends FileHandler {
+
+    Reader createReader();
+
+    <T> T readFromJson(T readTo);
+
 }
