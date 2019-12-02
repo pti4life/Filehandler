@@ -46,7 +46,7 @@
 <div>
     <span style="font-weight: bold;">Név: ${user.name}</span>
     <span style="font-weight: bold;">Felhasználónév: ${user.username}</span>
-    <span>Email: ${user.email}</span>
+    <span style="font-weight: bold;">Email: ${user.email}</span>
 </div>
 
 <div>
