@@ -14,4 +14,11 @@ class UserRoleTest {
 
         assertEquals(150, userRole.getId());
     }
+
+    @Test
+    void getAuthority() {
+        userRole.setAuthority("asd");
+
+        assertEquals("asd", userRole.getAuthority());
+    }
 }
