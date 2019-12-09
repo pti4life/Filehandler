@@ -10,13 +10,17 @@ class AuthenticationTest {
     @Test
     void loginTest() {
         auth.setName("greg");
-        auth.setPassword("Securepwd");
+        auth.setPassword("SuperSecurepwd");
         assertAll("login",
-                () -> assertEquals("greg", auth.getName();),
-                () -> assertEquals("Securepwd",  auth.getPassword();)
+                () -> assertEquals("greg", auth.getName();,"Sikertelen teszt"),
+                () -> assertEquals("SuperSecurepwd",  auth.getPassword();,"Sikertelen teszt")
         );
-
-        fail("Sikertelen teszt");
     }
 
+    @Test
+    void authTest() {
+        auth.setDatabase("greg","SuperSecurepwd");
+
+        assertEquals(auth.validate("greg","SuperSecurepwd"),"validalva");
+    }
 }
